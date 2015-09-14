@@ -177,3 +177,4 @@ It then hands the content over to [Core Image](https://developer.apple.com/libra
 </section>
 
 {% include subscribe.html %}
+{% include purchase.html %}
