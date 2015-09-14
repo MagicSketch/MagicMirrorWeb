@@ -1,24 +1,37 @@
-- title: Applech2
-  link: http://applech2.com/archives/45794567.html
+# - title: Applech2
+#   link: http://applech2.com/archives/45794567.html
 - title: DesignerNews
   link: https://www.designernews.co/stories/53390-magic-mirror-for-sketch-3--plugin-to-create-perspective-designs
+  image: /images/community/designernews.png
 - title: Design+Code
   link: https://designcode.io/learn
+  image: /images/community/designcode.png
 - title: HeyDesigner
-  link: http://heydesigner.com/sketchapp/
+  link: http://heydesigner.com/magic-mirror-for-sketch-3-perspective-designs-in-sketch/
+  image: /images/community/heydesigner.png
 - title: iOSDevWeekly
   link: https://iosdevweekly.com/issues/209
+  image: /images/community/iosdevweekly.png
 - title: LevelUpTuts
   link: https://www.youtube.com/watch?v=Gm5wPXOgVtM&list=PLXM9Shjg7jenAH19HHSWYPJ4EtB4RNDc1&index=3
+  image: /images/community/leveluptuts.png
 - title: Sketch App Sources
   link: http://www.sketchappsources.com/plugins-for-sketch.html
+  image: /images/community/sketchappsources.png
 - title: SketchAppTV
   link: https://www.youtube.com/watch?v=F7wOPtKjVps
+  image: /images/community/sketchapptv.png
 - title: SketchCasts
   link: http://www.sketchcasts.net/episodes/47
+  image: /images/community/sketchcasts.png
 - title: SketchHunt
   link: http://sketchhunt.com/?s=magic+mirror
+  image: /images/community/sketchhunt.png
 - title: Sketchtalk.io
   link: http://sketchtalk.io/discussion/1371/magic-mirror-perspective-3d-for-your-artboards
-- title: T3n
-  link: http://t3n.de/news/magic-mirror-sketch-plugin-627330/
+  image: /images/community/sketchtalk.png
+- title: UX Design Weekly
+  link: http://uxdesignweekly.com/issue-46/
+  image: /images/community/uxdesignweekly.png
+# - title: T3n
+#   link: http://t3n.de/news/magic-mirror-sketch-plugin-627330/

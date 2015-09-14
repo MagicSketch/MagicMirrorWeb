@@ -1,10 +1,40 @@
+<style>
+.community {
+	background-color:#FFFFFF;
+}
+.community h1 {
+	font-family: "Asap", Helvetica, Arial, sans-serif;
+	font-size: 11px;
+	color: #B3B3B3;
+	line-height: 14px;
+	margin-top: 1rem;
+	margin-bottom: 0px;
+	display:inline-block;
+}
+.community hr {
+    border-style: inset;
+    margin:0.5em 1em 0.4em 1em;
+	display:inline-block;
+	border-color: #F2F2F2;
+}
+.community img.animated {
+	width: 44px;
+	height: 44px;
+}
+</style>
 
-<section class="py3 border-top border-bottom" style='background-color:#EEE'>
-<h1>Media</h1>
-<div class="wrapper sm-flex flex-wrap mxn1 px1 flex-center">
-	<!-- <h2 class="sm-col-12">Backtracks</h2> -->
-	{% for site in site.data.backtracks %}
-	<a href="{{ site.link }}" class="px1 border-box flex-auto center">{{ site.title }}</a>
+
+<section class="community">
+<div class="flex">
+<hr class="flex-auto mb1"></hr><h1>THE THE COMMUNITY ❤ MAGIC MIRROR</h1><hr class="flex-auto"></hr>
+</div>
+<div class="flex px2 py3 flex-auto">
+	<div class="mx-auto flex flex-center sm-flex flex-wrap">
+	{% for site in site.data.community %}
+	<div class="border-box center px1">
+	   <a href="{{ site.link }}"><img src="{{ site.image }}" class="grayscale animated"></a>
+	</div>
 	{% endfor %}
+	</div>
 </div>
 </section>
