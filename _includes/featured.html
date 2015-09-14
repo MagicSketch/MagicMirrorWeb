@@ -1,0 +1,33 @@
+<style>
+.featured {
+	background-color:#FAFAFA;
+}
+.featured h1 {
+	font-family: "Asap", Helvetica, Arial, sans-serif;
+	font-size: 11px;
+	color: #B3B3B3;
+	line-height: 14px;
+	margin-top: 1rem;
+	margin-bottom: 0px;
+	display:inline-block;
+}
+.featured hr {
+    border-style: inset;
+    margin:0.5em 1em 0.4em 1em;
+	display:inline-block;
+	border-color: #F2F2F2;
+}
+</style>
+
+<section class="featured">
+<div class="flex">
+<hr class="flex-auto"></hr><h1>THE NEWS AND MEDIA ★★★★★</h1><hr class="flex-auto"></hr>
+</div>
+<div class="sm-flex flex-wrap mxn1 px1 flex-center">
+	{% for site in site.data.featured %}
+	<div class="sm-col-3 border-box p2 center">
+	   <a href="{{ site.link }}"><img src="{{ site.image }}" class="grayscale animated"></a>
+	</div>
+	{% endfor %}
+</div>
+</section>

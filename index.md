@@ -158,23 +158,7 @@ It then hands the content over to [Core Image](https://developer.apple.com/libra
 </div>
 </section>
 
-
-<section class="py3 border-top border-bottom" style='background-color:#EEE'>
-<h1>Media</h1>
-
-<div class="wrapper sm-flex flex-wrap mxn1 px1 flex-center">
-	{% for site in site.data.featured %}
-	<div class="sm-col-4 border-box p2 center">
-	   <a href="{{ site.link }}"><img src="{{ site.image }}" class="grayscale animated"></a>
-	</div>
-	{% endfor %}
-
-	<!-- <h2 class="sm-col-12">Backtracks</h2> -->
-	{% for site in site.data.backtracks %}
-	<a href="{{ site.link }}" class="px1 border-box flex-auto center">{{ site.title }}</a>
-	{% endfor %}
-</div>
-</section>
-
+{% include community.html %}
 {% include subscribe.html %}
+{% include featured.html %}
 {% include purchase.html %}
