@@ -77,12 +77,12 @@ It then hands the content over to [Core Image](https://developer.apple.com/libra
 
 {% include showend.html %}
 
-<section class="my2 py2 border-top" style='background-color:black'>
+<section class="my2 py2 border-top clearfix" style='background-color:black'>
 <h1>Showcase</h1>
 
-<div class="clearfix">
+<div class="flex-wrap">
 {% for showcase in site.data.showcases %}
-<div class="sm-col sm-col-6 showcase">
+<div class="sm-col sm-col-4 showcase" style="order: {{ showcase.order }}">
 	<img src="{{ showcase.image }}" />
 	<a href="{{ showcase.link }}" identifier="{{ showcase.author }}" class="overlay">
 		<img src="/images/showcase-placeholder.png" />
