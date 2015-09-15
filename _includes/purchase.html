@@ -1,15 +1,18 @@
 
 <style>
 .purchase {
-	height: 180px;
+	/*background-color: #FAFAFA;*/
+	height: 100px;
 }
 .purchase a.btn {
+	margin-bottom: 3px;
+}
+.purchase a.btn.strong {
 	color: white;
 	background-color: rgb(250, 148, 2);
 	border-color: rgb(250, 148, 2);
 	font-family: "Asap";
 	font-weight: normal;
-	margin-bottom: 3px;
 }
 .purchase sub {
 	color: #BBBBBB;
@@ -17,10 +20,13 @@
 </style>
 <div class="purchase wrapper flex py2 flex-center">
 
-	<img src="/images/magic-mirror-trimmed.gif" class="flex-none col-4"></img>
+	<!-- <img src="/images/magic-mirror-trimmed.gif" class="flex-none col-4"></img> -->
 
-	<div class="flex flex-column flex-end flex-auto">
+	<div class="flex flex-column flex-center flex-auto">
+	<div class="flex-auto center">
+	<a href="{{ site.downloadurl }}/latest" identifier="Free-Download" class="flex-auto border-box center btn btn-outline orange"><i class="fa fa-arrow-circle-o-down"></i>    Try</a>
 	<a href="/purchase" identifier="Get-Full-License-Bottom" class="flex-none border-box center btn btn-outline orange strong">Get License 50% off</a>
+	</div>
 	<sub class="clearfix">Join the <span id="count">4,123</span> designers already using Magic Mirror!</sub>
 	</div>
 </div>

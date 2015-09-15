@@ -1,6 +1,6 @@
 <style>
 .featured {
-	background-color:#f8f9fa;
+	/*background-color:#f8f9fa;*/
 }
 .featured h1 {
 	font-family: "Asap", Helvetica, Arial, sans-serif;
@@ -23,7 +23,7 @@
 <div class="flex">
 <hr class="flex-auto"></hr><h1>THE NEWS AND MEDIA ★★★★★</h1><hr class="flex-auto"></hr>
 </div>
-<div class="sm-flex flex-wrap mxn1 px1 flex-center">
+<div class="container sm-flex flex-wrap flex-center">
 	{% for site in site.data.featured %}
 	<div class="sm-col-3 border-box p2 center">
 	   <a href="{{ site.link }}"><img src="{{ site.image }}" class="grayscale animated"></a>

@@ -104,7 +104,7 @@ It then hands the content over to [Core Image](https://developer.apple.com/libra
 
 </section>
 
-
+<!--
 <a id="features"></a>
 
 
@@ -157,8 +157,9 @@ It then hands the content over to [Core Image](https://developer.apple.com/libra
 
 </div>
 </section>
+-->
 
-{% include community.html %}
-{% include subscribe.html %}
 {% include featured.html %}
 {% include purchase.html %}
+{% include community.html %}
+{% include subscribe.html %}
