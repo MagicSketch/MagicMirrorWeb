@@ -104,61 +104,7 @@ It then hands the content over to [Core Image](https://developer.apple.com/libra
 
 </section>
 
-<!--
-<a id="features"></a>
-
-
-<section class="my2 py2">
-<h1>Features</h1>
-
-<div class="container sm-flex flex-wrap mxn1 px1 flex-center">
-
-	<div class="sm-col-8 border-box p1">
-		<img src="/images/magic-mirror-feature1.gif" />
-	</div>
-
-	<div class="sm-col-4 border-box p1" markdown="1">
-
-
-## Magic Mirror! (⌃ ⇧ M)
-1. Prepare a source artboard.
-2. Draw a 4-point polygon
-3. Rename the shape to match the artboard
-4. Press the shortcut
-
-</div>
-
-<div class="sm-flex mt2 flex-wrap">
-<div class="sm-col-4 border-box p1 flex flex-column flex-center">
-	<img src="/images/magic-mirror-feature2.gif" class="flex-grow"/>
-	<p class="p1">Jump to Artboard (⌃ ⇧ J)</p>
-</div>
-
-<div class="sm-col-4 border-box p1 flex flex-column flex-center">
-	<img src="/images/magic-mirror-feature3.gif" class="flex-grow"/>
-	<p class="p1">Rotate Content (⌃ ⌘ ⇧ R)</p>
-</div>
-
-<div class="sm-col-4 border-box p1 flex flex-column flex-center">
-	<img src="/images/magic-mirror-feature4.gif" class="flex-grow"/>
-	<p class="p1">Flip Content (⌃ ⌘ ⇧ F)</p>
-</div>
-
-<div class="sm-col-4 border-box p1 flex flex-column flex-center">
-	<img src="/images/magic-mirror-feature-retina.png" class="flex-grow"/>
-	<p class="p1">Retina Image Support <sup class="red">NEW</sup></p>
-</div>
-
-<div class="sm-col-4 border-box p1 flex flex-column flex-center">
-	<img src="/images/magic-mirror-feature-crosspage-mirroring.gif" class="flex-grow"/>
-	<p class="p1">Cross Page Screen Mirroring<sup class="red">NEW</sup></p>
-</div>
-</div>
-
-</div>
-</section>
--->
-
+{% include features.html %}
 {% include featured.html %}
 {% include purchase.html %}
 {% include community.html %}
