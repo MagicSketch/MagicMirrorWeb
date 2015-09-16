@@ -64,6 +64,6 @@ weight: 1
 </div>
 <div class="center wrapper mt4" markdown="1">
 
-Magic Mirror Templates is still in beta. If you want to help or want to have your own templates show up please [contact me](mailto:{{ site.email }}) :)
+Magic Mirror Templates is still in beta. If you want to help or want to have your own templates show up please read the <a href="/template-guideline">templates contribution guideline</a> :)
 
 </div>
