@@ -1,7 +1,9 @@
 ---
-layout: page
+layout: post
 title: Magic Mirror Template Contribution Guideline
+date:   2015-09-17 03:40
 permalink: /template-guideline
+identifier: template-guideline
 ---
 
 There are still very few resources out there regarding “perspective mockups for Sketch”, the community appreciates every bits of contributions to create more resources available.
