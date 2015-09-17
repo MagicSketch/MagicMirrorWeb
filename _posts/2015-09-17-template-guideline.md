@@ -15,7 +15,7 @@ Thats why I’m creating this skeleton template.
 ## The Skeleton Template
 
 <div class="center" markdown="1">
-[![](/images/download-sketch.png)]()
+[![](/images/download-sketch.png)]({{ site.downloadurl }}/template-guideline)
 </div>
 
 After you download the file, you should be seeing Page 1 with a number of artboards.

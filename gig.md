@@ -13,7 +13,7 @@ You will need to make sure all resources from your template are created by your 
 ## The Skeleton Template
 
 <div class="center" markdown="1">
-[![](/images/download-sketch.png)]({{ site.downloadurl }}/template-guideline)
+[![](/images/download-sketch.png)]({{ site.downloadurl }}/template-gig)
 </div>
 
 After you download the file, you should be seeing Page 1 with a number of artboards.
