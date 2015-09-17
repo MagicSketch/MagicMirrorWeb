@@ -14,7 +14,7 @@ analytics:
 
 
 # Build settings
-markdown: redcarpet
+markdown: kramdown
 
 collections:
   templates:

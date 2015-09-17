@@ -14,7 +14,9 @@ Thats why I’m creating this skeleton template.
 
 ## The Skeleton Template
 
-[![](/images/download-sketch.png)]()
+<div class="center" markdown="1">
+[![](/images/download-sketch.png)]({{ site.downloadurl }}/template-guideline)
+</div>
 
 After you download the file, you should be seeing Page 1 with a number of artboards.
 
@@ -51,7 +53,7 @@ Before you submit your template, please make sure you have the following list ch
 
 So if you’re good and would like to share the freebie, please include the attached sketch file with a few info, and send an email to [james@magicmirror.design](mailto:james@magicmirror.design) with following format. (Replace text wrapped in the <brackets>)
 
-```
+~~~
 Title: Magic Mirror Template Submission - <Template Name>
 Body:
 1. <Preview Image>
@@ -64,7 +66,7 @@ Body:
 
 I agreed all resources from the template I are created by my own, and Magic Mirror for Sketch has the rights to redistribute my work only through the site without a price tag.
 
-```
+~~~
 
 ## Disclaimers & Regulations
 

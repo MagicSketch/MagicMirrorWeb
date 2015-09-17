@@ -12,7 +12,9 @@ You will need to make sure all resources from your template are created by your 
 
 ## The Skeleton Template
 
-[![](/images/download-sketch.png)]({{ site.downloadurl }}/template-guideline)
+<div class="center" markdown="1">
+[![](/images/download-sketch.png)]({{ site.downloadurl }}/template-gig)
+</div>
 
 After you download the file, you should be seeing Page 1 with a number of artboards.
 
@@ -49,10 +51,12 @@ Before you submit your template, please make sure you have the following list ch
 
 So if you’re ready, please include the following info with your attached sketch file, and deliver as stated in the gig description.
 
+~~~
 1. \<Preview Image\>
 2. Template Name: \<Template Name\>
 3. Short Description: \<Short Description of the Template\>
 4. Description: \<Description for your template\>
+~~~
 
 ## Additional Resources
 
