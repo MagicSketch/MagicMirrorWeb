@@ -2,7 +2,6 @@
 layout: page
 title: Changelog
 permalink: /changelog/
-weight: 4
 ---
 
 ### v1.2 (2015-08-20)
