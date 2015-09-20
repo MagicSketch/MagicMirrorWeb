@@ -26,6 +26,8 @@ Templates:
 - [Template Guideline](https://www.dropbox.com/s/nu9eblkigol4mm0/magicmirror-template-skeleton.sketch?dl=1){: identifier="template-guideline"}
 - [Three Cards Layout](https://www.dropbox.com/s/xge7ifbxh2va6f6/magicmirror-template-three-cards-layout.sketch?dl=1){: identifier="three-cards-layout"}
 
-License activation service will have to wait until Heroku resolves the issue. Sorry for the inconvenience.
+You can still purchase license during this period, but if you try to activate your license in the plugin you may experience difficulties for getting it activated within the plugin. Our license activation service should automatically restore once Heroku resolves the issue.
+
+Sorry for the inconvenience.
 
 James
