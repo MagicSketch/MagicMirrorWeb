@@ -8,11 +8,11 @@ title: Press
 
 
 <div class="center" markdown="1">
-[Download PressKit]({{ site.downloadurl }}/press)
+[Download PressKit]({{ site.downloadurl }}/press){: identifier="download-press-top"}
 </div>
 
 ![](/images/press-preview.jpg)
 
 <div class="center" markdown="1">
-[Download PressKit]({{ site.downloadurl }}/press)
+[Download PressKit]({{ site.downloadurl }}/press){: identifier="download-press-bottom"}
 </div>
