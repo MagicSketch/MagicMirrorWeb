@@ -14,15 +14,15 @@ title: Create Perspective Mockups in Sketch
 <!-- <div class="flex-auto center btn orange border-box none" id="get-license-free">
 	<a href="/madewithmagicmirror" identifier="Get-License-Free" class="clearfix">Get a license for free</a>
 	<sup class="gray">ENDED (20/8-24/8)</sup>
-</div>
-<div class="flex-auto center btn orange border-box none" id="see-templates">
+</div> -->
+<div class="flex-auto center btn orange border-box" id="see-templates">
 	<a href="/templates" identifier="See-Templates" class="clearfix">New iPhone6s Template</a>
 	<sup class="red">UPDATED (11/9)</sup>
-</div> -->
-<div class="flex-auto center btn orange border-box" id="server-maintenance">
+</div>
+<!-- <div class="flex-auto center btn orange border-box" id="server-maintenance">
 	<a href="/2015/09/21/server-maintenance.html" identifier="See-Templates" class="clearfix">Server Maintenance</a>
 	<sup class="red">NEW (21/9)</sup>
-</div>
+</div> -->
 <div class="flex-auto center">
 	<a href="{{ site.downloadurl }}/latest" identifier="Free-Download" class="flex-auto border-box center btn btn-outline orange"><i class="fa fa-arrow-circle-o-down"></i>    Try</a>
 	<a href="/purchase" identifier="Get-Full-License-Top" class="flex-auto border-box center btn btn-outline orange strong">Get License 50% off</a>
