@@ -17,11 +17,15 @@ weight: 1
 {% endfor %}
 </div>
 <h1 style='text-align:center;'>Articles</h1>
-<div class='lg lg-col-4 md-col-4 sm-col-2'>
-lorem ipsum
+<div class="flex flex-wrap p1 templates">
+{% for article in site.data.articles %}
+<div class='lg lg-col-3 md-col-3 sm-col-2 px3'>
+<img src="{{ article.featured}}" alt="{{ article.title }}"  />
+<p><a href="{{ article.link }}" alt="{{ article.title }}">{{ article.title }} </a></p>
 </div>
+{% endfor %}
+</div>
+
 <div class="center wrapper mt4" markdown="1">
-
 Magic Mirror Templates is still in beta. If you want to help or want to have your own templates show up please read the <a href="/template-guideline">templates contribution guideline</a> :)
-
 </div>
