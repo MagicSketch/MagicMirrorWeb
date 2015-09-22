@@ -18,7 +18,7 @@ weight: 1
 </div>
 <h1 style='text-align:center;'>Articles</h1>
 <div class='lg lg-col-4 md-col-4 sm-col-2'>
-{{kampret}}
+lorem ipsum
 </div>
 <div class="center wrapper mt4" markdown="1">
 
