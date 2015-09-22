@@ -12,7 +12,7 @@ weight: 1
         <a href="https://youtube.com/watch?v={{ video.yt_id }}&list=PLXM9Shjg7jenAH19HHSWYPJ4EtB4RNDc1">
         <img src="http://img.youtube.com/vi/{{ video.yt_id }}/0.jpg" alt="{{ video.title }}"/>
         </a>
-        <p><a href="https://youtube.com/watch?v={{ video.yt_id }}&list=PLXM9Shjg7jenAH19HHSWYPJ4EtB4RNDc1">{{ video.title }}</a></p>
+        <p><a href="https://youtube.com/watch?v={{ video.yt_id }}&list=PLXM9Shjg7jenAH19HHSWYPJ4EtB4RNDc1">{{ video.title }}</a></p><p class="author"><img src="https://avatars.githubusercontent.com/{{ video.github }}" class="avatar"/><a href="https://github.com/{{ video.github }}" class="name">{{ video.github }}</a></p>
         </div>
 {% endfor %}
 </div>
@@ -22,6 +22,7 @@ weight: 1
 <div class='lg lg-col-3 md-col-3 sm-col-2 px3'>
 <img src="{{ article.featured}}" alt="{{ article.title }}"  />
 <p><a href="{{ article.link }}" alt="{{ article.title }}">{{ article.title }} </a></p>
+<p class="author"><img src="https://avatars.githubusercontent.com/{{ article.github }}" class="avatar"/><a href="https://github.com/{{ article.github }}" class="name">{{ article.github }}</a></p>
 </div>
 {% endfor %}
 </div>
