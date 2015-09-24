@@ -1,8 +1,9 @@
 ---
 layout: flex
-title: Videos
-permalink: /videos/
-weight: 1
+title: How-to
+permalink: /how-to/
+weight: 2
+redirect_from: /videos/
 ---
 
 <h1>Videos</h1>
@@ -12,7 +13,7 @@ weight: 1
 <div class="sm-col sm-col-4 showcase">
 	<img src="/images/video-placeholder.png" style="background-image:url('http://img.youtube.com/vi/{{ video.yt_id }}/0.jpg');background-position: center; background-size: 100% auto;
 	    background-repeat: no-repeat;"/>
-	<a href="https://youtube.com/watch?v={{ video.yt_id }}&list=PLXM9Shjg7jenAH19HHSWYPJ4EtB4RNDc1" identifier="{{ video.title }}" class="overlay">
+	<a href="https://youtube.com/watch?v={{ video.yt_id }}&list=PLXM9Shjg7jenAH19HHSWYPJ4EtB4RNDc1" identifier="{{ video.identifier }}" class="overlay">
 		<div class="overlay flex flex-end">
 			<div class="flex flex-end m2">
 				<div class="flex-none mr2">
@@ -38,7 +39,7 @@ weight: 1
 <div class="sm-col sm-col-4 showcase fixing">
 	<img src="/images/showcase-placeholder.png" style="background-image:url('{{ article.featured }}');background-position: center; background-size: 100% auto;
     background-repeat: no-repeat; background-color: black;"/>
-	<a href="{{ article.link }}" identifier="{{ article.author }}" class="overlay">
+	<a href="{{ article.link }}" identifier="{{ article.identifier }}" class="overlay">
 		<div class="overlay flex flex-end">
 			<div class="flex flex-end m2">
 				<div class="flex-none mr2">
