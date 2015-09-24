@@ -19,7 +19,7 @@ weight: 1
 					<img src="{{ video.avatar }}" class="avatar">
 				</div>
 				<div class="flex flex-column">
-					<div class="flex-auto liner">“{{ video.title }}” </div>
+					<div class="flex-auto liner videotitle">{{ video.title }}</div>
 					<div class="flex-auto author">- {{ video.author }}</div>
 				</div>
 			</div>
@@ -45,7 +45,7 @@ weight: 1
 					<img src="{{ article.avatar }}" class="avatar">
 				</div>
 				<div class="flex flex-column">
-					<div class="flex-auto liner">“{{ article.title }}” </div>
+					<div class="flex-auto liner videotitle">{{ article.title }}</div>
 					<div class="flex-auto author">- {{ article.author }}</div>
 				</div>
 			</div>
@@ -56,9 +56,3 @@ weight: 1
 </div>
 
 </section>
-
-
-<div class="center wrapper mt4" markdown="1">
-Magic Mirror Templates is still in beta. If you want to help or want to have your own templates show up please read the <a href="/template-guideline">templates contribution guideline </a> :)
-</div>
-
