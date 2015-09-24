@@ -19,7 +19,9 @@
   <meta property="og:site_name" content="{{ title }}">
   <meta name="twitter:title" content="{{ title }}">
 
-  {% if page.excerpt %}
+  {% if page.description %}
+    {% assign description = page.description | strip_html | strip_newlines | truncate: 160 %}
+  {% elsif page.excerpt %}
     {% assign description = page.excerpt | strip_html | strip_newlines | truncate: 160 %}
   {% else %}
     {% assign description = site.description %}

@@ -4,6 +4,7 @@ title: How-to
 permalink: /how-to/
 weight: 2
 redirect_from: /videos/
+description: All video tutorials and articles for Sketch and Magic Mirror Plugin. Be more productive with these tips and tricks!
 ---
 
 <h1>Videos</h1>
