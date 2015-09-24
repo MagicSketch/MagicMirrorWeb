@@ -11,8 +11,8 @@ github_username:  jamztang
 gems:
   - jekyll-redirect-from
 analytics:
-  # google: UA-65727569-3
-  # mixpanel: 6ba7071e7855c0925266804032a85acc
+  google: UA-65727569-3
+  mixpanel: 6ba7071e7855c0925266804032a85acc
 
 # Build settings
 markdown: kramdown
