@@ -6,13 +6,13 @@ weight: 1
 ---
 
 <h1>Videos</h1>
-<section class="my2 py2 border-top clearfix" style='background-color:transparent'>
+<section class="my2 py2 clearfix" style='background-color:transparent'>
 <div class="flex-wrap">
 {% for video in site.data.videos %}
 <div class="sm-col sm-col-4 showcase">
-	<img src="http://img.youtube.com/vi/{{ video.yt_id }}/0.jpg" class='fixing'/>
+	<img src="/images/video-placeholder.png" style="background-image:url('http://img.youtube.com/vi/{{ video.yt_id }}/0.jpg');background-position: center; background-size: 100% auto;
+	    background-repeat: no-repeat;"/>
 	<a href="https://youtube.com/watch?v={{ video.yt_id }}&list=PLXM9Shjg7jenAH19HHSWYPJ4EtB4RNDc1" identifier="{{ video.title }}" class="overlay">
-		<img src="http://magicmirror.design/images/showcase-placeholder.png" />
 		<div class="overlay flex flex-end">
 			<div class="flex flex-end m2">
 				<div class="flex-none mr2">
