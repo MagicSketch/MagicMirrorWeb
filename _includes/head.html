@@ -99,17 +99,18 @@
     }
 
     function pickTitleForVideos() {
-      var title = sessionStorage.getItem("videoTitle")
-      if (title == null) {
-        console.log("randomizing title...")
-        var index = getRandomInt(0, 2)
-        var titles = [
-          "videos", "tutorials", "how-to"
-        ]
-        title = titles[index]
-        sessionStorage.setItem("videoTitle", title)
-      }
-      return title
+      // var title = sessionStorage.getItem("videoTitle")
+      // if (title == null) {
+      //   console.log("randomizing title...")
+      //   var index = getRandomInt(0, 2)
+      //   var titles = [
+      //     "videos", "tutorials", "how-to"
+      //   ]
+      //   title = titles[index]
+      //   sessionStorage.setItem("videoTitle", title)
+      // }
+      // return title
+      return "how-to-2015-09-24"
     }
 
     // function pickCenterLink() {
