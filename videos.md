@@ -5,28 +5,60 @@ permalink: /videos/
 weight: 1
 ---
 
-<h1 stlye='text-align:center;'>Videos</h1>
-<div class="flex flex-wrap p1 templates">
+<h1>Videos</h1>
+<section class="my2 py2 border-top clearfix" style='background-color:transparent'>
+<div class="flex-wrap">
 {% for video in site.data.videos %}
-      <div class="lg lg-col-4 md-col-4 sm-col-2">
-        <a href="https://youtube.com/watch?v={{ video.yt_id }}&list=PLXM9Shjg7jenAH19HHSWYPJ4EtB4RNDc1">
-        <img src="http://img.youtube.com/vi/{{ video.yt_id }}/0.jpg" alt="{{ video.title }}"/>
-        </a>
-        <p><a href="https://youtube.com/watch?v={{ video.yt_id }}&list=PLXM9Shjg7jenAH19HHSWYPJ4EtB4RNDc1">{{ video.title }}</a></p><p class="author"><img src="https://avatars.githubusercontent.com/{{ video.github }}" class="avatar"/><a href="https://github.com/{{ video.github }}" class="name">{{ video.github }}</a></p>
-        </div>
-{% endfor %}
-</div>
-<h1 style='text-align:center;'>Articles</h1>
-<div class="flex flex-wrap p1 templates">
-{% for article in site.data.articles %}
-<div class='lg lg-col-3 md-col-3 sm-col-2 px3'>
-<img src="{{ article.featured}}" alt="{{ article.title }}"  />
-<p><a href="{{ article.link }}" alt="{{ article.title }}">{{ article.title }} </a></p>
-<p class="author"><img src="https://avatars.githubusercontent.com/{{ article.github }}" class="avatar"/><a href="https://github.com/{{ article.github }}" class="name">{{ article.github }}</a></p>
+<div class="sm-col sm-col-4 showcase">
+	<img src="http://img.youtube.com/vi/{{ video.yt_id }}/0.jpg" class='fixing'/>
+	<a href="https://youtube.com/watch?v={{ video.yt_id }}&list=PLXM9Shjg7jenAH19HHSWYPJ4EtB4RNDc1" identifier="{{ video.title }}" class="overlay">
+		<img src="http://magicmirror.design/images/showcase-placeholder.png" />
+		<div class="overlay flex flex-end">
+			<div class="flex flex-end m2">
+				<div class="flex-none mr2">
+					<img src="{{ video.avatar }}" class="avatar">
+				</div>
+				<div class="flex flex-column">
+					<div class="flex-auto liner">“{{ video.title }}” </div>
+					<div class="flex-auto author">- {{ video.author }}</div>
+				</div>
+			</div>
+		</div>
+	</a>
 </div>
 {% endfor %}
 </div>
 
-<div class="center wrapper mt4" markdown="1">
-Magic Mirror Templates is still in beta. If you want to help or want to have your own templates show up please read the <a href="/template-guideline">templates contribution guideline</a> :)
+</section>
+<br />
+<h1>Articles</h1>
+<section class="my2 py2 border-top clearfix" style='background-color:black'>
+<div class="flex-wrap">
+{% for article in site.data.articles %}
+<div class="sm-col sm-col-4 showcase fixing">
+	<img src="{{ article.featured }}" class='fixing' />
+	<a href="{{ article.link }}" identifier="{{ article.author }}" class="overlay">
+		<img src="http://magicmirror.design/images/showcase-placeholder.png" />
+		<div class="overlay flex flex-end">
+			<div class="flex flex-end m2">
+				<div class="flex-none mr2">
+					<img src="{{ article.avatar }}" class="avatar">
+				</div>
+				<div class="flex flex-column">
+					<div class="flex-auto liner">“{{ article.title }}” </div>
+					<div class="flex-auto author">- {{ article.author }}</div>
+				</div>
+			</div>
+		</div>
+	</a>
 </div>
+{% endfor %}
+</div>
+
+</section>
+
+
+<div class="center wrapper mt4" markdown="1">
+Magic Mirror Templates is still in beta. If you want to help or want to have your own templates show up please read the <a href="/template-guideline">templates contribution guideline </a> :)
+</div>
+
