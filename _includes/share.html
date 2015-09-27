@@ -1,5 +1,6 @@
-
-{% if page.description %}
+{% if page.share.description %}
+	{% assign desc = page.share.description %}
+{% elsif page.description %}
 	{% assign desc = page.description %}
 {% elsif page.excerpt %}
 	{% assign desc = page.excerpt %}
@@ -7,8 +8,18 @@
 	{% assign desc = site.description %}
 {% endif %}
 
+{% if page.share.title %}
+	{% assign title = page.share.title %}
+{% elsif page.title %}
+	{% assign title = page.title %}
+{% else %}
+	{% assign title = site.title %}
+{% endif %}
+
+{% assign url = site.url|append:page.url|remove:'index.html' %}
+
 {% capture share %}
-{{ page.title }} {{ site.url }}{{ page.id }} {{ desc }}
+{{ page.share.pre }}{{ title }} {{ url }} {{ desc }}{{ page.share.post }}
 {% endcapture %}
 <div class="flex flex-center mb2" style="height:180px;">
 <a href="https://twitter.com/intent/tweet?text={{ share | truncate:140 }}" class="mx-auto tweetcircle" data-via="jamztang">
@@ -25,7 +36,7 @@
 			 }
 		);
      }
-     var urlBase='http://magicmirror.design';
+     var urlBase='{{ url }}';
      getTwitterCount(urlBase); 
 
 </script>

@@ -1,6 +1,9 @@
 ---
 layout: flex
 title: Create Perspective Mockups in Sketch
+share:
+  title: Magic Mirror Sketch 3 Plugin
+  description: Create Perspective Mockups in Sketch
 ---
 
 # Create Perspective Mockups in Sketch

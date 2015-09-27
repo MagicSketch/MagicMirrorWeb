@@ -29,6 +29,9 @@ defaults:
       layout: template
       pagename: Template # for tracking
       is_template: true
+      share:
+        pre: "Sketch Perspective Mockup "
+        post: " for Magic Mirror"
   - scope:
       type: "posts"
     values:
