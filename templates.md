@@ -70,5 +70,3 @@ share:
 Magic Mirror Templates is still in beta. If you want to help or want to have your own templates show up please read the <a href="/template-guideline">templates contribution guideline</a> :)
 
 </div>
-
-{% include share.html %}
