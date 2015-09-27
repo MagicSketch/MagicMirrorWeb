@@ -30,14 +30,30 @@ footer .nav a {
 
     {% if site.analytics.mixpanel %}
     {% if page.pagename %}
-    mixpanel.track("View {{ page.pagename }}",
+      {% assign title = page.pagename %}
+    {% elsif page.title %}
+      {% assign title = page.title %}
+    {% endif %}
+
+    {% if page.share %}
+      {% assign share = true %}
+    {% else %}
+      {% assign share = false %}
+    {% endif %}
+
+    {% if page.subscribe %}
+      {% assign subscribe = true %}
+    {% else %}
+      {% assign subscribe = false %}
+    {% endif %}
+
+    mixpanel.track("View {{ title }}",
     {
       "identifier" : "{{ page.identifier }}",
       "title" : "{{ page.title }}",
+      "share" : {{ share }},
+      "subscribe" : {{ subscribe }},
     });
-    {% else %}
-    mixpanel.track("View {{ page.title }}");
-    {% endif %}
     {% endif %}
 
     $("#submitButton").click(function(event) {

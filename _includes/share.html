@@ -1,0 +1,43 @@
+{% if page.share.description %}
+	{% assign desc = page.share.description %}
+{% elsif page.description %}
+	{% assign desc = page.description %}
+{% elsif page.excerpt %}
+	{% assign desc = page.excerpt %}
+{% else %}
+	{% assign desc = site.description %}
+{% endif %}
+
+{% if page.share.title %}
+	{% assign title = page.share.title %}
+{% elsif page.title %}
+	{% assign title = page.title %}
+{% else %}
+	{% assign title = site.title %}
+{% endif %}
+
+{% assign url = site.url|append:page.url|remove:'index.html' %}
+
+{% capture share %}
+{{ page.share.pre }}{{ title }} {{ url }} {{ desc }}{{ page.share.post }}
+{% endcapture %}
+<div class="flex flex-center mb2" style="height:180px;">
+<a href="https://twitter.com/intent/tweet?text={{ share | truncate:140 }}" class="mx-auto tweetcircle" data-via="jamztang">
+<span id="twitterCount">calculating</span>
+</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+
+     function getTwitterCount(url){
+        var tweets;
+        $.getJSON('http://urls.api.twitter.com/1/urls/count.json?url=' + url + '&callback=?',
+         	function(data){
+			     tweets = data.count;
+			     $('#twitterCount').html("tweets " + tweets);
+			 }
+		);
+     }
+     var urlBase='{{ url }}';
+     getTwitterCount(urlBase); 
+
+</script>
+</div>

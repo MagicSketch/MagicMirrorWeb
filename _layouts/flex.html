@@ -15,6 +15,9 @@
       </div>
     </div>
 
+    {% if page.share %}{% include share.html %}{% endif %}
+    {% if page.subscribe %}{% include subscribe.html %}{% endif %}
+
     {% include footer.html %}
 
   </body>

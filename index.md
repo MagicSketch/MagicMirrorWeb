@@ -1,6 +1,10 @@
 ---
 layout: flex
 title: Create Perspective Mockups in Sketch
+subscribe: true
+share:
+  title: Magic Mirror Sketch 3 Plugin
+  description: Create Perspective Mockups in Sketch
 ---
 
 # Create Perspective Mockups in Sketch
@@ -112,4 +116,3 @@ It then hands the content over to [Core Image](https://developer.apple.com/libra
 {% include featured.html %}
 {% include purchase.html %}
 {% include community.html %}
-{% include subscribe.html %}
