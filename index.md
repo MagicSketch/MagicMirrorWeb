@@ -112,4 +112,5 @@ It then hands the content over to [Core Image](https://developer.apple.com/libra
 {% include featured.html %}
 {% include purchase.html %}
 {% include community.html %}
+{% include share.html %}
 {% include subscribe.html %}

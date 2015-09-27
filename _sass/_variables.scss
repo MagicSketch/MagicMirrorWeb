@@ -226,3 +226,32 @@ a.btn {
   font-size:18px;
   font-weight:bold;
 }
+
+a.tweetcircle {
+  height: 167px;
+  width: 167px;
+  background-image: url("/images/tweetcircle.svg")
+}
+
+a.mx-auto.tweetcircle {
+  position:relative;
+}
+
+#twitterCount {
+  text-align: center;
+  position: absolute;
+  bottom: 36px;
+  width: 100%;
+  font-family: Asap-Regular;
+  font-size: 23px;
+  color: #FA9402;
+  line-height: 29px;
+}
+
+a.tweetcircle:hover {
+  background-image: url("/images/tweetcircle-active.svg")
+}
+
+a.tweetcircle:hover #twitterCount {
+  color: white;
+}
