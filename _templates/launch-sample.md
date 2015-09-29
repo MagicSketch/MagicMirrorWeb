@@ -4,6 +4,7 @@ description: The original sample Sketch file
 image: sample.jpg
 author: jamztang
 identifier: launch-sample
+weight: 750
 ---
 
 The original sample Sketch file.

@@ -7,6 +7,7 @@ identifier: iphone6s-hands
 members: false
 hidden: false
 permalink: /templates/iphone6s-hands/
+weight: 249
 ---
 
 Collection of iPhone 6s with hands mockups on the official website.
