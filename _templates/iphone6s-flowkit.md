@@ -10,6 +10,4 @@ permalink: /templates/iphone6s-flowkit/
 weight: 1
 ---
 
-Collection of iPhone 6s with hands mockups on the official website.
-
 Like it? Tweet the link above, and consider purchasing the license :)
