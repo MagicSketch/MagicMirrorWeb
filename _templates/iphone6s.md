@@ -7,6 +7,7 @@ identifier: iphone6s
 members: false
 hidden: false
 permalink: /templates/iphone6s/
+weight: 250
 ---
 
 The only thing that’s changed is now we’re using Sketch.

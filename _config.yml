@@ -29,6 +29,7 @@ defaults:
       layout: template
       pagename: Template # for tracking
       is_template: true
+      weight: 500
       share:
         pre: "Sketch Perspective Mockup "
         post: " for Magic Mirror"

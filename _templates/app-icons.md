@@ -4,6 +4,7 @@ description: iOS App Icon template
 image: appicon.jpg
 author: FradSer
 identifier: app-icons-by-fradser
+weight: 750
 ---
 
 iOS App Icons template.

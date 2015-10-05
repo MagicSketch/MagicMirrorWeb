@@ -19,9 +19,9 @@ share:
     {% else %}
 
     {% if item.members %}
-    <div class="flex sm-col-6 md-col-4 border-box p1 template members">
+    <div class="flex sm-col-6 md-col-4 border-box p1 template members" style="order:{{ item.weight }}">
     {% else %}
-    <div class="flex sm-col-6 md-col-4 border-box p1 template free">
+    <div class="flex sm-col-6 md-col-4 border-box p1 template free" style="order:{{ item.weight }}">
     {% endif %}
 
 
