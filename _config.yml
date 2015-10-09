@@ -41,3 +41,8 @@ defaults:
     values:
       pagename: Post
       is_post: true
+  - scope:
+      type: videos
+    values:
+      layout: video
+      pagename: Video # for tracking
