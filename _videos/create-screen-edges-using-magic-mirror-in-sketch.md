@@ -6,6 +6,7 @@ sketch: https://github.com/jamztang/MagicMirror/releases/download/templates/magi
 author: jamztang
 yt_id: ORzAM5Qjpmw
 link: https://youtu.be/ORzAM5Qjpmw?list=PLXM9Shjg7jenAH19HHSWYPJ4EtB4RNDc1
+description: Utilizing Transform Tool, Rotate Content, Flip Content, Masks, and Gradient Fills for Shading
 ---
 
 Utilizing Transform Tool, Rotate Content, Flip Content, Masks, and Gradient Fills for Shading
