@@ -5,7 +5,7 @@ image: iphone6s-flowkit.jpg
 author: jamztang
 identifier: iphone6s-flowkit
 members: false
-hidden: true
+hidden: false
 permalink: /templates/iphone6s-flowkit/
 weight: 1
 ---

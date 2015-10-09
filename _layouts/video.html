@@ -1,0 +1,33 @@
+---
+layout: page
+---
+
+<div class="flex flex-wrap mxn2 templates">
+    <div class="flex sm-col-12 border-box p1 template">
+      <div class="p1 border rounded">
+          <div style="position:relative">
+          <img src="/images/showcase-placeholder.png" style="background-image:url('http://img.youtube.com/vi/{{ video.yt_id }}/0.jpg');background-position: center; background-size: 100% auto;
+      background-repeat: no-repeat;"/>
+          <div class="overlay flex flex-center">
+            <div style="width: 100%; height: 100%">
+              <div class="videoWrapper video-16-9">
+                  <iframe width="1920" height="1200" src="https://www.youtube.com/embed/{{ page.yt_id }}" frameborder="0" allowfullscreen></iframe>
+              </div>
+            </div>
+          </div>
+    </div>
+        <div class="mx-auto">
+        <span class="flex flex-center">
+          <span class="flex-auto">
+            <h4 class="title mt1 mb1 bold">{{ page.title }}</h4>
+            <i class="meta m0">{{ page.content }}</i>
+            <div><i class="fa fa-download"></i><a href="{{ page.sketch }}"> .sketch file</a></div>
+            {% assign author = site.data.authors[page.author] %}
+            <p class="author"><img src="{{ author.avatar }}" class="avatar"/><a href="{{ author.link }}" identifier="{{ page.author }}" class="name">{{ page.author }}</a></p>
+        </span>
+    </span>
+    </div>
+      </div>
+    </div>
+
+</div>
