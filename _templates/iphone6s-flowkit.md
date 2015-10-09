@@ -5,9 +5,13 @@ image: iphone6s-flowkit.jpg
 author: jamztang
 identifier: iphone6s-flowkit
 members: false
-hidden: true
+hidden: false
 permalink: /templates/iphone6s-flowkit/
 weight: 1
 ---
 
-Like it? Tweet the link above, and consider purchasing the license :)
+There's a number of use cases that you can use Magic Mirror to improve your design workflow. 
+
+The Application Flow template is aimed to let you create wireframe much more easily.
+
+[Watch the video](/videos/create-applicatin-flow-using-magic-mirror-in-sketch/) on how to use this template.

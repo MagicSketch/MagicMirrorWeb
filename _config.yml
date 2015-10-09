@@ -21,6 +21,9 @@ collections:
   templates:
     output: true
     permalink: /templates/:path/
+  videos:
+    output: true
+    permalink: /videos/:path/
 
 defaults:
   - scope:

@@ -41,6 +41,8 @@
     {% else %}
       {% capture image %}{{ site.url }}{{ page.image }}{% endcapture %}
     {% endif %}
+  {% elsif page.yt_id %}
+      {% capture image%}http://img.youtube.com/vi/{{ page.yt_id }}/0.jpg{% endcapture %}
   {% else %}
     {% capture image %}{{ site.url }}/images/ogimage-julie.jpg{% endcapture %}
   {% endif %}

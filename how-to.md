@@ -11,10 +11,17 @@ description: All video tutorials and articles for Sketch and Magic Mirror Plugin
 <section class="my2 py2 clearfix" style='background-color:transparent'>
 <div class="flex-wrap">
 {% for video in site.data.videos %}
+
+{% if video.link %}
+{% assign link = video.link %}
+{% else %}
+{% assign link = "https://youtube.com/watch?v={{ video.yt_id }}&list=PLXM9Shjg7jenAH19HHSWYPJ4EtB4RNDc1" %}
+{% endif %}
+
 <div class="sm-col sm-col-4 showcase">
 	<img src="/images/video-placeholder.png" style="background-image:url('http://img.youtube.com/vi/{{ video.yt_id }}/0.jpg');background-position: center; background-size: 100% auto;
 	    background-repeat: no-repeat;"/>
-	<a href="https://youtube.com/watch?v={{ video.yt_id }}&list=PLXM9Shjg7jenAH19HHSWYPJ4EtB4RNDc1" identifier="{{ video.identifier }}" class="overlay">
+	<a href="{{ link }}" identifier="{{ video.identifier }}" class="overlay">
 		<div class="overlay flex flex-end">
 			<div class="flex flex-end m2">
 				<div class="flex-none mr2">
