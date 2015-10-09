@@ -2,6 +2,7 @@
 layout: video
 permalink: /videos/create-application-flow-using-magic-mirror-in-sketch/
 title: Create Application Flow using Magic Mirror in Sketch
+identifier: create-application-flow-using-magic-mirror-in-sketch
 sketch: /templates/iphone6s-flowkit/
 author: jamztang
 yt_id: DGZuI9RDel4

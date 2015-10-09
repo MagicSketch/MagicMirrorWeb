@@ -2,6 +2,7 @@
 layout: video
 permalink: /videos/create-screen-edges-using-magic-mirror-in-sketch/
 title: Creating Screen Edges Using Magic Mirror in Sketch
+identifier: create-screen-edges-using-magic-mirror-in-sketch
 sketch: https://github.com/jamztang/MagicMirror/releases/download/templates/magicmirror-screen-edge-demo.sketch
 author: jamztang
 yt_id: ORzAM5Qjpmw
