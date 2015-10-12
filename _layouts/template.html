@@ -38,6 +38,7 @@
         {% else %}
         <div class="mx-auto">
             <form action="{{ site.downloadurl }}/{{ page.identifier }}" id="downloadForm">
+            <input type="hidden" class="license-box col-12 sm-col-6 clearfix border-box mr1 mt1" name="license" id="license" placeholder="Enter your license key..." />
             <input type="hidden" name="redirect_url" value="{{ site.url }}{{ page.url }}" />
             <input type="button" value="DOWNLOAD" class="border-box center btn btn-outline gray col-4 sm-col-2 mt1 download" id="submitButton" identifier="{{ page.identifier }}"/>
           </form>

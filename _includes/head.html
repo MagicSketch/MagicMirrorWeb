@@ -87,12 +87,12 @@
     function setLicense() {
       if ($("#license").length > 0) { 
         var license = $("#license").val()
-        sessionStorage.setItem("license", license)
+        setStorage("license", license)
       }
     }
 
     function fillLicense() {
-       var license = sessionStorage.getItem("license")
+       var license = getStorage("license")
        if (license) {
          $("#license").val(license)
        }
@@ -103,7 +103,7 @@
     }
 
     function pickTitleForVideos() {
-      // var title = sessionStorage.getItem("videoTitle")
+      // var title = getStorage("videoTitle")
       // if (title == null) {
       //   console.log("randomizing title...")
       //   var index = getRandomInt(0, 2)
@@ -111,15 +111,29 @@
       //     "videos", "tutorials", "how-to"
       //   ]
       //   title = titles[index]
-      //   sessionStorage.setItem("videoTitle", title)
+      //   setStorage("videoTitle", title)
       // }
       // return title
       return "how-to-2015-09-24"
     }
 
+    function pickDownloadButtonTitle() {
+      var title = getStorage("downloadButtonTitle")
+      if (title == null) {
+        console.log("randomizing downloadButton title...")
+        var titles = [
+          "Try", "Download"
+        ]
+        var index = getRandomInt(0, titles.length - 1)
+        title = titles[index]
+        setStorage("downloadButtonTitle", title)
+      }
+      $(".free-download").html(title)
+      return title
+    }
     // function pickCenterLink() {
 
-    //   var title = sessionStorage.getItem("center_link")
+    //   var title = getStorage("center_link")
     //   if (title == null) {
     //     console.log("randomizing center_link...")
     //     var index = getRandomInt(0, 1)
@@ -128,11 +142,38 @@
     //       "#get-license-free"
     //     ]
     //     title = titles[index]
-    //     sessionStorage.setItem("center_link", title)
+    //     setStorage("center_link", title)
     //   }
     //   console.log("pick center link", title)
     //   return title
     // }
+
+    function setCookie(cname, cvalue, exdays) {
+        var d = new Date();
+        d.setTime(d.getTime() + (exdays*24*60*60*1000));
+        var expires = "expires="+d.toUTCString();
+        document.cookie = cname + "=" + cvalue + "; " + expires;
+    }
+
+    function getCookie(cname) {
+        var name = cname + "=";
+        var ca = document.cookie.split(';');
+        for(var i=0; i<ca.length; i++) {
+            var c = ca[i];
+            while (c.charAt(0)==' ') c = c.substring(1);
+            if (c.indexOf(name) == 0) return c.substring(name.length, c.length);
+        }
+        return null;
+    }
+
+    function setStorage(cname, cvalue) {
+      setCookie(cname, cvalue, 180)
+    }
+
+    function getStorage(cname) {
+      return getCookie(cname)
+    }
+
 
     var DateDiff = {
 
@@ -201,6 +242,7 @@
           "video_title":title,
           "video":"intro20150907",
           "share-index": true,
+          "download_button_title": pickDownloadButtonTitle()
           // "center_link":center_link,
         })
       {% endif %}
