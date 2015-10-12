@@ -117,6 +117,20 @@
       return "how-to-2015-09-24"
     }
 
+    function pickDownloadButtonTitle() {
+      var title = sessionStorage.getItem("downloadButtonTitle")
+      if (title == null) {
+        console.log("randomizing downloadButton title...")
+        var titles = [
+          "Try", "Download"
+        ]
+        var index = getRandomInt(0, titles.length - 1)
+        title = titles[index]
+        sessionStorage.setItem("downloadButtonTitle", title)
+      }
+      $(".free-download").html(title)
+      return title
+    }
     // function pickCenterLink() {
 
     //   var title = sessionStorage.getItem("center_link")
@@ -201,6 +215,7 @@
           "video_title":title,
           "video":"intro20150907",
           "share-index": true,
+          "download_button_title": pickDownloadButtonTitle()
           // "center_link":center_link,
         })
       {% endif %}

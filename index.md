@@ -28,7 +28,7 @@ share:
 	<sup class="red">NEW (21/9)</sup>
 </div> -->
 <div class="flex-auto center">
-	<a href="{{ site.downloadurl }}/latest" identifier="Free-Download" class="flex-auto border-box center btn btn-outline orange"><i class="fa fa-arrow-circle-o-down"></i>    Try</a>
+	<a href="{{ site.downloadurl }}/latest" identifier="Free-Download" class="flex-auto border-box center btn btn-outline orange"><i class="fa fa-arrow-circle-o-down"></i>    <span class="free-download">Try</span></a>
 	<a href="/purchase" identifier="Get-Full-License-Top" class="flex-auto border-box center btn btn-outline orange strong">Get License 50% off</a>
 </div>
 </div>
