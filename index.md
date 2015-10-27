@@ -12,10 +12,15 @@ share:
 <div class="wrapper">
 <div class="flex flex-wrap mxn1 px1 py2 flex-center flex-start nav">
 <div class="flex-auto border-box center btn orange">
+	<a href="/2015/10/27/sketch-3-4-fixes.html" identifier="sketch-3-4-fixes" class="clearfix">v1.2.1 for Sketch 3.4 Fixes</a>
+	<sup class="red">UPDATED (27/10)</sup>
+</div>
+<!-- 
+<div class="flex-auto border-box center btn orange">
 	<a href="/beta/v1.3" identifier="Beta-2-v1.3" class="clearfix">v1.3 Beta 2 + Corner Radius</a>
 	<sup class="red">UPDATED (05/09)</sup>
 </div>
-<!-- <div class="flex-auto center btn orange border-box none" id="get-license-free">
+<div class="flex-auto center btn orange border-box none" id="get-license-free">
 	<a href="/madewithmagicmirror" identifier="Get-License-Free" class="clearfix">Get a license for free</a>
 	<sup class="gray">ENDED (20/8-24/8)</sup>
 </div> -->
