@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  Sketch 3.4 Fixes
+title:  v1.2.1 for Sketch 3.4 Fixes
 date:   2015-10-27 10:04
 identifier: 2015-10-27-sketch-3-4-fixes
 ---
