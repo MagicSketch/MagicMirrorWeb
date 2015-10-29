@@ -235,6 +235,15 @@
       }, 3000);
     }
 
+    function proceedToDownload() {
+      window.location = "{{ site.downloadurl }}/latest"
+    }
+    function proceedToDownloadDelayed() {
+      setTimeout(function(){ 
+        proceedToDownload()
+      }, 3000);
+    }
+
     $( document ).ready(function() {
       console.log( "ready!" );
       

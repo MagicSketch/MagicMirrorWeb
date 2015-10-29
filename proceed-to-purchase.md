@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Proceeding to Purchase
-permalink: /proceeding-to-purchase/
+permalink: /proceed-to-purchase/
 ---
 
 <div markdown="1" class="center" style="height:300px">
