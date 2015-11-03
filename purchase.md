@@ -2,7 +2,7 @@
 layout: page
 title: Purchase
 permalink: /purchase/
-weight: 5
+weight: 4
 ---
 
 
