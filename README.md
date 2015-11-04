@@ -1,4 +1,8 @@
-# MagicMirrorWeb
+---
+layout: page
+title: Web Development
+permalink: /web-development/
+---
 
 ## To run the project locally
 
@@ -45,4 +49,7 @@ git checkout -b feature/new_feature
 
 3) Start working on the feature and commit frequently, finally push to your repository
 
-4) Once the feature is complete, make a pull request to merge to the `develop` branch
+4) Once the feature is complete, make a pull request to the official repo and make sure it's based on the `develop` branch.
+![](/images/create_pull_request.png)
+
+5) Let me know :D
