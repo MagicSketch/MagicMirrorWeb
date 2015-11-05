@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Purchase
+title: Pro Version
 permalink: /purchase/
 weight: 4
 ---
