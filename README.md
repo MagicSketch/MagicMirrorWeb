@@ -19,13 +19,16 @@ cd /path/to/project
 git checkout develop
 ```
 
-3) Run the [jekyll](http://jekyllrb.com) server
+3) Run the [Jekyll](http://jekyllrb.com) server. If you're on Windows, follow [this](https://github.com/madhur/PortableJekyll)
+and [this](http://jekyll-windows.juthilo.com/1-ruby-and-devkit/) link.
 
 ```
 jekyll serve
 ```
 
 4) Open browser and head to [http://localhost:4000](http://localhost:4000)
+
+![](/images/running.png)
 
 
 ## The development workflow
@@ -50,6 +53,7 @@ git checkout -b feature/new_feature
 3) Start working on the feature and commit frequently, finally push to your repository
 
 4) Once the feature is complete, make a pull request to the official repo and make sure it's based on the `develop` branch.
+
 ![](/images/create_pull_request.png)
 
 5) Let me know :D
