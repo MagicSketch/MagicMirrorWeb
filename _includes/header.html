@@ -24,8 +24,16 @@
             {% endif %}
           {% endif %}
         {% endfor %}
+
+        {% if page.purchase-button %}
+            <a href="/proceed-to-purchase/" identifier="proceed-to-purchase-top" class="purchase-button custom-button-nav">Upgrade for $10 <s>$19</s></a>
+            <!--<a class="page-link purchase-button" href="">Upgrade for $10 $19</a>-->
+        {% endif %}
+
       </div>
     </nav>
+
+
 
   </div>
 

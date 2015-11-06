@@ -3,6 +3,7 @@ layout: page-without-title
 title: Pro Version
 permalink: /purchase/
 weight: 4
+purchase-button: true
 ---
 
 <style type="text/css">
@@ -10,9 +11,14 @@ weight: 4
 	{
 	    color: #fff !important;
 		background-color: #F79403;
-		padding: 5px 15px 5px 15px;
-		border-radius: 10px;
+		padding: 10px 20px 10px 20px;
+		border-radius: 20px;
 		text-decoration: none !important;
+	}
+
+	.custom-button-nav
+	{
+		margin: 0 0px 0 10px;
 	}
 
 	.first-block-left
@@ -158,7 +164,7 @@ weight: 4
 		<div style="text-align:center;">
 			The transformed images will look as good in 200% zoomed in, even when you export in @2x resolution.
 			<br><br>
-			<a href="/proceed-to-purchase/" class="purchase-button">Upgrade for $10 $19</a>
+			<a href="/proceed-to-purchase/" class="purchase-button">Upgrade for $10 <s>$19</s></a>
 		</div>
 	</div>
 	<div class="first-block-right">
@@ -176,7 +182,7 @@ weight: 4
 		<div style="text-align:center;">
 			Magic mirror will also detect Artboards in a different page and transform the content to your shape.
 			<br><br>
-			<a href="/proceed-to-purchase/" class="purchase-button">Upgrade for $10 $19</a>
+			<a href="/proceed-to-purchase/" class="purchase-button">Upgrade for $10 <s>$19</s></a>
 		</div>
 	</div>
 </div>
@@ -188,7 +194,7 @@ weight: 4
 		<div style="text-align:center;">
 			A Quick way to preserve the paths orientation and flip the upside down , useful for creating reflections and mirroring effects.
 			<br><br>
-			<a href="/proceed-to-purchase/" class="purchase-button">Upgrade for $10 $19</a>
+			<a href="/proceed-to-purchase/" class="purchase-button">Upgrade for $10 <s>$19</s></a>
 		</div>
 	</div>
 	<div class="third-block-right">
@@ -228,7 +234,7 @@ weight: 4
 </div>
 <br>
 <div class="sixth-block">
-	<a href="/proceed-to-purchase/" class="purchase-button">Upgrade for $10 $19</a>
+	<a href="/proceed-to-purchase/" class="purchase-button">Upgrade for $10 <s>$19</s></a>
 </div>
 <br><br><br>
 
