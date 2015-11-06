@@ -156,7 +156,7 @@ purchase-button: true
 
 </style>
 
-## What's in the Pro version
+# What's in the Pro version
 
 <div class="first-block">
 	<div class="first-block-left">
@@ -164,7 +164,7 @@ purchase-button: true
 		<div style="text-align:center;">
 			The transformed images will look as good in 200% zoomed in, even when you export in @2x resolution.
 			<br><br>
-			<a href="/proceed-to-purchase/" class="purchase-button">Upgrade for $10 <s>$19</s></a>
+			<a href="/proceed-to-purchase/" identifier="proceed-to-purchase-retina-image" class="purchase-button">Upgrade for $10 <s>$19</s></a>
 		</div>
 	</div>
 	<div class="first-block-right">
@@ -180,9 +180,9 @@ purchase-button: true
 	<div class="second-block-right">
 		<div class="page-heading">Across Page Referencing</div>
 		<div style="text-align:center;">
-			Magic mirror will also detect Artboards in a different page and transform the content to your shape.
+			Magic Mirror will also detect Artboards in a different page and transform the content to your shape.
 			<br><br>
-			<a href="/proceed-to-purchase/" class="purchase-button">Upgrade for $10 <s>$19</s></a>
+			<a href="/proceed-to-purchase/" identifier="proceed-to-purchase-across-page-reference" class="purchase-button">Upgrade for $10 <s>$19</s></a>
 		</div>
 	</div>
 </div>
@@ -192,9 +192,9 @@ purchase-button: true
 	<div class="third-block-left">
 		<div class="page-heading">Flip Content</div>
 		<div style="text-align:center;">
-			A Quick way to preserve the paths orientation and flip the upside down , useful for creating reflections and mirroring effects.
+			A quick way to preserve the paths orientation and flip the content upside down, useful for creating reflections and mirroring effect.
 			<br><br>
-			<a href="/proceed-to-purchase/" class="purchase-button">Upgrade for $10 <s>$19</s></a>
+			<a href="/proceed-to-purchase/" identifier="proceed-to-purchase-flip-content" class="purchase-button">Upgrade for $10 <s>$19</s></a>
 		</div>
 	</div>
 	<div class="third-block-right">
@@ -234,7 +234,7 @@ purchase-button: true
 </div>
 <br>
 <div class="sixth-block">
-	<a href="/proceed-to-purchase/" class="purchase-button">Upgrade for $10 <s>$19</s></a>
+	<a href="/proceed-to-purchase/" identifier="proceed-to-purchase-tips" class="purchase-button">Upgrade for $10 <s>$19</s></a>
 </div>
 <br><br><br>
 

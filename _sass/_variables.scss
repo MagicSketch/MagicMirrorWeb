@@ -3,6 +3,17 @@
 .btn-outline {
   border-radius: 22px;
 }
+
+
+.custom-nav-seperator
+{
+  border-left: 1px solid rgba(154, 154, 154, 0.62);
+  padding: 0px 0px 0 13px;
+  position: relative;
+  left: -10px;
+}
+
+
 .showcase {
 	background-size: cover;
 	background-position: center;

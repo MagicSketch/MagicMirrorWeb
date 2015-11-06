@@ -19,22 +19,20 @@
           {% if page.weight %}
             {% if page.title == "Videos" %}
             <a class="page-link" id="videoLink" href="{{ page.url | prepend: site.baseurl }}">{{ page.title | downcase }}</a>
+            {% elsif page.permalink == "/purchase/" %}
+            <a class="page-link custom-nav-seperator" href="{{ page.url | prepend: site.baseurl }}">{{ page.title | downcase }}</a>
             {% else %}
-            <a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title | downcase }}</a>
+            <a class="page-link"  href="{{ page.url | prepend: site.baseurl }}">{{ page.title | downcase }}</a>
             {% endif %}
           {% endif %}
         {% endfor %}
 
         {% if page.purchase-button %}
-            <a href="/proceed-to-purchase/" identifier="proceed-to-purchase-top" class="purchase-button custom-button-nav">Upgrade for $10 <s>$19</s></a>
-            <!--<a class="page-link purchase-button" href="">Upgrade for $10 $19</a>-->
+            <a href="/proceed-to-purchase/" identifier="proceed-to-purchase-top" class="purchase-button">Upgrade for $10 <s>$19</s></a>
         {% endif %}
 
       </div>
     </nav>
-
-
-
   </div>
 
 </header>
