@@ -168,8 +168,7 @@ purchase-button: true
 		<img style="max-width: 550px !important;" src="/images/purchase-retina-image.png">
 	</div>
 </div>
-<div class="clear"></div>
-<br />
+<div class="py2 clear"></div>
 
 <div class="second-block">
 	<div class="second-block-left col-7">
@@ -184,8 +183,7 @@ purchase-button: true
 		</div>
 	</div>
 </div>
-<div class="clear"></div>
-<br />
+<div class="py2 clear"></div>
 
 <div class="third-block">
 	<div class="third-block-left col-5">
@@ -200,8 +198,7 @@ purchase-button: true
 		<img src="/images/purchase-flip-content.png">
 	</div>
 </div>
-<div class="clear"></div>
-<br />
+<div class="py2 clear"></div>
 
 <div class="fourth-block">
 	<div class="fourth-block-center">
@@ -214,8 +211,7 @@ purchase-button: true
 		</span>
 	</div>
 </div>
-<div class="clear"></div>
-<br />
+<div class="py2 clear"></div>
 
 <div class="fifth-block">
 	<br>
@@ -233,7 +229,8 @@ purchase-button: true
 	</div>
 	<br>
 </div>
-<br />
+
+<div class="py2 clear"></div>
 
 <div class="sixth-block">
 	<a href="/proceed-to-purchase/" identifier="proceed-to-purchase-tips" class="purchase-button">Upgrade for $10 <s>$19</s></a>
