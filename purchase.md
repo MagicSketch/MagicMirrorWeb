@@ -157,7 +157,7 @@ purchase-button: true
 
 <div class="first-block">
 	<div class="first-block-left">
-		<div class="page-heading">Ratina Image Support</div>
+		<div class="page-heading">Retina Image Support</div>
 		<div style="text-align:center;">
 			The transformed images will look as good in 200% zoomed in, even when you export in @2x resolution.
 			<br><br>
