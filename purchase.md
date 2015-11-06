@@ -1,66 +1,239 @@
 ---
-layout: page
-title: Purchase
+layout: page-without-title
+title: Pro Version
 permalink: /purchase/
 weight: 4
+purchase-button: true
 ---
 
+<style type="text/css">
+	.purchase-button
+	{
+	    color: #fff !important;
+		background-color: #F79403;
+		padding: 10px 20px 10px 20px;
+		border-radius: 20px;
+		text-decoration: none !important;
+	}
 
-Magic Mirror is free to download for personal use, it's also an [opensourced on Github](http://github.com/jamztang/MagicMirror) for code review and contributions.
+	.custom-button-nav
+	{
+		margin: 0 0px 0 10px;
+	}
 
-Current version of Magic Mirror is licensed under the Creative Commons Attribution-NonCommercial 4.0 International License.
+	.first-block-left
+	{
+		width: 35%;
+		float:left;
+		padding: 110px 0;
+	}
 
-To use it for commerical projects, you'll have to obtain commercial license through purchasing below. <sub>(Early donors in v1.1 or before will **not** need to pay anything extra to continue to use the plugin for commercial purpose.)</sub>
+	.page-heading
+	{
+		text-align:center;
+		font-size: 25px;
+	}
 
-For the pricing, please welcome our new "Coffee Menu".
+	.first-block-right
+	{
+		width: 65%;
+		float:right;
+	}
 
-## Coffee Menu
+	.clear
+	{
+		clear: both;
+	}
 
-||Free Drip |Espresso|
-|---|:-:|:-:|
-|4-points Perspective Transform (Magic Mirror!)|x|x|
-|Rotate Content|x|x|
-|Jump To Artboard|x|x|
-|Flip Content| |x|
-|Retina Images (@2x)| |x|
-|Across Page Screen Mirroring| |x|
-|*Crystal Clear Images (@3x or above)| |...|
-|*Cross Sketch File Reference| |...|
-|*Circle/Round Rect Support| |...|
-|Commercial Use| |x|
-| |Free|<a href="javascript:void(0);" identifier="Buy" onclick="donateClicked()" class="center btn btn-outline orange">$10</a>|
-| ||<s>$19</s>|
+	.second-block-left
+	{
+		float: left;
+	}
 
-## Why I make it paid?
+	.second-block-right
+	{
+		width: 40%;
+		float: right;
+		padding: 100px 0px;
+	}
 
-Magic Mirror initially launch at 30 July has quickly become my most successful product. The plugin went on top of DesignerNews front page within hours, four days later cracked into TheNextWeb. Till now and counting, nearly 500 retweets is marked on this site. My email has received tons of feedbacks from awesome people, appreciations and feature requests.
+	.third-block-left
+	{
+		float: left;
+		padding: 120px 0;
+	}
 
-Moreover, Google Analytics reported more than 10,000 page views in just 5 days. My Github tracked more than 2,200 downloads, plus an unknown number of people that uses SketchToolbox or the forgotten number that I've used Cloudly which got deleted due to traffic overload.
+	.third-block-right
+	{
+		float: right;
+	}
 
-Sounds like it's doing well, right? In fact, only 55 donations has been made in this 20 days. That's less than 2% of the users has taken out their wallets. Considering every $5 transaction, $0.5 will be somehow charged by Paypal, I am sure you can quickly do a math and know how much Magic Mirror had made.
+	.fourth-block
+	{
+		width: 100%;
+		background-color: #E5E5E5;
+		border-radius: 10px;
+	}
 
-It's pretty clear that the donation modal will never be sustainable. From an individual developer's point of view, there could be two possible route:
+	.fourth-block-center
+	{
+		padding: 10px 10px 10px 10px;
+	}
 
-1. Continue to be nice and feel good about having people donating occationally, until something else more cost effective takes up my time
-2. Be better product owner and make decisions based on what should made the product successful
+	.fourth-block-center span
+	{
+		font-size: 13px;
+	}
 
-<!-- ![](/images/red-blue-pill.jpg) -->
+	.fourth-block-center span span
+	{
+		font-weight: bold;
+	}
 
-After lots of struggle, I decided to take path 2.
+	.fifth-block
+	{
+		background-color: #FFF7D0;
+		width:100%;
+		border-radius: 10px;
+	}
 
-To justify the value of Magic Mirror, I've taken a look at some others. One of the very rarely available commerical plugin for Sketch (originally came from Photoshop) charges for $39.99, designed to provide better markups on design specs. Another one creating perspective mockups in Photoshop selling for $19.99. Nothing else offer similar functionality like Magic Mirror does is yet available to Sketch user.
+	.fifth-first
+	{
+		float: left;
+		width: 30%;
+		padding: 0 15px 0 15px;
+		text-align: center;
+	}
 
-## Going from Donation to Freemium
+	.fifth-second
+	{
+		float: left;
+		width: 30%;
+		padding: 0 20px 0 0px;
+	}
 
-It feels right to start the initial price of Magic Mirror at $10. The updated version will still be free for personal use, however advanced features will require a license key to unlock.
+	.sixth-block
+	{
+		width: 100%;
+		text-align: center;
+	}
 
-But again, early donors are already having the commercial license and will be able continue to use all the advanced features :) (of course, man!)
+	.seventh-block
+	{
+		width: 100%;
+		background-color: #FAFAFA;
+	}
 
-A number of beta testers for v1.2 were amazed and satisfied with the new features.
+	.seventh-first
+	{
+		width: 23%;
+		float: left;
+	}
 
-> People who write down their goals are much more likely to achieve them
+	.seventh-second
+	{
+		width: 23%;
+		float: left;
+		padding: 0 15px 0 0;
+	}
 
-*Features with asterisks are just a few in my road map. There're a lot more plans I have with Magic Mirror. With the changes in the pricing modal, I am confident that we will create a better world for Sketch users and designers.
+	.seventh-third
+	{
+		width: 23%;
+		float: left;
+		padding: 0 0px 0 10px;
+	}
+
+	.seventh-fourth
+	{
+		width: 23%;
+		float: right;
+	}
 
 
+</style>
+
+# What's in the Pro version
+
+<div class="first-block">
+	<div class="first-block-left">
+		<div class="page-heading">Retina Image Support</div>
+		<div style="text-align:center;">
+			The transformed images will look as good in 200% zoomed in, even when you export in @2x resolution.
+			<br><br>
+			<a href="/proceed-to-purchase/" identifier="proceed-to-purchase-retina-image" class="purchase-button">Upgrade for $10 <s>$19</s></a>
+		</div>
+	</div>
+	<div class="first-block-right">
+		<img style="max-width: 550px !important;" src="/images/purchase-retina-image.png">
+	</div>
+</div>
+<div class="clear"></div>
+<br>
+<div class="second-block">
+	<div class="second-block-left col-7">
+		<img src="/images/purchase-across-page-rendering copy.png">
+	</div>
+	<div class="second-block-right">
+		<div class="page-heading">Across Page Referencing</div>
+		<div style="text-align:center;">
+			Magic Mirror will also detect Artboards in a different page and transform the content to your shape.
+			<br><br>
+			<a href="/proceed-to-purchase/" identifier="proceed-to-purchase-across-page-reference" class="purchase-button">Upgrade for $10 <s>$19</s></a>
+		</div>
+	</div>
+</div>
+<div class="clear"></div>
+<br>
+<div class="third-block">
+	<div class="third-block-left col-5">
+		<div class="page-heading">Flip Content</div>
+		<div style="text-align:center;">
+			A quick way to preserve the paths orientation and flip the content upside down, useful for creating reflections and mirroring effect.
+			<br><br>
+			<a href="/proceed-to-purchase/" identifier="proceed-to-purchase-flip-content" class="purchase-button">Upgrade for $10 <s>$19</s></a>
+		</div>
+	</div>
+	<div class="third-block-right col-7">
+		<img src="/images/purchase-flip-content.png">
+	</div>
+</div>
+<div class="clear"></div>
+<br>
+<div class="fourth-block">
+	<div class="fourth-block-center">
+		Free version of Magic Mirror is licensed under the creative commons Attibution-NonCommercial 4.0 International License.
+		<br>
+		To use it for Commercial projects, you'll have to obtain commercial license through purchasing below.
+		<br>
+		<span>
+			(Early doners in v1.1 before will <span>not</span> need to pay anything extra to continue to use the plugin for commercial purpose.)
+		</span>
+	</div>
+</div>
+<div class="clear"></div>
+<br>
+<div class="fifth-block">
+	<br>
+	<div class="fifth-first">
+		<img src="/images/tips-mail.png">
+		<p>You'll receive an email for your license key shortly after payment.</p>
+	</div>
+	<div class="fifth-second">
+		<p>Go to Sketch > Plugins > Magic mirror > License info...</p>
+		<img src="/images/tips-menu.png">
+	</div>
+	<div class="fifth-third">
+		<img src="/images/tips-input.png">
+		<p>Enter in the text box and enjoy!</p>
+	</div>
+	<br>
+</div>
+<br>
+<div class="sixth-block">
+	<a href="/proceed-to-purchase/" identifier="proceed-to-purchase-tips" class="purchase-button">Upgrade for $10 <s>$19</s></a>
+</div>
+<br><br><br>
+
+{% include featured.html %}
 

@@ -216,6 +216,7 @@ footer {
 	height: 100%;
 }
 
+
 @media print, screen and (max-width: 480px), screen and (max-device-width: 640px) {
 
 .container {
