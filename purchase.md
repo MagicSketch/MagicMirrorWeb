@@ -23,7 +23,7 @@ purchase-button: true
 
 	.first-block-left
 	{
-		width:50%;
+		width: 35%;
 		float:left;
 		padding: 55px 0;
 	}
@@ -36,7 +36,7 @@ purchase-button: true
 
 	.first-block-right
 	{
-		width:50%;
+		width: 65%;
 		float:right;
 	}
 
@@ -47,27 +47,24 @@ purchase-button: true
 
 	.second-block-left
 	{
-		width: 50%;
 		float: left;
 	}
 
 	.second-block-right
 	{
-		width: 50%;
+		width: 40%;
 		float: right;
 		padding: 100px 0px;
 	}
 
 	.third-block-left
 	{
-		width: 50%;
 		float: left;
 		padding: 120px 0;
 	}
 
 	.third-block-right
 	{
-		width: 50%;
 		float: right;
 	}
 
@@ -174,7 +171,7 @@ purchase-button: true
 <div class="clear"></div>
 <br>
 <div class="second-block">
-	<div class="second-block-left">
+	<div class="second-block-left col-7">
 		<img src="/images/purchase-across-page-rendering copy.png">
 	</div>
 	<div class="second-block-right">
@@ -189,7 +186,7 @@ purchase-button: true
 <div class="clear"></div>
 <br>
 <div class="third-block">
-	<div class="third-block-left">
+	<div class="third-block-left col-5">
 		<div class="page-heading">Flip Content</div>
 		<div style="text-align:center;">
 			A quick way to preserve the paths orientation and flip the content upside down, useful for creating reflections and mirroring effect.
@@ -197,7 +194,7 @@ purchase-button: true
 			<a href="/proceed-to-purchase/" identifier="proceed-to-purchase-flip-content" class="purchase-button">Upgrade for $10 <s>$19</s></a>
 		</div>
 	</div>
-	<div class="third-block-right">
+	<div class="third-block-right col-7">
 		<img src="/images/purchase-flip-content.png">
 	</div>
 </div>
