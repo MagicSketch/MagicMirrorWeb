@@ -169,7 +169,8 @@ purchase-button: true
 	</div>
 </div>
 <div class="clear"></div>
-<br>
+<br />
+
 <div class="second-block">
 	<div class="second-block-left col-7">
 		<img src="/images/purchase-across-page-rendering copy.png">
@@ -185,6 +186,7 @@ purchase-button: true
 </div>
 <div class="clear"></div>
 <br />
+
 <div class="third-block">
 	<div class="third-block-left col-5">
 		<div class="page-heading">Flip Content</div>
@@ -199,7 +201,8 @@ purchase-button: true
 	</div>
 </div>
 <div class="clear"></div>
-<br>
+<br />
+
 <div class="fourth-block">
 	<div class="fourth-block-center">
 		Free version of Magic Mirror is licensed under the creative commons Attibution-NonCommercial 4.0 International License.
@@ -213,6 +216,7 @@ purchase-button: true
 </div>
 <div class="clear"></div>
 <br />
+
 <div class="fifth-block">
 	<br>
 	<div class="fifth-first">
@@ -230,6 +234,7 @@ purchase-button: true
 	<br>
 </div>
 <br />
+
 <div class="sixth-block">
 	<a href="/proceed-to-purchase/" identifier="proceed-to-purchase-tips" class="purchase-button">Upgrade for $10 <s>$19</s></a>
 </div>
