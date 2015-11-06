@@ -24,11 +24,11 @@ Redirecting to PayPal in 3 seconds...
 	</div>
 	<br>
 </div>
-
+<br>
 if it doesn't start automatically, please [click here](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=9SVXLQ753LJKY).
 
 </div>
 
 <script>
-proceedToPurchaseDelayed()
+//proceedToPurchaseDelayed()
 </script>
