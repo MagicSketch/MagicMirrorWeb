@@ -25,7 +25,7 @@ purchase-button: true
 	{
 		width: 35%;
 		float:left;
-		padding: 55px 0;
+		padding: 110px 0;
 	}
 
 	.page-heading
@@ -165,7 +165,7 @@ purchase-button: true
 		</div>
 	</div>
 	<div class="first-block-right">
-		<img src="/images/purchase-retina-image.png">
+		<img style="max-width: 550px !important;" src="/images/purchase-retina-image.png">
 	</div>
 </div>
 <div class="clear"></div>
