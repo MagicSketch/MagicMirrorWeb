@@ -31,6 +31,7 @@ purchase-button: true
 	.page-heading
 	{
 		text-align:center;
+		margin-bottom: 0.5em;
 		font-size: 25px;
 	}
 
@@ -165,7 +166,7 @@ purchase-button: true
 		</div>
 	</div>
 	<div class="first-block-right">
-		<img style="max-width: 550px !important;" src="/images/purchase-retina-image.png">
+		<img style="max-width: 580px !important;" src="/images/purchase-retina-image.png">
 	</div>
 </div>
 <div class="py2 clear"></div>
