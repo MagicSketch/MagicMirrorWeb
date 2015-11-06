@@ -184,7 +184,7 @@ purchase-button: true
 	</div>
 </div>
 <div class="clear"></div>
-<br>
+<br />
 <div class="third-block">
 	<div class="third-block-left col-5">
 		<div class="page-heading">Flip Content</div>
@@ -212,7 +212,7 @@ purchase-button: true
 	</div>
 </div>
 <div class="clear"></div>
-<br>
+<br />
 <div class="fifth-block">
 	<br>
 	<div class="fifth-first">
@@ -229,7 +229,7 @@ purchase-button: true
 	</div>
 	<br>
 </div>
-<br>
+<br />
 <div class="sixth-block">
 	<a href="/proceed-to-purchase/" identifier="proceed-to-purchase-tips" class="purchase-button">Upgrade for $10 <s>$19</s></a>
 </div>
