@@ -154,7 +154,7 @@ purchase-button: true
 
 </style>
 
-# What's in the Pro version
+# What's in the Pro version ([EULA](/eula/))
 
 <div class="first-block">
 	<div class="first-block-left">
