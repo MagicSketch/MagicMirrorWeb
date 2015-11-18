@@ -26,10 +26,10 @@ function testVideo()
 		<div class="wordings">
 			<span class="main-heading">Magic Mirror</span><br>
 			<span class="main-sub-heading">
-				essential image transform tool for sketch 3.4
+				Essential image transform tool for Sketch 3.4
 			</span><br>
 			<span class="main-body-content">
-				Now we can create perspective mockups, landing pages, and application flows all within sketch.
+				Now we can create perspective mockups, landing pages, and application flows all within Sketch.
 			</span><br><br>
 			<a href="http://api.magicmirror.design/download/latest" identifier="Free-Download" class="flex-auto border-box center btn btn-outline orange ">
 				<img src="/images/icon-download.png">&nbsp;&nbsp;
@@ -79,32 +79,36 @@ function testVideo()
 </div>
 <div class="clear"></div>
 
-<div class="col-12 center custom-div-color">
+<div class="center custom-div-color">
 	<br>
 	<span class="span1">1</span>&nbsp;&nbsp;
 	<span class="span2">Prepare your design artboards or get one from our</span>
 	<a class="span3" href="/templates/">templates gallery</a><br>
 	<img src="/images/tutorial-1.png"><br>
 </div>
-<br>
-<div class="col-12 center custom-div-color">
+
+<div class="center custom-div-color">
 	<br>
 	<span class="span1">2</span>&nbsp;&nbsp;
 	<span class="span2">Trace around the screen area with Vector tool</span><br>
 	<img src="/images/tutorial-2.png"><br><br>
 </div>
-<div class="col-12 center custom-div-color">
+
+<div class="center custom-div-color">
 	<br>
 	<span class="span1">3</span>&nbsp;&nbsp;
 	<span class="span2">Name the new layer the same as your artboard screen</span><br>
 	<img src="/images/tutorial-3.png"><br><br>
 </div>
-<div class="col-12 center custom-div-color">
+
+<div class="center custom-div-color">
 	<br>
 	<span class="span1">4</span>&nbsp;&nbsp;
 	<span class="span2">Press hotkey '⌘ + ⇧ + M'</span><br>
 	<img src="/images/tutorial-4.png"><br><br>
-</div><br><br>
+</div>
+
+<div class="clear"></div>
 
 {% include testimonals.html %}
 
