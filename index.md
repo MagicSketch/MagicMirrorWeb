@@ -79,32 +79,36 @@ function testVideo()
 </div>
 <div class="clear"></div>
 
-<div class="col-12 center custom-div-color">
+<div class="center custom-div-color">
 	<br>
 	<span class="span1">1</span>&nbsp;&nbsp;
 	<span class="span2">Prepare your design artboards or get one from our</span>
 	<a class="span3" href="/templates/">templates gallery</a><br>
 	<img src="/images/tutorial-1.png"><br>
 </div>
-<br>
-<div class="col-12 center custom-div-color">
+
+<div class="center custom-div-color">
 	<br>
 	<span class="span1">2</span>&nbsp;&nbsp;
 	<span class="span2">Trace around the screen area with Vector tool</span><br>
 	<img src="/images/tutorial-2.png"><br><br>
 </div>
-<div class="col-12 center custom-div-color">
+
+<div class="center custom-div-color">
 	<br>
 	<span class="span1">3</span>&nbsp;&nbsp;
 	<span class="span2">Name the new layer the same as your artboard screen</span><br>
 	<img src="/images/tutorial-3.png"><br><br>
 </div>
-<div class="col-12 center custom-div-color">
+
+<div class="center custom-div-color">
 	<br>
 	<span class="span1">4</span>&nbsp;&nbsp;
 	<span class="span2">Press hotkey '⌘ + ⇧ + M'</span><br>
 	<img src="/images/tutorial-4.png"><br><br>
-</div><br><br>
+</div>
+
+<div class="clear"></div>
 
 {% include testimonals.html %}
 
