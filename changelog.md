@@ -4,7 +4,16 @@ title: Changelog
 permalink: /changelog/
 ---
 
-### v1.2 (2015-08-20)
+### v1.2.2 (2015-10-30) [![](/images/icon-download.png)]({{ site.downloadurl }}/latest)
+
+- Fix issues on Mavericks
+
+### v1.2.1 (2015-10-27) 
+
+- Made compatible with Sketch 3.4
+- This is not compatible with Sketch 3.3.3
+
+### v1.2 (2015-08-20) [![](/images/icon-download.png)]({{ site.downloadurl }}/v1_2)
 
 - Across Page Screen Mirroring ([Read the blog post](https://medium.com/perspective-design-in-sketch/create-a-simple-poster-mockup-in-sketch-with-magic-mirror-92b4a8c3207d))
 - Retina Image Support
