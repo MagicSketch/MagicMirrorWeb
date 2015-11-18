@@ -1,0 +1,180 @@
+.class-left
+{
+	float: left;
+}
+
+.class-right
+{
+	float: right;
+}
+
+.center
+{
+	text-align: center;
+}
+
+.main-heading
+{
+	font-size: 48px;
+	color: #666666;
+}
+
+.main-sub-heading
+{
+	font-size: 30px;
+	color: #666666;
+}
+
+.main-body-content
+{
+	font-size: 16px;
+    color: #535353;
+}
+
+.custom-button
+{
+	background-color: #FA9402 !important;
+	color: #fff !important;
+	font-weight: normal !important;
+	padding: 11px 25px 11px 25px;
+	margin-top: 10px;
+	font-size: 18px;
+}
+
+.watch-link
+{
+	font-size: 20px;
+    text-decoration: none!important;
+    color: #fa9042 !important;
+    position: relative;
+    top: 10px;
+}
+
+.main-right-div
+{
+	padding: 130px 0 150px 0;
+}
+
+.clear
+{
+	clear: both;
+}
+
+.custom-heading1
+{
+	font-size: 36px;
+	color: #666666;
+}
+
+.custom-div-color
+{
+	overflow-y: hidden;
+	background: linear-gradient(#EAEAEA, #ffffff);
+	background: -webkit-linear-gradient(#EAEAEA, #ffffff); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(#EAEAEA, #ffffff); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(#EAEAEA, #ffffff); /* For Firefox 3.6 to 15 */
+}
+
+.second-block-span-content
+{
+	font-size: 20px;
+    color: #535353;
+}
+
+.second-block
+{
+	padding-bottom: 80px;
+}
+
+.second-block2
+{
+	padding-bottom: 75px;
+}
+
+.comment-div1 {
+    color: #808080;
+    font-size: 16px;
+    font-style: italic;
+    padding: 0 40px 0 85px;
+}
+
+.comment-div2 {
+    color: #808080;
+    font-size: 16px;
+    font-style: italic;
+    padding: 0 40px 0 75px;
+}
+
+.comment-div3 {
+    color: #808080;
+    font-size: 16px;
+    font-style: italic;
+    padding: 0 40px 0 75px;
+}
+
+.author
+{
+	font-size: 13px;
+	color: #808080;
+}
+
+.span1
+{
+	font-size: 61px;
+	color: #999;
+}
+
+.span2
+{
+	font-size: 20px;
+	color: #999;
+	position: relative;
+	top: -13px;
+}
+
+.span3
+{
+	font-size: 20px;
+	color: #fa9042 !important;
+	position: relative;
+	top: -13px;
+	text-decoration: none !important;
+}
+
+.span-members
+{
+	font-size: 14px;
+	color: #808080;
+}
+
+.author-image
+{
+	height: 22px;
+	width: 22px;
+	border-radius: 10px;
+}
+
+#watch-video
+{
+	display: none;
+}
+
+.image-size
+{
+	width: 797px;
+    height: 658px;
+}
+
+@media (max-width : 1000px) and (min-width: 550px) {
+	.custom-image
+	{
+		position: relative;
+		left: -30px;
+		top: 35px;
+	}
+
+	.image-size
+	{
+		max-width: 110%;
+	}
+}

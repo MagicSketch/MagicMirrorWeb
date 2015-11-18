@@ -8,176 +8,7 @@ share:
 ---
 
 <!-- Start custom code on 16-11-2015 -->
-
-<style type="text/css">
-.class-left
-{
-	float: left;
-}
-
-.class-right
-{
-	float: right;
-}
-
-.center
-{
-	text-align: center;
-}
-
-.main-heading
-{
-	font-size: 48px;
-	color: #666666;
-}
-
-.main-sub-heading
-{
-	font-size: 30px;
-	color: #666666;
-}
-
-.main-body-content
-{
-	font-size: 16px;
-    color: #535353;
-}
-
-.custom-button
-{
-	background-color: #FA9402 !important;
-	color: #fff !important;
-	font-weight: normal !important;
-	padding: 11px 25px 11px 25px;
-	margin-top: 10px;
-	font-size: 18px;
-}
-
-.watch-link
-{
-	font-size: 20px;
-    text-decoration: none!important;
-    color: #fa9042 !important;
-    position: relative;
-    top: 10px;
-}
-
-.main-right-div
-{
-	padding: 130px 0 150px 0;
-}
-
-.clear
-{
-	clear: both;
-}
-
-.custom-heading1
-{
-	font-size: 36px;
-	color: #666666;
-}
-
-.custom-div-color
-{
-	overflow-y: hidden;
-	background: linear-gradient(#EAEAEA, #ffffff);
-	background: -webkit-linear-gradient(#EAEAEA, #ffffff); /* For Safari 5.1 to 6.0 */
-	background: -o-linear-gradient(#EAEAEA, #ffffff); /* For Opera 11.1 to 12.0 */
-	background: -moz-linear-gradient(#EAEAEA, #ffffff); /* For Firefox 3.6 to 15 */
-}
-
-.second-block-span-content
-{
-	font-size: 20px;
-    color: #535353;
-}
-
-.second-block
-{
-	padding-bottom: 80px;
-}
-
-.second-block2
-{
-	padding-bottom: 75px;
-}
-
-.comment-div1 {
-    color: #808080;
-    font-size: 16px;
-    font-style: italic;
-    padding: 0 40px 0 85px;
-}
-
-.comment-div2 {
-    color: #808080;
-    font-size: 16px;
-    font-style: italic;
-    padding: 0 40px 0 75px;
-}
-
-.comment-div3 {
-    color: #808080;
-    font-size: 16px;
-    font-style: italic;
-    padding: 0 40px 0 75px;
-}
-
-.author
-{
-	font-size: 13px;
-	color: #808080;
-}
-
-.span1
-{
-	font-size: 61px;
-	color: #999;
-}
-
-.span2
-{
-	font-size: 20px;
-	color: #999;
-	position: relative;
-	top: -13px;
-}
-
-.span3
-{
-	font-size: 20px;
-	color: #fa9042 !important;
-	position: relative;
-	top: -13px;
-	text-decoration: none !important;
-}
-
-.span-members
-{
-	font-size: 14px;
-	color: #808080;
-}
-
-.author-image
-{
-	height: 22px;
-	width: 22px;
-	border-radius: 10px;
-}
-
-.custom-image
-{
-	position: relative;
-	left: -30px;
-}
-
-#watch-video
-{
-	display: none;
-}
-
-</style>
+<link rel="stylesheet" type="text/css" href="/css/custom-landing.css" media="screen" />
 <script type="text/javascript" src="/js/jquery.fancybox.js?v=2.1.5"></script>
 <link rel="stylesheet" type="text/css" href="/css/jquery.fancybox.css?v=2.1.5" media="screen" />
 <script type="text/javascript">
@@ -190,7 +21,7 @@ function testVideo()
 
 <div class="col-12">
 	<div class="col-7 class-left custom-image">
-		<img src="/images/landing-intro.png">
+		<img src="/images/landing-intro.png" class="image-size">
 	</div>
 	<div class="col-5 class-right center main-right-div">
 		<span class="main-heading">Magic Mirror</span><br>
@@ -215,7 +46,7 @@ function testVideo()
 </div>
 <div class="clear"></div>
 <div id="watch-video">
-	<iframe src="https://www.youtube.com/embed/b2bwysoKWgU" height="420" width="540"></iframe>
+	<iframe src="https://www.youtube.com/embed/b2bwysoKWgU" height="460" width="740"></iframe>
 </div>
 <div class="col-12 center custom-div-color">
 	<br>
@@ -312,18 +143,6 @@ function testVideo()
 	<span class="span-members">Join 4,257 designers that already using Magic Mirror</span><br><br>
 </div>
 <br><br>
-
-
-
-
-
-
-
-
-
-
-
-
 <!-- End custom code -->
 
 {% include community.html %}
