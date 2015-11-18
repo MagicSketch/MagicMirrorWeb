@@ -18,7 +18,9 @@ share:
 
     {% else %}
 
-    {% if item.members %}
+    {% if item.price %}
+    <div class="flex sm-col-6 md-col-4 border-box p1 template price" style="order:{{ item.weight }}">
+    {% elsif item.members %}
     <div class="flex sm-col-6 md-col-4 border-box p1 template members" style="order:{{ item.weight }}">
     {% else %}
     <div class="flex sm-col-6 md-col-4 border-box p1 template free" style="order:{{ item.weight }}">
@@ -49,7 +51,9 @@ share:
             <div class="flex-none p1 right-align">
 
               <p class="status">
-              {% if item.members %}
+              {% if item.price %}
+                ${{ item.price }}
+              {% elsif item.members %}
                 MEMBERS
               {% else %}
                 FREE

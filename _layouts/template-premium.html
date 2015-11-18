@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+
+  <style>
+    #submitButton {
+      position: absolute;
+      width: 222px;
+      height: 44px;
+      left: 75px;
+      top: 353px;
+    }
+  </style>
+
+  <body class="flex-body">
+
+    {% include header.html %}
+
+    <div class="center">
+
+      {{ content }}
+
+      <script src="https://gumroad.com/js/gumroad.js"></script>
+      <a class="gumroad-button" href="https://gum.co/{{ page.identifier }}" target="_blank">Buy for $12</a>
+
+      </div>
+    </div>
+
+<div class="clear" style="height: 44px">
+</div>
+    {% if page.share %}{% include share.html %}{% endif %}
+    {% if page.subscribe %}{% include subscribe.html %}{% endif %}
+
+    {% include footer.html %}
+
+  </body>
+
+</html>
