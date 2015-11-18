@@ -19,29 +19,30 @@ function testVideo()
 }
 </script>
 
-<div class="col-12">
-	<div class="col-7 class-left custom-image">
-		<img src="/images/landing-intro.png" class="image-size">
+<div class="clearfix flex flex-center">
+	<div class="sm-col sm-col-7 landing-intro">
 	</div>
-	<div class="col-5 class-right center main-right-div">
-		<span class="main-heading">Magic Mirror</span><br>
-		<span class="main-sub-heading">
-			essential image transform<br> tool for sketch 3.4
-		</span><br>
-		<span class="main-body-content">
-			Now we can create perspective mockups, landing<br> pages, and application flows all within sketch.
-		</span><br><br>
-		<a href="http://api.magicmirror.design/download/latest" identifier="Free-Download" class="flex-auto border-box center btn btn-outline orange ">
-			<img src="/images/icon-download.png">&nbsp;&nbsp;
-			Download the plugin(10kb)
-		</a><br>
-		<a href="/purchase/" class="flex-none border-box center btn btn-outline orange strong custom-button">
-			learn about the pro version
-		</a><br>
-		<a href="#watch-video" identifier="Watch-Video" onclick="testVideo();" class="watch-link fancybox">
-			watch the demo video
-			<img src="/images/icon-play.png">
-		</a>
+	<div class="sm-col sm-col-5 center flex flex-center">
+		<div class="wordings">
+			<span class="main-heading">Magic Mirror</span><br>
+			<span class="main-sub-heading">
+				essential image transform tool for sketch 3.4
+			</span><br>
+			<span class="main-body-content">
+				Now we can create perspective mockups, landing pages, and application flows all within sketch.
+			</span><br><br>
+			<a href="http://api.magicmirror.design/download/latest" identifier="Free-Download" class="flex-auto border-box center btn btn-outline orange ">
+				<img src="/images/icon-download.png">&nbsp;&nbsp;
+				Download the plugin (10kb)
+			</a><br>
+			<a href="/purchase/" class="flex-none border-box center btn btn-outline orange strong custom-button">
+				learn about the pro version
+			</a><br>
+			<a href="#watch-video" identifier="Watch-Video" onclick="testVideo();" class="watch-link fancybox">
+				watch the demo video
+				<img src="/images/icon-play.png">
+			</a>
+		</div>
 	</div>
 </div>
 <div class="clear"></div>
