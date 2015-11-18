@@ -141,7 +141,7 @@ function testVideo()
 	<a href="/purchase/" class="flex-none border-box center btn btn-outline orange strong custom-button">
 		learn about the pro version
 	</a><br><br>
-	<span class="span-members">Join 4,257 designers that already using Magic Mirror</span><br><br>
+	<span class="span-members">Join <span id="count">4,257</span> designers that already using Magic Mirror</span><br><br>
 </div>
 <br><br>
 <!-- End custom code -->
