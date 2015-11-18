@@ -1,0 +1,11 @@
+<div class="flex-wrap">
+{% for showcase in site.data.testimonals %}
+<div class="sm-col sm-col-4">
+	<div class="p3">
+		<p>"{{ showcase.liner }}"</p>
+		<img class="author-image" src="{{ showcase.avatar }}" />
+		<span class="author clear">{{ showcase.author }}</span>
+	</div>
+</div>
+{% endfor %}
+</div>

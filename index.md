@@ -78,34 +78,9 @@ function testVideo()
 	</div>
 </div>
 <div class="clear"></div>
-<div class="col-12">
-	<div class="col-4 class-left">
-		<div class="comment-div1">
-			"Magic Mirror is the plugin we've been<br> waiting for. No more switching to<br> photoshop for creating perspective<br> mockups. It works that great."
-			<br>
-			<img class="author-image" src="images/meng.jpg">
-			<span class="author">Meng To, Author of Design+Code</span>
-		</div>
-	</div>
-	<div class="col-4 class-left comment-div">
-		<div class="comment-div2">
-			"The only time  I open photoshop<br> nowadays is when I'm creating a<br> presentation mockup on my designs. But<br>this is about to change."
-			<br>
-			<img class="author-image" src="images/marko.jpg">
-			<span class="author">Marco Vuletic, UI/UX Design Professional</span>
-		</div>
-	</div>
-	<div class="col-4 class-right comment-div">
-		<div class="comment-div3">
-			"Magic Mirror is great for showing off my<br> app designs. It's much more user-friendly<br> than photoshop with double the<br> possibilities."
-			<br>
-			<img class="author-image" src="images/jesse.jpg"> 
-			<span class="author">Jesse Kyle, UI/UX Designer</span>
-		</div>
-	</div>
-	<div class="clear"></div>
-	<br><br>
-</div>
+
+{% include testimonals.html %}
+
 <div class="col-12 center custom-div-color">
 	<br>
 	<span class="span1">1</span>&nbsp;&nbsp;
