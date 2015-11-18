@@ -79,8 +79,6 @@ function testVideo()
 </div>
 <div class="clear"></div>
 
-{% include testimonals.html %}
-
 <div class="col-12 center custom-div-color">
 	<br>
 	<span class="span1">1</span>&nbsp;&nbsp;
@@ -108,7 +106,7 @@ function testVideo()
 	<img src="/images/tutorial-4.png"><br><br>
 </div><br><br>
 
-{% include featured.html %}
+{% include testimonals.html %}
 
 <div class="col-12 center custom-div-color">
 	<br>
@@ -118,7 +116,7 @@ function testVideo()
 	</a><br><br>
 	<span class="span-members">Join <span id="count">4,257</span> designers that already using Magic Mirror</span><br><br>
 </div>
-<br><br>
-<!-- End custom code -->
+
+{% include featured.html %}
 
 {% include community.html %}
