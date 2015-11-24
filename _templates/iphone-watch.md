@@ -1,9 +1,9 @@
 ---
-title: Apple Watch on Wrist
+title: iPhone 6 + Apple Watch
 description: 12 High-Definition Photos
-image: watch-cover.jpg
+image: iphone-watch-cover.jpg
 author: jamztang
-identifier: apple-watch-on-wrist
+identifier: iphone-watch
 members: false
 hidden: false
 price: 10
@@ -11,4 +11,4 @@ weight: 1
 layout: template-premium
 ---
 
-![](/images/templates/watch-full.jpg)
+![](/images/templates/iphone-watch-full.jpg)
