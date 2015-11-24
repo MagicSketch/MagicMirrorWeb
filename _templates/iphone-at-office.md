@@ -1,9 +1,9 @@
 ---
-title: Apple Watch on Wrist
+title: iPhone at Office
 description: 12 High-Definition Photos
-image: watch-cover.jpg
+image: iphone-office-cover.jpg
 author: jamztang
-identifier: apple-watch-on-wrist
+identifier: iphone-office
 members: false
 hidden: false
 price: 10
@@ -11,4 +11,4 @@ weight: 1
 layout: template-premium
 ---
 
-![](/images/templates/watch-full.jpg)
+![](/images/templates/iphone-office-full.jpg)
