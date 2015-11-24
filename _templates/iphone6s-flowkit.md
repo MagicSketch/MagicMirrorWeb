@@ -14,4 +14,4 @@ There's a number of use cases that you can use Magic Mirror to improve your desi
 
 The Application Flow template is aimed to let you create wireframe much more easily.
 
-[Watch the video](/videos/create-applicatin-flow-using-magic-mirror-in-sketch/) on how to use this template.
+[Watch the video](/videos/create-application-flow-using-magic-mirror-in-sketch/) on how to use this template.
