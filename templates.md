@@ -3,6 +3,7 @@ layout: flex
 title: Templates
 permalink: /templates/
 weight: 1
+templatebanner: true
 share:
   title: Sketch Perspective Mockups and Templates
   description: Checkout the new Magic Mirror Templates for iPhone 6S
