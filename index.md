@@ -2,6 +2,7 @@
 layout: flex
 title: Create Perspective Mockups in Sketch
 subscribe: true
+banner: true
 share:
   title: Magic Mirror Sketch 3 Plugin
   description: Create Perspective Mockups in Sketch
@@ -115,7 +116,7 @@ function testVideo()
 <div class="col-12 center custom-div-color">
 	<br>
 	<img src="/images/pro-pitch.png"><br><br>
-	<a href="/purchase/" class="flex-none border-box center btn btn-outline orange strong custom-button">
+	<a href="/purchase/" identifier="purchase-bottom-pitch" class="flex-none border-box center btn btn-outline orange strong custom-button">
 		learn about the pro version
 	</a><br><br>
 	<span class="span-members">Join <span id="count">4,257</span> designers that already using Magic Mirror</span><br><br>
