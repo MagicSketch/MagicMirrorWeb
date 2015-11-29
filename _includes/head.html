@@ -227,7 +227,7 @@
     }
 
     function proceedToPurchase() {
-      window.location = "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=9SVXLQ753LJKY"
+      window.location = "{{ page.target }}"
     }
     function proceedToPurchaseDelayed() {
       setTimeout(function(){ 

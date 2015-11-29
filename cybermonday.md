@@ -176,7 +176,7 @@ It’s like stealing, **just for today**.
 </div>
 
 <div class="center py2">
-<a href="/proceed-to-purchase/" identifier="proceed-to-purchase-magic-bundle" class="purchase-button center">Steal this Magic Bundle for $19 <s>$49</s></a>
+<a href="/proceed-to-purchase-magic-bundle/" identifier="proceed-to-purchase-magic-bundle" class="purchase-button center">Steal this Magic Bundle for $19 <s>$49</s></a>
 </div>
 </div>
 </div>
