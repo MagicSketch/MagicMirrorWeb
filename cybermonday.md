@@ -169,7 +169,7 @@ permalink: /2015-cybermonday/
 This bundle includes:
 
 - pro version of the plugin ($19) 
-- 3 premium templates ($10 each) [more info](/templates)  
+- 3 premium templates ($10 each) [more info](https://gumroad.com/jamztang)  
 
 It’s like stealing, **just for today**.
 
