@@ -3,7 +3,8 @@ layout: page-without-title
 title: Pro Version
 permalink: /purchase/
 weight: 4
-purchase-button: true
+banner: true
+purchase-button: false
 ---
 
 <style type="text/css">
