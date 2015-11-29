@@ -186,5 +186,5 @@ It’s like stealing, **just for today**.
 </div>
 </div>
 
+{% include tips.html %}
 
-<div markdown="1">

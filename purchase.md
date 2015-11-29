@@ -214,22 +214,7 @@ purchase-button: true
 </div>
 <div class="py2 clear"></div>
 
-<div class="fifth-block">
-	<br>
-	<div class="fifth-first">
-		<img src="/images/tips-mail.png">
-		<p>You'll receive an email for your license key shortly after payment.</p>
-	</div>
-	<div class="fifth-second">
-		<p>Go to Sketch > Plugins > Magic mirror > License info...</p>
-		<img src="/images/tips-menu.png">
-	</div>
-	<div class="fifth-third">
-		<img src="/images/tips-input.png">
-		<p>Enter in the text box and enjoy!</p>
-	</div>
-	<br>
-</div>
+{% include tips.html %}
 
 <div class="py2 clear"></div>
 
