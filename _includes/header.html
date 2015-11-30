@@ -28,7 +28,7 @@
         {% endfor %}
 
         {% if page.purchase-button %}
-            <a href="/proceed-to-purchase/" identifier="proceed-to-purchase-top" class="purchase-button">Upgrade for $10 <s>$19</s></a>
+            <a href="/proceed-to-purchase/" identifier="proceed-to-purchase-top" class="purchase-button">Upgrade for ${{ site.data.products.plugin.price }} <s>${{ site.data.products.plugin.original }}</s></a>
         {% endif %}
 
       </div>
@@ -37,7 +37,7 @@
 
   {% if page.banner %}
     <div style="height:44px; width:100%; background-color: black; color: white" class="flex flex-center center">
-      <div class="mx-auto">Save $30 on Cyber Monday. Full Price for Pro Version + 3 Premium Templates at $49.<a href="/2015-cybermonday/" identifier="purchase-cybermonday" class="flex-none border-box center btn btn-outline orange strong custom-button" style="margin-left: 16px">Get the bundle for just $19</a></a></div>
+      <div class="mx-auto">Save ${{ site.data.products.bundle.saved }} on Cyber Monday. Magic Bundle full price at ${{ site.data.products.bundle.original }}.<a href="/2015-cybermonday/" identifier="purchase-cybermonday" class="flex-none border-box center btn btn-outline orange strong custom-button" style="margin-left: 16px">Get the bundle for just ${{ site.data.products.bundle.price }}</a></a></div>
     </div>
   {% endif %}
 

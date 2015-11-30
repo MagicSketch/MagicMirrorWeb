@@ -164,19 +164,19 @@ permalink: /2015-cybermonday/
 		<div class="flex-auto">
 		<div markdown="1">
 
-# Save $30 on Magic Bundle
+# Save ${{ site.data.products.bundle.saved }} on Magic Bundle
 
 This bundle includes:
 
-- pro version of the plugin ($19) 
-- 3 premium templates ($10 each) [more info](https://gumroad.com/jamztang)  
+- pro version of the plugin (${{ site.data.products.bundle.price }}) 
+- 3 premium templates (${{ site.data.products.template.price }} each) [more info](https://gumroad.com/jamztang)  
 
 It’s like stealing, **just for today**.
 
 </div>
 
 <div class="center py2">
-<a href="/proceed-to-purchase-magic-bundle/" identifier="proceed-to-purchase-magic-bundle" class="purchase-button center">Steal this Magic Bundle for $19 <s>$49</s></a>
+<a href="/proceed-to-purchase-magic-bundle/" identifier="proceed-to-purchase-magic-bundle" class="purchase-button center">Steal this Magic Bundle for ${{ site.data.products.bundle.price }} <s>${{ site.data.products.bundle.original }}</s></a>
 </div>
 </div>
 </div>
