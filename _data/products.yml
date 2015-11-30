@@ -1,0 +1,9 @@
+plugin: 
+  price: 10
+  original: 19
+template:
+  price: 10
+bundle:
+  price: 16
+  original: 49
+  saved: 33
