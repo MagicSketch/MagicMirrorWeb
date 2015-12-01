@@ -15,7 +15,7 @@ description: All video tutorials and articles for Sketch and Magic Mirror Plugin
 {% if video.link %}
 {% assign link = video.link %}
 {% else %}
-{% assign link = "https://youtube.com/watch?v={{ video.yt_id }}&list=PLXM9Shjg7jenAH19HHSWYPJ4EtB4RNDc1" %}
+{% capture link %}https://youtube.com/watch?v={{ video.yt_id }}&list=PLXM9Shjg7jenAH19HHSWYPJ4EtB4RNDc1{% endcapture %}
 {% endif %}
 
 <div class="sm-col sm-col-4 showcase">
