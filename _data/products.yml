@@ -1,9 +1,10 @@
 plugin: 
-  price: 10
+  price: 12
   original: 19
 template:
   price: 10
 bundle:
-  price: 16
+  price: 20
   original: 49
-  saved: 33
+  saved: 29
+  percentoff: 60
