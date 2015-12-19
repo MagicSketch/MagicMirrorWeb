@@ -4,7 +4,16 @@ title: Changelog
 permalink: /changelog/
 ---
 
-### v1.2.2 (2015-10-30) [![](/images/icon-download.png)]({{ site.downloadurl }}/latest)
+### v1.2.4 (2015-12-19) [![](/images/icon-download.png)]({{ site.downloadurl }}/latest)
+
+- Only apply to selected layer, or deselect to apply to all
+- Always enable fill when applying mirror (handly for vector tool)
+
+### v1.2.3 (2015-11-25) [![](/images/icon-download.png)]({{ site.downloadurl }}/v1_2_3)
+
+- Adds get template menu option
+
+### v1.2.2 (2015-10-30) [![](/images/icon-download.png)]({{ site.downloadurl }}/v1_2_2)
 
 - Fix issues on Mavericks
 
