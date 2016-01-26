@@ -25,7 +25,7 @@ function testVideo()
 	</div>
 	<div class="sm-col sm-col-5 center flex flex-center">
 		<div class="wordings">
-			<span class="main-heading">Magic Mirror</span><br>
+			<span class="main-heading">Magic Mirror 2</span><br>
 			<span class="main-sub-heading">
 				Essential image transform tool for Sketch 3.4
 			</span><br>
@@ -79,7 +79,7 @@ function testVideo()
 	</div>
 </div>
 <div class="clear"></div>
-
+<!-- 
 <div class="center custom-div-color">
 	<br>
 	<span class="span1">1</span>&nbsp;&nbsp;
@@ -107,13 +107,13 @@ function testVideo()
 	<span class="span1">4</span>&nbsp;&nbsp;
 	<span class="span2">Press hotkey '⌘ + ⇧ + M'</span><br>
 	<img src="/images/tutorial-4.png"><br><br>
-</div>
+</div> -->
 
 <div class="clear"></div>
 
 {% include testimonals.html %}
 
-<div class="col-12 center custom-div-color">
+<!-- <div class="col-12 center custom-div-color">
 	<br>
 	<img src="/images/pro-pitch.png"><br><br>
 	<a href="/purchase/" identifier="purchase-bottom-pitch" class="flex-none border-box center btn btn-outline orange strong custom-button">
@@ -121,7 +121,7 @@ function testVideo()
 	</a><br><br>
 	<span class="span-members">Join <span id="count">4,257</span> designers that already using Magic Mirror</span><br><br>
 </div>
-
+ -->
 {% include featured.html %}
 
 {% include community.html %}

@@ -4,7 +4,14 @@ title: Changelog
 permalink: /changelog/
 ---
 
-### v1.2.4 (2015-12-19) [![](/images/icon-download.png)]({{ site.downloadurl }}/latest)
+### v2.0 (2016-01-27)  [![](/images/icon-download.png)]({{ site.downloadurl }}/latest)
+
+- Enhanced Image Quality
+- Improved Performance (3x-5x better)
+- New UI Toolbar
+- Live Update (experiemental)
+
+### v1.2.4 (2015-12-19) [![](/images/icon-download.png)]({{ site.downloadurl }}/v1_2_4)
 
 - Only apply to selected layer, or deselect to apply to all
 - Always enable fill when applying mirror (handly for vector tool)

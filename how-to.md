@@ -1,8 +1,8 @@
 ---
 layout: flex
-title: How-to
+<!-- title: How-to -->
 permalink: /how-to/
-weight: 2
+<!-- weight: -1 -->
 redirect_from: /videos/
 description: All video tutorials and articles for Sketch and Magic Mirror Plugin. Be more productive with these tips and tricks!
 ---
