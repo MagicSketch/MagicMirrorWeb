@@ -24,6 +24,9 @@ collections:
   videos:
     output: true
     permalink: /videos/:path/
+  learn:
+    output: true
+    permalink: /learn/:path/
 
 defaults:
   - scope:
@@ -46,3 +49,8 @@ defaults:
     values:
       layout: video
       pagename: Video # for tracking
+  - scope:
+      path: ""
+      type: learn
+    values:
+      layout: learn

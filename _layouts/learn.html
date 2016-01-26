@@ -3,23 +3,91 @@
 
   {% include head.html %}
 
-  <body class="flex-body">
+  <style>
+  	h1 {
+    		/* Installing Magic Mir: */
+  		font-family: Asap-Regular;
+  		font-size: 42px;
+  		color: #666666;
+  		line-height: 42px;
+  	}
+  	h2 {
+  		/* Two steps to install: */
+  		font-family: Asap-Regular;
+  		font-size: 26px;
+  		color: #666666;
+  		line-height: 42px;
+  	}
+  	h3 {
+  		/* 1. Download the plug: */
+  		font-family: Asap-Regular;
+  		font-size: 32px;
+  		color: #9B9B9B;
+  		line-height: 42px;
+  		margin-top: 60px;
+  	}
+  	p {
+       padding-left: 100px;
+  	}
+  	.img {
+  		max-width: 940px;
+  		margin: -100px 0px -100px 0px;
+  		text-align: center;
+  	}
+  	div.outer {
+      width: 940px; /* some width amount needed */
+      margin: 0 auto; 
+      overflow: visible;
+    }
+    div.inner {
+        display: inline-block; 
+        position:relative; 
+        /*right: -50%;*/
+    }
+    div.inner p, div.inner h1, div.inner h2 {
+        position: relative;
+        max-width: 740px;
+        padding: 0px;
+    }
+    div.inner p img {
+        position: relative; 
+        left: -100px;
+        right: -100px;
+        max-width: 940px;
+    }
+  </style>
+
+  <body class="flex-body center">
 
     {% include header.html %}
 
-	<img src="{{ page.image }}" class="mb4"/>
+	<img src="{{ page.image }}" class="mb3"/>
 
 	<header class="post-header">
 		<h1 class="post-title">{{ page.title }}</h1>
 	</header>
 
-	<article class="post-content">
-		<div class="wrapper">
+	<div class="outer">
+		<div class="inner">
 			{{ content }}
 		</div>
-	</article>
+	</div>
 
-    {% include footer.html %}
+  <div class="wrapper">
+    <!-- <div class="inner"> -->
+      {% if page.previous %} 
+          <p class="left"><a href="{{ page.previous.url }}">&lt; {{ page.previous.title }}</a></p> 
+      {% endif %}
+      {% if page.next %} 
+          <p class="right">next: <a href="{{ page.next.url }}">{{ page.next.title }} &gt;</a></p>
+      {% endif %}
+    <!-- </div> -->
+  </div>
+
+  <br />
+  <br />
+
+  {% include footer.html %}
 
   </body>
 
