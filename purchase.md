@@ -8,6 +8,22 @@ purchase-button: false
 ---
 
 <style type="text/css">
+  	h3 {
+  		/* 1. Download the plug: */
+  		font-family: Asap-Regular;
+  		font-size: 32px;
+  		color: #9B9B9B;
+  		line-height: 42px;
+  		margin-top: 60px;
+  		text-align: center;
+  	}
+  	p {
+		font-family: Asap-Regular;
+		font-size: 18px;
+		color: #B3B2B2;
+		line-height: 32px;
+		text-align: center;
+  	}
 	.purchase-button
 	{
 	    color: #fff !important;
@@ -20,54 +36,6 @@ purchase-button: false
 	.custom-button-nav
 	{
 		margin: 0 0px 0 10px;
-	}
-
-	.first-block-left
-	{
-		width: 35%;
-		float:left;
-		padding: 110px 0;
-	}
-
-	.page-heading
-	{
-		text-align:center;
-		margin-bottom: 0.5em;
-		font-size: 25px;
-	}
-
-	.first-block-right
-	{
-		width: 65%;
-		float:right;
-	}
-
-	.clear
-	{
-		clear: both;
-	}
-
-	.second-block-left
-	{
-		float: left;
-	}
-
-	.second-block-right
-	{
-		width: 40%;
-		float: right;
-		padding: 100px 0px;
-	}
-
-	.third-block-left
-	{
-		float: left;
-		padding: 120px 0;
-	}
-
-	.third-block-right
-	{
-		float: right;
 	}
 
 	.fourth-block
@@ -157,50 +125,30 @@ purchase-button: false
 
 # What's in the Pro version
 
-<div class="first-block">
-	<div class="first-block-left">
-		<div class="page-heading">Retina Image Support</div>
-		<div style="text-align:center;">
-			The transformed images will look as good in 200% zoomed in, even when you export in @2x resolution.
-			<br><br>
-			<a href="/proceed-to-purchase/" identifier="proceed-to-purchase-retina-image" class="purchase-button">Upgrade for ${{ site.data.products.plugin.price }} <s>${{ site.data.products.plugin.original }}</s></a>
-		</div>
-	</div>
-	<div class="first-block-right">
-		<img style="max-width: 580px !important;" src="/images/purchase-retina-image.png">
-	</div>
-</div>
-<div class="py2 clear"></div>
+## Magic Mirror 2 vs Magic Mirror 1
 
-<div class="second-block">
-	<div class="second-block-left col-7">
-		<img src="/images/purchase-across-page-rendering copy.png">
-	</div>
-	<div class="second-block-right">
-		<div class="page-heading">Across Page Referencing</div>
-		<div style="text-align:center;">
-			Magic Mirror will also detect Artboards in a different page and transform the content to your shape.
-			<br><br>
-			<a href="/proceed-to-purchase/" identifier="proceed-to-purchase-across-page-reference" class="purchase-button">Upgrade for ${{ site.data.products.plugin.price }} <s>${{ site.data.products.plugin.original }}</s></a>
-		</div>
-	</div>
-</div>
-<div class="py2 clear"></div>
+- Enhanced Image Quality
+- Improved Performance (3x-5x better)
+- New UI Toolbar
+- Live Update (experiemental)
 
-<div class="third-block">
-	<div class="third-block-left col-5">
-		<div class="page-heading">Flip Content</div>
-		<div style="text-align:center;">
-			A quick way to preserve the paths orientation and flip the content upside down, useful for creating reflections and mirroring effect.
-			<br><br>
-			<a href="/proceed-to-purchase/" identifier="proceed-to-purchase-flip-content" class="purchase-button">Upgrade for ${{ site.data.products.plugin.price }} <s>${{ site.data.products.plugin.original }}</s></a>
-		</div>
-	</div>
-	<div class="third-block-right col-7">
-		<img src="/images/purchase-flip-content.png">
-	</div>
-</div>
-<div class="py2 clear"></div>
+## The Story:
+
+After two full months of working on this update, I've finally made its way to this major release. It's a free upgrade to all Magic Mirror 1 supporters, just download the latest version and enjoy the new features! Like the first version, number of features are locked until you've enter the license key.
+
+
+### Enhanced Image Quality
+
+![](/images/enhanced-image-quality.png)
+
+All transformed image should look pixel perfect in 100% zoomed in even in @1x settings.
+However, when you're looking to export images with @2x or above resolution, the source would have provide 4 times as much pixels.
+Enhanced Image Quality is here to solve the issue.
+@1x and @2x depends on the source of the artboard size, so the higher the source is, the clearer the rendered image. It's fast and works well with general UI perpective transform.
+
+Max resolution depends on the shape, it looks into the target's shape size and find out the best resolution it can be rendered to make exporting in @3x as clear as possible. Works best for rendering small vector UI components into larger canvas.
+
+*Free version will see a watermark in @2x and Max image quality setting.
 
 <div class="fourth-block">
 	<div class="fourth-block-center">
