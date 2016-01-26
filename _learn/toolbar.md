@@ -1,5 +1,7 @@
 ---
 title:  The Toolbar
+description: Introducing the Toolbar, easier access to all Magic Mirror features like Rotation, Flip, Jump and Refresh
+weight: 2
 date:   2016-01-26 18:36:00
 image: /learn/images/toolbar-hero.jpg
 next:

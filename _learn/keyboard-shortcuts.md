@@ -1,5 +1,7 @@
 ---
-title:  The Toolbar
+title: Keyboard Shortcuts
+description: Overview of the menu items and keyboard shortcuts
+weight: 3
 date:   2016-01-26 22:05:00
 image: /learn/images/keyboard-hero.jpg
 next:

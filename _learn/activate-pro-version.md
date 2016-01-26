@@ -1,5 +1,7 @@
 ---
-title:  Activate Pro Version
+title: Pro Version
+description: How to unlock the pro features and troubleshoot the process, and enhance your image export quality
+weight: 6
 date:   2016-01-26 22:25:00
 image: /learn/images/activate-hero.jpg
 previous: 
@@ -7,7 +9,7 @@ previous:
   url: /learn/use-your-own-photos
 ---
 
-## How to unlock the pro features and troubleshoot the process, and enhance your image export quality.
+## How to unlock the pro features and troubleshoot the process, and enhance your image export quality
 
 ### 1) Find "About Pro Version" in the [Menu Bar](/learn/keyboard-shortcuts)
 

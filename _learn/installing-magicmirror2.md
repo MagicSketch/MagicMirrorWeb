@@ -1,5 +1,7 @@
 ---
 title:  Installing Magic Mirror 2
+description: Two steps to install a Sketch Plugin
+weight: 1
 date:   2016-01-18 02:58:00
 image: /learn/images/installing-hero.jpg
 next: 

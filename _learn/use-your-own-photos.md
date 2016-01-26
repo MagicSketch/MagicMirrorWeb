@@ -1,5 +1,7 @@
 ---
-title:  Use Your Own Photos
+title: Using Your Own Photos
+description: Learn how to create your own unique templates with the photo of your choice
+weight: 5
 date:   2016-01-26 22:20:00
 image: /learn/images/use-your-own-hero.jpg
 next:

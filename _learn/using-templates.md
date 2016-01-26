@@ -1,5 +1,7 @@
 ---
 title:  Using Templates
+description: Instantly create professional presentations for your app design
+weight: 4
 date:   2016-01-26 22:09:00
 image: /learn/images/templates-hero.jpg
 next:
