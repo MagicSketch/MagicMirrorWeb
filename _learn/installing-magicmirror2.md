@@ -13,7 +13,7 @@ next:
 
 ### 1) Download the plugin  
 
-[![](../images/installing-download.png)](/download/latest)
+[![](../images/installing-download.png)]({{ site.downloadurl }}/latest)
 
 ### 2) Extract the file and double click to install  
 ![](../images/installing-extract.png)  
