@@ -25,28 +25,27 @@ When nothing is selected.
 
 ### 1) Pick an Artboard to Perspective Transform
 
-![](../images/toolbar-pick-artboard.png)
+{% include video.html poster="../images/toolbar-pick-artboard.png" video="../videos/toolbar-pick-artboard.mp4" %}
 
 Select any 4-point shape, then pick an artboard from the selector combobox to apply perspective transform.
 
 
 ### 2) Rotate Content
 
-![](../images/toolbar-rotate-content.png)
+{% include video.html poster="../images/toolbar-rotate-content.png" video="../videos/toolbar-rotate-content.mp4" %}
 
 You can rotate the image inside without affecting the shape's geometry.
 
  
 ### 3) Flip Content
 
-![](../images/toolbar-flip-content.png)
+{% include video.html poster="../images/toolbar-flip-content.png" video="../videos/toolbar-flip-content.mp4" %}
 
 Flipping the content can be useful, for example when you're working on [reflections](https://medium.com/perspective-design-in-sketch/perspective-mockups-in-sketch-reflections-5fa275ce947).
 
-
 ### 4) Jump to Artboard
 
-![](../images/toolbar-jump-to-artboard.png)
+{% include video.html poster="../images/toolbar-jump-to-artboard.png" video="../videos/toolbar-jump-to-artboard.mp4" %}
 
 "Jump to Artboard" helps you locate the artboard so that you can quickly edit the content, it works even when your artboard is in a different page.
 
