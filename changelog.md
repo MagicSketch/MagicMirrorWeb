@@ -4,7 +4,11 @@ title: Changelog
 permalink: /changelog/
 ---
 
-### v2.0 (2016-01-27)  [![](/images/icon-download.png)]({{ site.downloadurl }}/latest)
+### v2.0.1 (2016-01-28)  [![](/images/icon-download.png)]({{ site.downloadurl }}/latest)
+
+- Fix Issues with Sketch 3.5
+
+### v2.0 (2016-01-27)
 
 - Enhanced Image Quality
 - Improved Performance (3x-5x better)
