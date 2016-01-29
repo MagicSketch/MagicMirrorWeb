@@ -27,7 +27,7 @@ function testVideo()
 		<div class="wordings">
 			<span class="main-heading">Magic Mirror 2</span><br>
 			<span class="main-sub-heading">
-				Essential image transform tool for Sketch 3.4
+				Essential image transform tool for Sketch 3.5
 			</span><br>
 			<span class="main-body-content">
 				Now we can create perspective mockups, landing pages, and application flows all within Sketch.
