@@ -5,6 +5,11 @@ permalink: /purchase/
 weight: 4
 banner: true
 purchase-button: false
+show-featured: true
+share:
+  title: Image Perspective Transform Plugin for Sketch 3
+  url: http://magicmirror.design
+  description: Create Professional Realistic Mockups with Magic Mirror 2
 ---
 
 <style type="text/css">
@@ -169,8 +174,7 @@ Max resolution depends on the shape, it looks into the target's shape size and f
 
 <div class="sixth-block">
 	<a href="/proceed-to-purchase/" identifier="proceed-to-purchase-tips" class="purchase-button">Upgrade for ${{ site.data.products.plugin.price }} <s>${{ site.data.products.plugin.original }}</s></a>
+  <span id="tweet-text" class="px2">Tweet to get extra 25% off!</span>
 </div>
-<br><br><br>
-
-{% include featured.html %}
-
+<br>
+<br><br>

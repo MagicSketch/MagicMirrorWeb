@@ -13,6 +13,9 @@
       </div>
     </div>
 
+    {% if page.share %}{% include share.html %}{% endif %}
+    {% if page.show-featured %}{% include featured.html %}{% endif %}
+    {% if page.show-community %}{% include community.html %}{% endif %}
     {% include footer.html %}
 
   </body>
