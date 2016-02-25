@@ -16,28 +16,77 @@
 	{% assign title = site.title %}
 {% endif %}
 
+{% if page.share.url %}
+{% assign url = page.share.url %}
+{% else %}
 {% assign url = site.url|append:page.url|remove:'index.html' %}
+{% endif %}
 
 {% capture share %}
 {{ page.share.pre }}{{ title }} {{ url }} {{ desc }}{{ page.share.post }}
 {% endcapture %}
 <div class="flex flex-center mb2" style="height:180px;">
-<a href="https://twitter.com/intent/tweet?text={{ share | truncate:140 }}" class="mx-auto tweetcircle" data-via="jamztang">
+<a href="https://twitter.com/intent/tweet?text={{ share | truncate:140 }}" class="mx-auto tweetcircle" data-via="jamztang" data-url="{{ url }}">
 <span id="twitterCount">Tweet</span>
-</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+</a><!-- Twitter -->
+<script>
+window.twttr = (function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0],
+    t = window.twttr || {};
+  if (d.getElementById(id)) return t;
+  js = d.createElement(s);
+  js.id = id;
+  js.src = "https://platform.twitter.com/widgets.js";
+  fjs.parentNode.insertBefore(js, fjs);
 
-     function getTwitterCount(url){
-        var tweets;
-        $.getJSON('http://urls.api.twitter.com/1/urls/count.json?url=' + url + '&callback=?',
-         	function(data){
-			     tweets = data.count;
-			     $('#twitterCount').html("tweets " + tweets);
-			 }
-		);
-     }
-     var urlBase='{{ url }}';
-     getTwitterCount(urlBase); 
+  t._e = [];
+  t.ready = function(f) {
+    t._e.push(f);
+  };
+
+  return t;
+}(document, "script", "twitter-wjs"));
 
 </script>
+<script>
+
+// Define our custom event handlers
+function clickEventToAnalytics (intentEvent) {
+  if (!intentEvent) return;
+  var label = intentEvent.region;
+	console.log("click tweet button")
+  // pageTracker._trackEvent('twitter_web_intents', intentEvent.type, label);
+
+	setTimeout(function () {
+		console.log("25% off applied!");
+		$('#tweet-text').html("25% off applied! √");
+		$("#proceed-to-purchase").attr("href","/proceed-to-purchase-discounted/")
+		$("#proceed-to-purchase").attr("identifier","proceed-to-purchase-discounted")
+		$("#proceed-to-purchase-magic-bundle").attr("href","/proceed-to-purchase-magic-bundle-discounted/")
+		$("#proceed-to-purchase-magic-bundle").attr("identifier","proceed-to-purchase-magic-bundle-discounted")
+	}, 10000);
+}
+
+function tweetIntentToAnalytics (intentEvent) {
+  if (!intentEvent) return;
+  var label = "tweet";
+
+	console.log("tweet tweet button")
+  // pageTracker._trackEvent(
+  //   'twitter_web_intents',
+  //   intentEvent.type,
+  //   label
+  // );
+}
+
+// Wait for the asynchronous resources to load
+twttr.ready(function (twttr) {
+  // Now bind our custom intent events
+  twttr.events.bind('click', clickEventToAnalytics);
+  twttr.events.bind('tweet', tweetIntentToAnalytics);
+
+});
+
+</script>
+
 </div>
