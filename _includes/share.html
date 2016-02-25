@@ -58,9 +58,12 @@ function clickEventToAnalytics (intentEvent) {
   // pageTracker._trackEvent('twitter_web_intents', intentEvent.type, label);
 
 	setTimeout(function () {
-		console.log("25% off aplied!");
+		console.log("25% off applied!");
 		$('#tweet-text').html("25% off applied! √");
-		$('#tweet-text').html("25% off applied! √");
+		$("#proceed-to-purchase").attr("href","/proceed-to-purchase-discounted/")
+		$("#proceed-to-purchase").attr("identifier","proceed-to-purchase-discounted")
+		$("#proceed-to-purchase-magic-bundle").attr("href","/proceed-to-purchase-magic-bundle-discounted/")
+		$("#proceed-to-purchase-magic-bundle").attr("identifier","proceed-to-purchase-magic-bundle-discounted")
 	}, 10000);
 }
 

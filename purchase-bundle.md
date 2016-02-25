@@ -2,6 +2,10 @@
 layout: page-without-title
 title: 4 in 1 Bundle
 permalink: /purchase-bundle/
+share:
+  title: Image Perspective Transform Plugin for Sketch 3
+  url: http://magicmirror.design/
+  description: Create Professional Realistic Mockups with Magic Mirror 2
 ---
 
 <style type="text/css">
@@ -174,7 +178,9 @@ This bundle includes:
 </div>
 
 <div class="center py2">
-<a href="/proceed-to-purchase-magic-bundle/" identifier="proceed-to-purchase-magic-bundle" class="purchase-button center">Get it for ${{ site.data.products.bundle.price }} <s>${{ site.data.products.bundle.original }}</s></a>
+<a id="proceed-to-purchase-magic-bundle" href="/proceed-to-purchase-magic-bundle/" identifier="proceed-to-purchase-magic-bundle" class="purchase-button center">Get it for ${{ site.data.products.bundle.price }} <s>${{ site.data.products.bundle.original }}</s></a>
+<span id="tweet-text" class="px1">Tweet to get extra 25% off!</span>
+
 </div>
 </div>
 </div>
@@ -185,4 +191,3 @@ This bundle includes:
 </div>
 
 {% include tips.html %}
-

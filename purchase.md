@@ -173,7 +173,7 @@ Max resolution depends on the shape, it looks into the target's shape size and f
 <div class="py2 clear"></div>
 
 <div class="sixth-block">
-	<a href="/proceed-to-purchase/" identifier="proceed-to-purchase-tips" class="purchase-button">Upgrade for ${{ site.data.products.plugin.price }} <s>${{ site.data.products.plugin.original }}</s></a>
+	<a href="/proceed-to-purchase/" id="proceed-to-purchase" identifier="proceed-to-purchase-tips" class="purchase-button">Upgrade for ${{ site.data.products.plugin.price }} <s>${{ site.data.products.plugin.original }}</s></a>
   <span id="tweet-text" class="px2">Tweet to get extra 25% off!</span>
 </div>
 <br>
