@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta http-equiv="refresh" content="0;url={{ page.source_url }}" />
+  {% include head.html %}
+
+  <body>
+
+    {% include header.html %}
+
+    <div class="page-content" style="height:1vh;">
+      <div class="wrapper center">
+        redirecting to <a href="{{ page.source_url }}">{{ page.source_url }}</a>...
+      </div>
+    </div>
+
+    {% if page.share %}{% include share.html %}{% endif %}
+    {% if page.show-featured %}{% include featured.html %}{% endif %}
+    {% if page.show-community %}{% include community.html %}{% endif %}
+    {% include footer.html %}
+
+  </body>
+
+</html>
