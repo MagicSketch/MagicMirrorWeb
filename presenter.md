@@ -1,4 +1,16 @@
-<!DOCTYPE html>
+---
+layout: none
+title: Pro Version
+permalink: /presenter/
+weight: 4
+banner: true
+purchase-button: false
+show-featured: true
+#share:
+#  title: Image Perspective Transform Plugin for Sketch 3
+#  url: http://magicmirror.design
+#  description: Create Professional Realistic Mockups with Magic Mirror 2
+---
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -25,8 +37,8 @@
     
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-    <link rel="stylesheet" href="./css/font-awesome.min.css">
-    <link rel="stylesheet" href="./css/presenter.css">
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/presenter.css">
     <title>Magic Presenter</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
     
@@ -75,8 +87,8 @@
       <div class="section-bg"></div>
       <div class="col-md-12 col-xs-12 col-sm-12 header-bar">
         <div class="col-md-9 col-xs-8 col-sm-8">
-          <object data="./images/presenter_icon.svg" type="image/svg+xml" align="top">
-            <img src="./images/presenter_icon.png" align="top" />
+          <object data="/images/presenter_icon.svg" type="image/svg+xml" align="top">
+            <img src="/images/presenter_icon.png" align="top" />
           </object>
           <span class="title-text thin-text">Magic Presenter</span>
         </div>
@@ -89,12 +101,12 @@
         <p class="big-title light-text thin-text">Present your slides/deck</p>
         <p class="light-text sub-title thin-text">directly within Sketch</p>
 
-        <button class="download-btn btn btn-default thin-text" onClick="downloadButtonClick()"}>Free Download</button>
+        <button class="download-btn btn btn-default thin-text" onClick="downloadButtonClick()">Free Download</button>
         <p class="version-text thin-text">Getting update...</p>
 
         <div class="movie-display">
           <div class="video-wrapper">
-            <video src="./video/demo.mp4" controls>
+            <video src="/video/demo.mp4" controls>
               Sorry, your browser doesn't support embedded videos.
             </video>
           </div>
@@ -109,7 +121,7 @@
       <p class="body-title-who dark-text thin-text">Who's behind</p>
       
       <div class="profile">
-        <div class="profile-image"><img src="../images/profile.png" /></div>
+        <div class="profile-image"><img src="/images/profile.png" /></div>
         <div class="thin-text profile-content">
           <div class="info1">
             <span class="my-name">James Tang</span> <a href="https://twitter.com/jamztang" target="_blank"><span class="twitter-text">@jamztang</span></a>
