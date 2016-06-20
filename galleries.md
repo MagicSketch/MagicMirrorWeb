@@ -2,7 +2,7 @@
 layout: flex
 title: Gallery
 permalink: /gallery/
-weight: 1
+<!-- weight: -1 -->
 banner: true
 share:
   title: Sketch Template Gallery

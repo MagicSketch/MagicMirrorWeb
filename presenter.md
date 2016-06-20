@@ -2,7 +2,7 @@
 layout: none
 title: Pro Version
 permalink: /presenter/
-weight: 4
+<!-- weight: 4 -->
 banner: true
 purchase-button: false
 show-featured: true
@@ -34,14 +34,14 @@ show-featured: true
     <meta name="twitter:image" content="./images/presenter_ogimage.png">
     <meta name="twitter:description" content="Present your slides or deck directly within Sketch using Magic Presenter.">
 
-    
+
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/font-awesome.min.css">
     <link rel="stylesheet" href="/css/presenter.css">
     <title>Magic Presenter</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-    
+
     <script>
       var versionCheckApi = "https://api.github.com/repos/jamztang/MagicMirror/releases/latest";
       var version = "0.1";
@@ -113,13 +113,13 @@ show-featured: true
         </div>
       </div>
     </div>
-    
+
     <div class="body-content col-md-12 col-xs-12 col-sm-12">
       <p class="body-title dark-text thin-text">Why Magic Presenter?</p>
       <p class="body-sub-title dark-text thin-text">Time is money. With a single shortcut, you can put your artboards presentable slides. No more switching between presentation tools and re-exporting assets when the content is updated.</p>
       <hr class="content-hr">
       <p class="body-title-who dark-text thin-text">Who's behind</p>
-      
+
       <div class="profile">
         <div class="profile-image"><img src="/images/profile.png" /></div>
         <div class="thin-text profile-content">
@@ -132,7 +132,7 @@ show-featured: true
         </div>
       </div>
       <div class="clearfix"></div>
-    
+
     </div>
 
     <div class="footer col-md-12 col-xs-12 col-sm-12"><a href="https://github.com/jamztang/MagicPresenter" target="_blank"><span class="fa fa-github"></span></a></div>
