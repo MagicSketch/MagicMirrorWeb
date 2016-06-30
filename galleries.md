@@ -27,7 +27,7 @@ share:
 
 		function createGalleryGrid(galleryItem){
 			var result = $('<div>').addClass("flex sm-col-6 md-col-4 border-box p1 template free");
-			var body = $('<div>').addClass('p1 border rounded').appendTo(result);
+			var body = $('<div>').addClass('p1 border rounded sm-col-12 md-col-12').appendTo(result);
 
 			var previewLink = $('<a>').attr({href: galleryItem.data}).append($('<img>').attr({'src': galleryItem.preview, 'height': 'auto'})).appendTo(body);
 
