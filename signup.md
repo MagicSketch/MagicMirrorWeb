@@ -85,11 +85,10 @@ share:
 
 			// create stripe 
 			$.ajax({
-				url: 'https://hooks.zapier.com/hooks/catch/1460209/4ts1ve/',
+				url: 'http://localhost:3000/signup',
 				data: param,
 				method: 'POST',
 				complete: function(json){
-					console.log(json);
 				},
 				success: function(json){
 					console.log(json);
