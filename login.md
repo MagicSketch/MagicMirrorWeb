@@ -53,16 +53,16 @@ share:
 			}
 
 			var param = {
-				token: btoa(email+":"+password)
+				email: email,
+				password: password
 			};
 
 			// Perform Login
 			$.ajax({
-				url: 'https://hooks.zapier.com/hooks/catch/1460209/4tz8if/',
+				url: 'http://localhost:3000/login',
 				data: param,
 				method: 'POST',
 				complete: function(json){
-					console.log(json);
 				},
 				success: function(json){
 					console.log(json);
