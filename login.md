@@ -65,6 +65,8 @@ share:
 				complete: function(json){
 				},
 				success: function(json){
+					Cookies.set('t', json.access_token); //{domain: 'config.domain'});
+					Cookies.set('rt', json.refresh_token);
 					console.log(json);
 				},
 				error: function(json){
@@ -79,6 +81,8 @@ share:
 
 			login(email, password);
 		});
+
+		$('#localMsg').html(Cookies.get('t') + ':' + Cookies.get('rt'));
 
 	  });
 
@@ -97,6 +101,7 @@ share:
 	<div>
 		<button id="loginButton">Login</button>
 	</div>
+	<div id="localMsg"></div>
 </div>
 <div class="center wrapper mt4" markdown="1">
 
