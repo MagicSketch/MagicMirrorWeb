@@ -4,7 +4,7 @@ title: Gallery
 permalink: /login/
 banner: true
 share:
-  title: Sign up For Magic Sketch
+  title: Login For Magic Sketch
   description: Checkout the new Magic Templates Gallery
 ---
 
