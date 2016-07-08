@@ -59,7 +59,7 @@ share:
 
 			// Perform Login
 			$.ajax({
-				url: 'http://localhost:3000/login',
+				url: '{{ site.apigateway_url }}/login',
 				data: param,
 				method: 'POST',
 				complete: function(json){
@@ -67,7 +67,40 @@ share:
 				success: function(json){
 					Cookies.set('t', json.access_token); //{domain: 'config.domain'});
 					Cookies.set('rt', json.refresh_token);
+					Cookies.set('userEmail', email);
 					console.log(json);
+
+					window.location = '/profile';
+				},
+				error: function(json){
+					console.log(json);
+				}
+			});
+		}
+
+		function logout(){
+			var param = {
+				email: Cookies.get('userEmail'),
+			};
+
+			// Perform Login
+			$.ajax({
+				url: '{{ site.apigateway_url }}/logout',
+				data: param,
+				headers: {
+					'X-Access-Token': Cookies.get('t'),
+					'X-Refresh-Token': Cookies.get('rt'),
+				},
+				method: 'DELETE',
+				complete: function(json){
+				},
+				success: function(json){
+					console.log(json);
+					Cookies.remove('t');
+					Cookies.remove('rt');
+					Cookies.remove('userEmail');
+
+					window.location = '/';
 				},
 				error: function(json){
 					console.log(json);
@@ -80,6 +113,14 @@ share:
 			var password = $('#passwordInput').val();
 
 			login(email, password);
+
+			$(this).attr('disabled', 'disabled');
+		});
+
+		$('#logoutButton').click(function(e){
+			logout();
+
+			$(this).attr('disabled', 'disabled');
 		});
 
 		$('#localMsg').html(Cookies.get('t') + ':' + Cookies.get('rt'));
@@ -103,6 +144,7 @@ share:
 	</div>
 	<div id="localMsg"></div>
 </div>
+<button id="logoutButton">logout</button>
 <div class="center wrapper mt4" markdown="1">
 
 Magic Mirror Gallery is still in beta. If you want to help or want to have your own templates show up please read the <a href="/template-guideline">templates contribution guideline</a> :)

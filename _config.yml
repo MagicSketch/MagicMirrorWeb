@@ -5,6 +5,7 @@ description: A Powerful Plugin to Perspective Transform Artboards into Shapes, j
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://magicmirror.design" # the base hostname & protocol for your site
 downloadurl: "http://api.magicmirror.design/download"
+apigateway_url: "http://localhost:3000"
 author: James Tang
 twitter_username: jamztang
 github_username:  jamztang

@@ -85,7 +85,7 @@ share:
 
 			// create stripe 
 			$.ajax({
-				url: 'http://localhost:3000/signup',
+				url: '{{ site.apigateway_url }}/signup',
 				data: param,
 				method: 'POST',
 				complete: function(json){

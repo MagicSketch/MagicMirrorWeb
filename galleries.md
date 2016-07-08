@@ -40,7 +40,12 @@ share:
 			$('<p>').addClass('author').append($('<a>').attr({href: 'http://twitter.com/jamztang', identifier: 'author'}).addClass('name').append($('<img>').attr({src: 'https://avatars2.githubusercontent.com/u/852375?v=3&s=460'}).addClass('avatar')).append(' James Tang')).appendTo(infoSpan);
 
 			var priceDiv = $('<div>').addClass('flex-none p1 right-align').appendTo(bigSpan);
-			$('<p>').addClass('status').append('FREE').appendTo(priceDiv);
+
+			if(galleryItem.premium == 1){
+				$('<p>').addClass('status').append('PREMIUM').appendTo(priceDiv);
+			}else{
+				$('<p>').addClass('status').append('FREE').appendTo(priceDiv);
+			}
 
 			return result;
 		}
@@ -52,8 +57,12 @@ share:
 		}
 
 		$.ajax({
-		  url: 'https://api.fieldbook.com/v1/572f1172158f420300f5211b/template',
+		  url: '{{ site.apigateway_url }}/template',
 		  method: 'GET',
+		  headers: {
+				'X-Access-Token': Cookies.get('t'),
+				'X-Refresh-Token': Cookies.get('rt'),
+		  },
 		  success: function (data) {
 		    $.each(data, function(index, item){
 		    	$('#galleryContainer').append(new createGalleryGrid(item));
