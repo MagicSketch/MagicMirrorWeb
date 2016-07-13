@@ -11,11 +11,14 @@ twitter_username: jamztang
 github_username:  jamztang
 gems:
   - jekyll-redirect-from
+  - kramdown
+exclude: ['config.ru', 'Gemfile', 'Gemfile.lock', 'vendor', 'Procfile', 'Rakefile']
 analytics:
   google: UA-65727569-1
   mixpanel: 3cfd84dad73057910e2e1ca896a4ab6b
 stripe:
   key: pk_test_1hTqZ9bzrJO201ZMinyoE2DI
+
 
 # Build settings
 markdown: kramdown
