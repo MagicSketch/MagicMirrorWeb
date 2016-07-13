@@ -5,7 +5,6 @@ description: A Powerful Plugin to Perspective Transform Artboards into Shapes, j
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://magicmirror.design" # the base hostname & protocol for your site
 downloadurl: "http://api.magicmirror.design/download"
-apigateway_url: "https://api.magicsketch.io"
 author: James Tang
 twitter_username: jamztang
 github_username:  jamztang
@@ -16,8 +15,20 @@ exclude: ['config.ru', 'Gemfile', 'Gemfile.lock', 'vendor', 'Procfile', 'Rakefil
 analytics:
   google: UA-65727569-1
   mixpanel: 3cfd84dad73057910e2e1ca896a4ab6b
+apigateway:
+  dev:
+    url: "https://cherry.magicsketch.io"
+  staging:
+    url: "https://cherry.magicsketch.io"
+  production:
+    url: "https://api.magicsketch.io"
 stripe:
-  key: pk_test_1hTqZ9bzrJO201ZMinyoE2DI
+  dev:
+    key: hihikey
+  staging:
+    key: pk_test_1hTqZ9bzrJO201ZMinyoE2DI
+  production:
+    key: pk_test_1hTqZ9bzrJO201ZMinyoE2DI
 
 
 # Build settings

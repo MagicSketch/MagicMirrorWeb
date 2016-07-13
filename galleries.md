@@ -57,7 +57,7 @@ share:
 		}
 
 		$.ajax({
-		  url: '{{ site.apigateway_url }}/template',
+		  url: '{{ site.apigateway[jekyll.environment].url }}/template',
 		  method: 'GET',
 		  headers: {
 				'X-Access-Token': Cookies.get('t'),

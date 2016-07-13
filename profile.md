@@ -31,7 +31,7 @@ share:
 
 			// Perform Login
 			$.ajax({
-				url: '{{ site.apigateway_url }}/logout',
+				url: '{{ site.apigateway[jekyll.environment].url }}/logout',
 				data: param,
 				headers: {
 					'X-Access-Token': Cookies.get('t'),
@@ -56,7 +56,7 @@ share:
 
 		function setupProfile(user){
 			var handler = StripeCheckout.configure({
-		    key: '{{ site.stripe.key }}',
+		    key: '{{ site.stripe[jekyll.environment].key }}',
 		    image: '/img/documentation/checkout/marketplace.png',
 		    locale: 'auto',
 		    token: function(token) {
@@ -65,7 +65,7 @@ share:
 
 				// Perform subscribe
 				$.ajax({
-					url: '{{ site.apigateway_url }}/subscribe',
+					url: '{{ site.apigateway[jekyll.environment].url }}/subscribe',
 					data: token,
 					method: 'POST',
 					complete: function(json){
@@ -109,7 +109,7 @@ share:
 		});
 
 		$.ajax({
-			url: '{{ site.apigateway_url }}/user',
+			url: '{{ site.apigateway[jekyll.environment].url }}/user',
 			data: {
 				email: Cookies.get('userEmail')
 			},

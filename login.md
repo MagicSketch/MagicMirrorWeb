@@ -59,7 +59,7 @@ share:
 
 			// Perform Login
 			$.ajax({
-				url: '{{ site.apigateway_url }}/login',
+				url: '{{ site.apigateway[jekyll.environment].url }}/login',
 				data: param,
 				method: 'POST',
 				complete: function(json){
@@ -85,7 +85,7 @@ share:
 
 			// Perform Login
 			$.ajax({
-				url: '{{ site.apigateway_url }}/logout',
+				url: '{{ site.apigateway[jekyll.environment].url }}/logout',
 				data: param,
 				headers: {
 					'X-Access-Token': Cookies.get('t'),

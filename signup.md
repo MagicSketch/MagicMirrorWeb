@@ -85,7 +85,7 @@ share:
 
 			// create stripe 
 			$.ajax({
-				url: '{{ site.apigateway_url }}/signup',
+				url: '{{ site.apigateway[jekyll.environment].url }}/signup',
 				data: param,
 				method: 'POST',
 				complete: function(json){
