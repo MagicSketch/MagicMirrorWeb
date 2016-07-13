@@ -30,19 +30,6 @@ share:
 			$('.site-footer').hide();
 		}
 
-		// $.ajax({
-		//   url: 'https://api.fieldbook.com/v1/572f1172158f420300f5211b/template',
-		//   method: 'GET',
-		//   success: function (data) {
-		//     $.each(data, function(index, item){
-		//     	$('#galleryContainer').append(new createGalleryGrid(item));
-		//     });
-		//   },
-		//   error: function (error) {
-		//     console.log('error', error);
-		//   }
-		// });
-
 		function login(email, password){
 			var errorOutput = $('#errorMsg');
 			var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
