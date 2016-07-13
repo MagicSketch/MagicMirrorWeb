@@ -11,8 +11,6 @@ share:
 
 # Gallery
 
-hhi {{ jekyll.environment }} okok
-
 <script>
 
 	$( document ).ready(function() {
