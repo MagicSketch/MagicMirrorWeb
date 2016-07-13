@@ -56,7 +56,7 @@ share:
 
 		function setupProfile(user){
 			var handler = StripeCheckout.configure({
-		    key: 'pk_test_nF0KASSRwbKt0dujnXAyxwpW',
+		    key: '{{ site.stripe.key }}',
 		    image: '/img/documentation/checkout/marketplace.png',
 		    locale: 'auto',
 		    token: function(token) {
