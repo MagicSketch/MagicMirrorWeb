@@ -17,7 +17,7 @@ analytics:
   mixpanel: 3cfd84dad73057910e2e1ca896a4ab6b
 apigateway:
   dev:
-    url: "https://cherry.magicsketch.io"
+    url: "http://localhost:3000"
   staging:
     url: "https://cherry.magicsketch.io"
   production:
