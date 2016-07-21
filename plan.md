@@ -1,7 +1,7 @@
 ---
 layout: flex
 title: Gallery
-permalink: /profile/
+permalink: /plan/
 banner: true
 share:
   title: Subscribe for Magic Sketch
@@ -226,86 +226,127 @@ share:
  -->
 <div class="profile-content">
 	<div class="profile-row flex">
-		<div class="col-4 col info-content">
+		<div class="col-8 col info-content">
 			<div class="profile-pic-info col"><img src="/images/profile.png" /></div>
 			<div class="user-info col">
 				<div class="user-info-content">
 					James Tang
-					<div class="plan-info">BASIC PLAN</div>
+					<div class="plan-info">james@magicsketch.io</div>
 				</div>
 			</div>
 		</div>
-		<div class="col-4 col usage-field info-content">
+		<div class="col-2 col info-content">
 			<div class="info-content-wrap">
-				<div class="col">Traffic</div><div class="col-right">7 / 10 GB</div>
-				<div class="clear"></div>
-				<div class="bar"><div class="usage-bar traffic" style="width:33%"></div></div>
+				<a href="">edit your profile on gravtar</a>
 			</div>
 		</div>
-		<div class="col-4 col usage-field info-content">
+		<div class="col-2 col info-content signout-field">
 			<div class="info-content-wrap">
-				<div class="col">Storage</div><div class="col-right">7 / 1000 MB</div>
+				<button id="logoutButton" class="signout-link">Sign out</button>
+			</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+
+	<div class="gallery-row flex">
+		<div class="col-3 col plan-desc">
+			<div class="plan-type">Free</div>
+			<div class="plan-price">Free</div>
+			<div class="plan-duration">Monthly</div>
+			<div class="plan-storage col-12">
+				<div class="col-7 col category">Storage</div>
+				<div class="col-5 col category-value">100MB</div>
 				<div class="clear"></div>
-				<div class="bar"><div class="usage-bar storage" style="width:77%"></div></div>
+			</div>
+			<div class="plan-traffic col-12">
+				<div class="col-7 col category">Traffic</div>
+				<div class="col-5 col category-value">1GB</div>
+				<div class="clear"></div>
+			</div>
+			<div class="plan-subscribe">
+				<button class="subscribe-button" disabled="disabled">current plan</button>
+			</div>
+		</div>
+		<div class="col-3 col plan-desc">
+			<div class="plan-type">Basic</div>
+			<div class="plan-price">$5*</div>
+			<div class="plan-duration">Monthly</div>
+			<div class="plan-storage col-12">
+				<div class="col-7 col category">Storage</div>
+				<div class="col-5 col category-value">1GB</div>
+				<div class="clear"></div>
+			</div>
+			<div class="plan-traffic col-12">
+				<div class="col-7 col category">Traffic</div>
+				<div class="col-5 col category-value">10GB</div>
+				<div class="clear"></div>
+			</div>
+			<div class="plan-subscribe">
+				<button class="subscribe-button">select plan</button>
+			</div>
+		</div>
+		<div class="col-3 col plan-desc">
+			<div class="plan-type">Pro</div>
+			<div class="plan-price">$10*</div>
+			<div class="plan-duration">Monthly</div>
+			<div class="plan-storage col-12">
+				<div class="col-7 col category">Storage</div>
+				<div class="col-5 col category-value">3GB</div>
+				<div class="clear"></div>
+			</div>
+			<div class="plan-traffic col-12">
+				<div class="col-7 col category">Traffic</div>
+				<div class="col-5 col category-value">30GB</div>
+				<div class="clear"></div>
+			</div>
+			<div class="plan-subscribe">
+				<button class="subscribe-button">select plan</button>
+			</div>
+		</div>
+		<div class="col-3 col plan-desc">
+			<div class="plan-type">Ultra</div>
+			<div class="plan-price">$20*</div>
+			<div class="plan-duration">Monthly</div>
+			<div class="plan-storage col-12">
+				<div class="col-7 col category">Storage</div>
+				<div class="col-5 col category-value">10GB</div>
+				<div class="clear"></div>
+			</div>
+			<div class="plan-traffic col-12">
+				<div class="col-7 col category">Traffic</div>
+				<div class="col-5 col category-value">200GB</div>
+				<div class="clear"></div>
+			</div>
+			<div class="plan-subscribe">
+				<button class="subscribe-button">select plan</button>
 			</div>
 		</div>
 		<div class="clear"></div>
 	</div>
+	<div class="remarks">* price in usd.</div>
 
-	<div class="gallery-row flex">
-		<div class="col-4 col gallery-preview">
-			<div class="loader">
-				<div class="spin">
-					<i class="fa fa-spinner fa-spin fa-3x fa-fw"></i>
-				</div>
-			</div>
-			<img src="/images/templates/2015-11-03-ipad-mac.jpg" />
+	<div class="log-content">
+		<div class="title">Transaction Log</div>
+		<div class="log-record col-12">
+			<div class="col-6 col log-time">2016-04-20</div>
+			<div class="col-6 col log-plan">Pro $10</div>
+			<div class="clear"></div>
 		</div>
-		<div class="col-4 col gallery-preview"><img src="/images/templates/ipad-on-desk.jpg" /></div>
-		<div class="col-4 col gallery-preview"><img src="/images/templates/iphone-6-and-6s.jpg" /></div>
-		<div class="clear"></div>
-	</div>
-
-	<div class="gallery-row flex">
-		<div class="col-4 col gallery-preview">
-			<div class="loader">
-				<div class="spin">
-					<i class="fa fa-spinner fa-spin fa-3x fa-fw"></i>
-				</div>
-			</div>
-			<img src="/images/templates/iphone-6-fingertip.jpg" />
+		<div class="log-record col-12">
+			<div class="col-6 col log-time">2016-04-20</div>
+			<div class="col-6 col log-plan">Pro $10</div>
+			<div class="clear"></div>
 		</div>
-		<div class="col-4 col gallery-preview">
-			<div class="loader">
-				<div class="spin">
-					<i class="fa fa-spinner fa-spin fa-3x fa-fw"></i>
-				</div>
-			</div>
-			<img src="/images/templates/iphone-office-cover.jpg" />
+		<div class="log-record col-12">
+			<div class="col-6 col log-time">2016-04-20</div>
+			<div class="col-6 col log-plan">Pro $10</div>
+			<div class="clear"></div>
 		</div>
-		<div class="col-4 col gallery-preview">
-			<div class="loader">
-				<div class="spin">
-					<i class="fa fa-spinner fa-spin fa-3x fa-fw"></i>
-				</div>
-			</div>
-			<img src="/images/templates/iphone-watch-cover.jpg" />
+		<div class="log-record col-12">
+			<div class="col-6 col log-time">2016-04-20</div>
+			<div class="col-6 col log-plan">Pro $10</div>
+			<div class="clear"></div>
 		</div>
-		<div class="clear"></div>
-	</div>
-
-	<div class="gallery-row flex">
-		<div class="col-4 col gallery-preview"><img src="/images/templates/iphone6-girls-hand.jpg" /></div>
-		<div class="col-4 col gallery-preview"><img src="/images/templates/iphone6s-flowkit.jpg" /></div>
-		<div class="col-4 col gallery-preview"><img src="/images/templates/iphone6s-hands.jpg" /></div>
-		<div class="clear"></div>
-	</div>
-
-	<div class="gallery-row flex">
-		<div class="col-4 col gallery-preview"><img src="/images/templates/iphone6s.jpg" /></div>
-		<div class="col-4 col gallery-preview"><img src="/images/templates/macbook-air-desk.jpg" /></div>
-		<div class="col-4 col gallery-preview nothing"></div>
-		<div class="clear"></div>
 	</div>
 
 </div>

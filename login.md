@@ -8,10 +8,12 @@ share:
   description: Checkout the new Magic Templates Gallery
 ---
 
-# Login Magic Sketch
+<link rel="stylesheet" type="text/css" href="/css/gallery.css" media="screen" />
+
+# Login Magic Gallery
 
 <script>
-
+	var inapp = false;
 	$( document ).ready(function() {
 
 		function getParameterByName(name, url) {
@@ -28,6 +30,8 @@ share:
 			$('.flex-center.mb2').hide();
 			$('.site-header').hide();
 			$('.site-footer').hide();
+
+			inapp = true;
 		}
 
 		function login(email, password){
@@ -36,6 +40,7 @@ share:
 
 			if(!re.test(email)){
 				errorOutput.html('Email address is invalid');
+				$('#loginButton').removeAttr('disabled');
 				return false;
 			}
 
@@ -55,12 +60,14 @@ share:
 					Cookies.set('t', json.access_token); //{domain: 'config.domain'});
 					Cookies.set('rt', json.refresh_token);
 					Cookies.set('userEmail', email);
-					console.log(json);
 
-					window.location = '/profile';
+					window.location = '/profile'+(inapp?'?inapp':'');
 				},
 				error: function(json){
 					console.log(json);
+
+					errorOutput.html('There is problem on logging in.');
+					$('#loginButton').removeAttr('disabled');
 				}
 			});
 		}
@@ -110,30 +117,33 @@ share:
 			$(this).attr('disabled', 'disabled');
 		});
 
-		$('#localMsg').html(Cookies.get('t') + ':' + Cookies.get('rt'));
+		$('#signupButton').click(function(e){
+			window.location = '/signup' + (inapp?'?inapp':'');
+		});
 
 	  });
 
 </script>
 
-<div class="">
-	<div>
-		<label for="emailInput">Email:</label>
-		<input type="text" id="emailInput" />
-	</div>
-	<div>
-		<label for="passwordInput">Password:</label>
-		<input type="password" id="passwordInput" />
-	</div>
-	<div id="errorMsg"></div>
-	<div>
-		<button id="loginButton">Login</button>
-	</div>
-	<div id="localMsg"></div>
-</div>
-<button id="logoutButton">logout</button>
-<div class="center wrapper mt4" markdown="1">
+<div class="login-form-container">
+	<div class="field-area">
+		<div class="form-field">
+			<i class="fa fa-envelope-o" aria-hidden="true"></i>
+			<input type="text" id="emailInput" placeholder="Email" />
+		</div>
 
-Magic Mirror Gallery is still in beta. If you want to help or want to have your own templates show up please read the <a href="/template-guideline">templates contribution guideline</a> :)
+		<div class="form-field">
+			<i class="fa fa-key" aria-hidden="true"></i>
+			<input type="password" id="passwordInput" placeholder="Password" />
+		</div>
+		<div class="form-field no-border">
+			<div id="errorMsg"></div>
+		</div>
+	</div>
+
+	<div class="account-control">
+		<div class="col-right col-6"><button class="button-action" id="signupButton">Sign up</button></div>
+		<div class="col-right col-6"><button class="button-action" id="loginButton">Login</button></div>
+	</div>
 
 </div>
