@@ -11,7 +11,7 @@ share:
 <link rel="stylesheet" type="text/css" href="/css/gallery.css" media="screen" />
 
 <script>
-
+	var inapp = false;
 	$( document ).ready(function() {
 
 		function getParameterByName(name, url) {
@@ -176,6 +176,8 @@ share:
 			$('.flex-center.mb2').hide();
 			$('.site-header').hide();
 			$('.site-footer').hide();
+
+			inapp = true;
 		}
 
 		$('#logoutButton').click(function(e){
@@ -184,31 +186,31 @@ share:
 			$(this).attr('disabled', 'disabled');
 		});
 
-		// $.ajax({
-		// 	url: '{{ site.apigateway[jekyll.environment].url }}/user',
-		// 	data: {
-		// 		email: Cookies.get('userEmail')
-		// 	},
-		// 	headers: {
-		// 		'X-Access-Token': Cookies.get('t'),
-		// 		'X-Refresh-Token': Cookies.get('rt'),
-		// 	},
-		// 	method: 'GET',
-		// 	complete: function(json){
-		// 	},
-		// 	success: function(json){
-		// 		console.log(json);
+		$.ajax({
+			url: '{{ site.apigateway[jekyll.environment].url }}/user',
+			data: {
+				email: Cookies.get('userEmail')
+			},
+			headers: {
+				'X-Access-Token': Cookies.get('t'),
+				'X-Refresh-Token': Cookies.get('rt'),
+			},
+			method: 'GET',
+			complete: function(json){
+			},
+			success: function(json){
+				console.log(json);
 
-		// 		if(json.email === undefined){
-		// 			window.location = '/login';
-		// 		}else{
-		// 			setupProfile(json);
-		// 		}
-		// 	},
-		// 	error: function(json){
-		// 		console.log(json);
-		// 	}
-		// });
+				if(json.email === undefined){
+					window.location = '/login';
+				}else{
+					setupProfile(json);
+				}
+			},
+			error: function(json){
+				console.log(json);
+			}
+		});
 
 	  });
 
@@ -229,19 +231,19 @@ share:
 		<div class="col-8 col info-content">
 			<div class="profile-pic-info col"><img src="/images/profile.png" /></div>
 			<div class="user-info col">
-				<div class="user-info-content">
-					James Tang
-					<div class="plan-info">james@magicsketch.io</div>
+				<div class="user-info-content thin-text">
+					<a href="/profile">James Tang</a>
+					<div class="plan-info"><a href="/profile">james@magicsketch.io</a></div>
 				</div>
 			</div>
 		</div>
 		<div class="col-2 col info-content">
-			<div class="info-content-wrap">
+			<div class="info-content-wrap thin-text">
 				<a href="">edit your profile on gravtar</a>
 			</div>
 		</div>
 		<div class="col-2 col info-content signout-field">
-			<div class="info-content-wrap">
+			<div class="info-content-wrap medium-text">
 				<button id="logoutButton" class="signout-link">Sign out</button>
 			</div>
 		</div>
@@ -251,7 +253,7 @@ share:
 	<div class="gallery-row flex">
 		<div class="col-3 col plan-desc">
 			<div class="plan-type">Free</div>
-			<div class="plan-price">Free</div>
+			<div class="plan-price medium-text">Free</div>
 			<div class="plan-duration">Monthly</div>
 			<div class="plan-storage col-12">
 				<div class="col-7 col category">Storage</div>
@@ -269,7 +271,7 @@ share:
 		</div>
 		<div class="col-3 col plan-desc">
 			<div class="plan-type">Basic</div>
-			<div class="plan-price">$5*</div>
+			<div class="plan-price medium-text">$5*</div>
 			<div class="plan-duration">Monthly</div>
 			<div class="plan-storage col-12">
 				<div class="col-7 col category">Storage</div>
@@ -287,7 +289,7 @@ share:
 		</div>
 		<div class="col-3 col plan-desc">
 			<div class="plan-type">Pro</div>
-			<div class="plan-price">$10*</div>
+			<div class="plan-price medium-text">$10*</div>
 			<div class="plan-duration">Monthly</div>
 			<div class="plan-storage col-12">
 				<div class="col-7 col category">Storage</div>
@@ -305,7 +307,7 @@ share:
 		</div>
 		<div class="col-3 col plan-desc">
 			<div class="plan-type">Ultra</div>
-			<div class="plan-price">$20*</div>
+			<div class="plan-price medium-text">$20*</div>
 			<div class="plan-duration">Monthly</div>
 			<div class="plan-storage col-12">
 				<div class="col-7 col category">Storage</div>
@@ -323,9 +325,9 @@ share:
 		</div>
 		<div class="clear"></div>
 	</div>
-	<div class="remarks">* price in usd.</div>
+	<div class="remarks thin-text">* price in USD.</div>
 
-	<div class="log-content">
+	<div class="log-content medium-text">
 		<div class="title">Transaction Log</div>
 		<div class="log-record col-12">
 			<div class="col-6 col log-time">2016-04-20</div>

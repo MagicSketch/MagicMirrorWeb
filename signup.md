@@ -8,10 +8,12 @@ share:
   description: Checkout the new Magic Templates Gallery
 ---
 
-# Sign up for Magic Sketch
+<link rel="stylesheet" type="text/css" href="/css/gallery.css" media="screen" />
+
+# Sign up for Magic Gallery
 
 <script>
-
+	var inapp = false;
 	$( document ).ready(function() {
 
 		function getParameterByName(name, url) {
@@ -48,6 +50,8 @@ share:
 			$('.flex-center.mb2').hide();
 			$('.site-header').hide();
 			$('.site-footer').hide();
+
+			inapp = true;
 		}
 
 		function signupUser(email, password, confirmPassword, firstName, lastName){
@@ -96,36 +100,49 @@ share:
 			signupUser(email, password, confirmPassword, firstName, lastName);
 		});
 
+		$('#loginButton').click(function(e){
+			window.location = '/login' + (inapp?'?inapp':'');
+		});
+
 	  });
 
 </script>
 
-<div class="">
-	<div>
-		<label for="firstNameInput">First name:</label>
-		<input type="text" id="firstNameInput" />
-		<label for="lastNameInput">Last name:</label>
-		<input type="text" id="lastNameInput" />
-	</div>
-	<div>
-		<label for="emailInput">Email:</label>
-		<input type="text" id="emailInput" />
-	</div>
-	<div>
-		<label for="passwordInput">Password:</label>
-		<input type="password" id="passwordInput" />
-	</div>
-	<div>
-		<label for="confirmPasswordInput">Confirm Password:</label>
-		<input type="password" id="confirmPasswordInput" />
-	</div>
-	<div id="errorMsg"></div>
-	<div>
-		<button id="signupButton">Sign me up!</button>
-	</div>
-</div>
-<div class="center wrapper mt4" markdown="1">
 
-Magic Mirror Gallery is still in beta. If you want to help or want to have your own templates show up please read the <a href="/template-guideline">templates contribution guideline</a> :)
+<div class="signup-form-container">
+	<div class="field-area">
+		<div class="form-field col-6 col first-input">
+			<input type="text" id="firstNameInput" placeholder="First Name" />
+		</div>
+
+		<div class="form-field col-5 col">
+			<input type="text" id="lastNameInput" placeholder="Last Name" />
+		</div>
+
+		<div class="clear"></div>
+
+		<div class="form-field">
+			<i class="fa fa-envelope-o" aria-hidden="true"></i>
+			<input type="text" id="emailInput" placeholder="Email" />
+		</div>
+
+		<div class="form-field">
+			<i class="fa fa-key" aria-hidden="true"></i>
+			<input type="password" id="passwordInput" placeholder="Password" />
+		</div>
+		<div class="form-field">
+			<i class="fa fa-key" aria-hidden="true"></i>
+			<input type="password" id="confirmPasswordInput" placeholder="Confirm Password" />
+		</div>
+		<div class="form-field no-border">
+			<div id="errorMsg"></div>
+		</div>
+	</div>
+
+	<div class="account-control">
+		<button class="button-action" id="signupButton">Sign up</button>
+		<p>&nbsp;</p>
+		<button class="button-action" id="loginButton">Have account? Login</button>
+	</div>
 
 </div>

@@ -11,7 +11,7 @@ share:
 <link rel="stylesheet" type="text/css" href="/css/gallery.css" media="screen" />
 
 <script>
-
+	var inapp = false;
 	$( document ).ready(function() {
 
 		function getParameterByName(name, url) {
@@ -176,6 +176,8 @@ share:
 			$('.flex-center.mb2').hide();
 			$('.site-header').hide();
 			$('.site-footer').hide();
+
+			inapp = true;
 		}
 
 		$('#logoutButton').click(function(e){
@@ -184,31 +186,31 @@ share:
 			$(this).attr('disabled', 'disabled');
 		});
 
-		// $.ajax({
-		// 	url: '{{ site.apigateway[jekyll.environment].url }}/user',
-		// 	data: {
-		// 		email: Cookies.get('userEmail')
-		// 	},
-		// 	headers: {
-		// 		'X-Access-Token': Cookies.get('t'),
-		// 		'X-Refresh-Token': Cookies.get('rt'),
-		// 	},
-		// 	method: 'GET',
-		// 	complete: function(json){
-		// 	},
-		// 	success: function(json){
-		// 		console.log(json);
+		$.ajax({
+			url: '{{ site.apigateway[jekyll.environment].url }}/user',
+			data: {
+				email: Cookies.get('userEmail')
+			},
+			headers: {
+				'X-Access-Token': Cookies.get('t'),
+				'X-Refresh-Token': Cookies.get('rt'),
+			},
+			method: 'GET',
+			complete: function(json){
+			},
+			success: function(json){
+				console.log(json);
 
-		// 		if(json.email === undefined){
-		// 			window.location = '/login';
-		// 		}else{
-		// 			setupProfile(json);
-		// 		}
-		// 	},
-		// 	error: function(json){
-		// 		console.log(json);
-		// 	}
-		// });
+				if(json.email === undefined){
+					window.location = '/login' + (inapp?'?inapp':'');
+				}else{
+					setupProfile(json);
+				}
+			},
+			error: function(json){
+				console.log(json);
+			}
+		});
 
 	  });
 
@@ -229,21 +231,21 @@ share:
 		<div class="col-4 col info-content">
 			<div class="profile-pic-info col"><img src="/images/profile.png" /></div>
 			<div class="user-info col">
-				<div class="user-info-content">
-					James Tang
-					<div class="plan-info">BASIC PLAN</div>
+				<div class="user-info-content thin-text">
+					<a href="/plan">James Tang</a>
+					<div class="plan-info"><a href="/plan">BASIC PLAN</a></div>
 				</div>
 			</div>
 		</div>
 		<div class="col-4 col usage-field info-content">
-			<div class="info-content-wrap">
+			<div class="info-content-wrap thin-text">
 				<div class="col">Traffic</div><div class="col-right">7 / 10 GB</div>
 				<div class="clear"></div>
 				<div class="bar"><div class="usage-bar traffic" style="width:33%"></div></div>
 			</div>
 		</div>
 		<div class="col-4 col usage-field info-content">
-			<div class="info-content-wrap">
+			<div class="info-content-wrap thin-text">
 				<div class="col">Storage</div><div class="col-right">7 / 1000 MB</div>
 				<div class="clear"></div>
 				<div class="bar"><div class="usage-bar storage" style="width:77%"></div></div>
