@@ -24,7 +24,7 @@ apigateway:
     url: "https://api.magicsketch.io"
 stripe:
   dev:
-    key: hihikey
+    key: pk_test_1hTqZ9bzrJO201ZMinyoE2DI
   staging:
     key: pk_test_1hTqZ9bzrJO201ZMinyoE2DI
   production:

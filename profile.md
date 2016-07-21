@@ -55,40 +55,116 @@ share:
 		}
 
 		function setupProfile(user){
-			var handler = StripeCheckout.configure({
-		    key: '{{ site.stripe[jekyll.environment].key }}',
-		    image: '/img/documentation/checkout/marketplace.png',
-		    locale: 'auto',
-		    token: function(token) {
-		      // You can access the token ID with `token.id`.
-		      // Get the token ID to your server-side code for use.
+			var basicHandler = StripeCheckout.configure({
+			    key: '{{ site.stripe[jekyll.environment].key }}',
+			    image: '/images/profile.png',
+			    locale: 'auto',
+			    token: function(token) {
+			      // You can access the token ID with `token.id`.
+			      // Get the token ID to your server-side code for use.
 
-				// Perform subscribe
-				$.ajax({
-					url: '{{ site.apigateway[jekyll.environment].url }}/subscribe',
-					data: token,
-					method: 'POST',
-					complete: function(json){
-					},
-					success: function(json){
-						console.log(json);
-					},
-					error: function(json){
-						console.log(json);
-					}
-				});
-		    },
-		    email: user.email
+					// Perform subscribe
+					$.ajax({
+						url: '{{ site.apigateway[jekyll.environment].url }}/subscribe/MG01',
+						data: token,
+						method: 'POST',
+						complete: function(json){
+						},
+						success: function(json){
+							console.log(json);
+						},
+						error: function(json){
+							console.log(json);
+						}
+					});
+			    },
+			    email: user.email
 
-		  });
+			  });
+
+			var premiumHandler = StripeCheckout.configure({
+			    key: '{{ site.stripe[jekyll.environment].key }}',
+			    image: '/images/profile.png',
+			    locale: 'auto',
+			    token: function(token) {
+			      // You can access the token ID with `token.id`.
+			      // Get the token ID to your server-side code for use.
+
+					// Perform subscribe
+					$.ajax({
+						url: '{{ site.apigateway[jekyll.environment].url }}/subscribe/MG02',
+						data: token,
+						method: 'POST',
+						complete: function(json){
+						},
+						success: function(json){
+							console.log(json);
+						},
+						error: function(json){
+							console.log(json);
+						}
+					});
+			    },
+			    email: user.email
+
+			  });
+
+			var proHandler = StripeCheckout.configure({
+			    key: '{{ site.stripe[jekyll.environment].key }}',
+			    image: '/images/profile.png',
+			    locale: 'auto',
+			    token: function(token) {
+			      // You can access the token ID with `token.id`.
+			      // Get the token ID to your server-side code for use.
+
+					// Perform subscribe
+					$.ajax({
+						url: '{{ site.apigateway[jekyll.environment].url }}/subscribe/MG03',
+						data: token,
+						method: 'POST',
+						complete: function(json){
+						},
+						success: function(json){
+							console.log(json);
+						},
+						error: function(json){
+							console.log(json);
+						}
+					});
+			    },
+			    email: user.email
+
+			  });
 
 		  $('#customButton').removeAttr('disabled');
 		  $('#customButton').on('click', function(e) {
 		    // Open Checkout with further options:
-		    handler.open({
-		      name: 'Demo Site',
-		      description: '2 widgets',
-		      amount: 2000,
+		    basicHandler.open({
+		      name: 'Basic plan',
+		      description: '5GB cloud storage',
+		      amount: 999,
+		    });
+		    e.preventDefault();
+		  });
+
+		  $('#customButton2').removeAttr('disabled');
+		  $('#customButton2').on('click', function(e) {
+		    // Open Checkout with further options:
+		    premiumHandler.open({
+		      name: 'Premium plan',
+		      description: '10GB cloud storage + access to premium content',
+		      amount: 2999,
+		    });
+		    e.preventDefault();
+		  });
+
+		  $('#customButton3').removeAttr('disabled');
+		  $('#customButton3').on('click', function(e) {
+		    // Open Checkout with further options:
+		    proHandler.open({
+		      name: 'Pro Plan',
+		      description: '50GB cloud storage + access to premium content',
+		      amount: 5999,
 		    });
 		    e.preventDefault();
 		  });
@@ -140,7 +216,9 @@ share:
 
 <script src="https://checkout.stripe.com/checkout.js"></script>
 
-<button id="customButton" disabled="disabled">Subscribe magic sketch</button>
+<button id="customButton" disabled="disabled">Subscribe magic sketch personal cloud (5GB)</button>
+<button id="customButton2" disabled="disabled">Subscribe magic sketch premium plan (10GB + download premium content)</button>
+<button id="customButton3" disabled="disabled">Subscribe magic sketch pro plan (50GB + download premium content)</button>
 
 <button id="logoutButton">logout</button>
 
