@@ -57,47 +57,29 @@ share:
 				complete: function(json){
 				},
 				success: function(json){
-					Cookies.set('t', json.access_token); //{domain: 'config.domain'});
-					Cookies.set('rt', json.refresh_token);
-					Cookies.set('userEmail', email);
+					if(json.access_token !== undefined){
+						Cookies.set('t', json.access_token); //{domain: 'config.domain'});
+						Cookies.set('rt', json.refresh_token);
+						Cookies.set('userEmail', email);
 
-					window.location = '/profile'+(inapp?'?inapp':'');
+						window.location = '/profile'+(inapp?'?inapp':'');	
+					}else{
+						console.log(json);
+						errorOutput.html('There is problem on logging in.');
+						$('#loginButton').removeAttr('disabled');
+					}
+					
 				},
 				error: function(json){
 					console.log(json);
 
-					errorOutput.html('There is problem on logging in.');
+					if(json.message === undefined){
+						errorOutput.html('There is problem on logging in.');
+					}else{
+						errorOutput.html(json.message);
+					}
+					
 					$('#loginButton').removeAttr('disabled');
-				}
-			});
-		}
-
-		function logout(){
-			var param = {
-				email: Cookies.get('userEmail'),
-			};
-
-			// Perform Login
-			$.ajax({
-				url: '{{ site.apigateway[jekyll.environment].url }}/logout',
-				data: param,
-				headers: {
-					'X-Access-Token': Cookies.get('t'),
-					'X-Refresh-Token': Cookies.get('rt'),
-				},
-				method: 'DELETE',
-				complete: function(json){
-				},
-				success: function(json){
-					console.log(json);
-					Cookies.remove('t');
-					Cookies.remove('rt');
-					Cookies.remove('userEmail');
-
-					window.location = '/';
-				},
-				error: function(json){
-					console.log(json);
 				}
 			});
 		}
@@ -105,16 +87,20 @@ share:
 		$('#loginButton').click(function(e){
 			var email = $('#emailInput').val();
 			var password = $('#passwordInput').val();
+			$(this).attr('disabled', 'disabled');
 
 			login(email, password);
+		});
 
-			$(this).attr('disabled', 'disabled');
+		$('#passwordInput').keypress(function(e){
+			if(e.which == 13) {
+				$('#loginButton').click();
+			}
 		});
 
 		$('#logoutButton').click(function(e){
-			logout();
-
 			$(this).attr('disabled', 'disabled');
+			logout();
 		});
 
 		$('#signupButton').click(function(e){

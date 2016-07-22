@@ -24,152 +24,54 @@ share:
 		    return decodeURIComponent(results[2].replace(/\+/g, " "));
 		}
 
-		function logout(){
-			var param = {
-				email: Cookies.get('userEmail'),
-			};
-
-			// Perform Login
-			$.ajax({
-				url: '{{ site.apigateway[jekyll.environment].url }}/logout',
-				data: param,
-				headers: {
-					'X-Access-Token': Cookies.get('t'),
-					'X-Refresh-Token': Cookies.get('rt'),
-				},
-				method: 'DELETE',
-				complete: function(json){
-				},
-				success: function(json){
-					console.log(json);
-					Cookies.remove('t');
-					Cookies.remove('rt');
-					Cookies.remove('userEmail');
-
-					window.location = '/';
-				},
-				error: function(json){
-					console.log(json);
-				}
-			});
+		function getTemplates(){
+			// TODO: get this user uploaded template
 		}
 
 		function setupProfile(user){
-			var basicHandler = StripeCheckout.configure({
-			    key: '{{ site.stripe[jekyll.environment].key }}',
-			    image: '/images/profile.png',
-			    locale: 'auto',
-			    token: function(token) {
-			      // You can access the token ID with `token.id`.
-			      // Get the token ID to your server-side code for use.
+			$('.global-loader').remove();
 
-					// Perform subscribe
-					$.ajax({
-						url: '{{ site.apigateway[jekyll.environment].url }}/subscribe/MG01',
-						data: token,
-						method: 'POST',
-						complete: function(json){
-						},
-						success: function(json){
-							console.log(json);
-						},
-						error: function(json){
-							console.log(json);
-						}
-					});
-			    },
-			    email: user.email
+			var totalStorage = user.customData.freeStorage + user.customData.cloudStorage;
+			var storagePercent = user.customData.cloudUsage / totalStorage * 100;
+			var trafficPercent = user.customData.trafficUsage / user.customData.trafficLimit * 100;
 
-			  });
+			var storageUsage = "";
+			var storageTotal = "";
+			var trafficUsage = "";
+			var trafficTotal = "";
 
-			var premiumHandler = StripeCheckout.configure({
-			    key: '{{ site.stripe[jekyll.environment].key }}',
-			    image: '/images/profile.png',
-			    locale: 'auto',
-			    token: function(token) {
-			      // You can access the token ID with `token.id`.
-			      // Get the token ID to your server-side code for use.
+			if(user.customData.trafficLimit > 1000){
+				trafficTotal = (user.customData.trafficLimit/1000)+" GB";
+				trafficUsage = (user.customData.trafficUsage/1000);
+			}else{
+				trafficTotal = (user.customData.trafficLimit)+" MB";
+				trafficUsage = (user.customData.trafficUsage);
+			}
 
-					// Perform subscribe
-					$.ajax({
-						url: '{{ site.apigateway[jekyll.environment].url }}/subscribe/MG02',
-						data: token,
-						method: 'POST',
-						complete: function(json){
-						},
-						success: function(json){
-							console.log(json);
-						},
-						error: function(json){
-							console.log(json);
-						}
-					});
-			    },
-			    email: user.email
+			if(totalStorage > 1000){
+				storageTotal = (totalStorage/1000)+" GB";
+				storageUsage = (user.customData.cloudUsage/1000);
+			}else{
+				storageTotal = (totalStorage)+" MB";
+				storageUsage = (user.customData.cloudUsage);
+			}
 
-			  });
+			$('#nameDisplay').html(user.fullName);
+			$('#planDisplay').html(user.customData.userType);
 
-			var proHandler = StripeCheckout.configure({
-			    key: '{{ site.stripe[jekyll.environment].key }}',
-			    image: '/images/profile.png',
-			    locale: 'auto',
-			    token: function(token) {
-			      // You can access the token ID with `token.id`.
-			      // Get the token ID to your server-side code for use.
+			$("#trafficUsageDisplay").html(trafficUsage);
+			$("#trafficLimitDisplay").html(trafficTotal);
+			$("#trafficUsageBar").attr('style', 'width:'+trafficPercent+'%');
+			$("#storageUsageDisplay").html(storageUsage);
+			$("#storageLimitDisplay").html(storageTotal);
+			$("#storageUsageBar").attr('style', 'width:'+storagePercent+'%');
 
-					// Perform subscribe
-					$.ajax({
-						url: '{{ site.apigateway[jekyll.environment].url }}/subscribe/MG03',
-						data: token,
-						method: 'POST',
-						complete: function(json){
-						},
-						success: function(json){
-							console.log(json);
-						},
-						error: function(json){
-							console.log(json);
-						}
-					});
-			    },
-			    email: user.email
+			if(inapp){
+				$('#nameDisplay').attr('href', $('#nameDisplay').attr('href')+'?inapp');
+				$('#planDisplay').attr('href', $('#planDisplay').attr('href')+'?inapp');
+			}
 
-			  });
-
-		  $('#customButton').removeAttr('disabled');
-		  $('#customButton').on('click', function(e) {
-		    // Open Checkout with further options:
-		    basicHandler.open({
-		      name: 'Basic plan',
-		      description: '5GB cloud storage',
-		      amount: 999,
-		    });
-		    e.preventDefault();
-		  });
-
-		  $('#customButton2').removeAttr('disabled');
-		  $('#customButton2').on('click', function(e) {
-		    // Open Checkout with further options:
-		    premiumHandler.open({
-		      name: 'Premium plan',
-		      description: '10GB cloud storage + access to premium content',
-		      amount: 2999,
-		    });
-		    e.preventDefault();
-		  });
-
-		  $('#customButton3').removeAttr('disabled');
-		  $('#customButton3').on('click', function(e) {
-		    // Open Checkout with further options:
-		    proHandler.open({
-		      name: 'Pro Plan',
-		      description: '50GB cloud storage + access to premium content',
-		      amount: 5999,
-		    });
-		    e.preventDefault();
-		  });
-
-		  $('#accountInfo').html('Logged in as: '+ user.email);
+			getTemplates();
 		}
 
 		if(getParameterByName('inapp') != null){
@@ -179,12 +81,6 @@ share:
 
 			inapp = true;
 		}
-
-		$('#logoutButton').click(function(e){
-			logout();
-
-			$(this).attr('disabled', 'disabled');
-		});
 
 		$.ajax({
 			url: '{{ site.apigateway[jekyll.environment].url }}/user',
@@ -208,7 +104,7 @@ share:
 				}
 			},
 			error: function(json){
-				console.log(json);
+				window.location = '/login' + (inapp?'?inapp':'');
 			}
 		});
 
@@ -216,39 +112,34 @@ share:
 
 </script>
 
-<!-- <script src="https://checkout.stripe.com/checkout.js"></script> -->
-
-<!-- <button id="customButton" disabled="disabled">Subscribe magic sketch personal cloud (5GB)</button>
-<button id="customButton2" disabled="disabled">Subscribe magic sketch premium plan (10GB + download premium content)</button>
-<button id="customButton3" disabled="disabled">Subscribe magic sketch pro plan (50GB + download premium content)</button>
-
-<button id="logoutButton">logout</button>
-
-<div id="accountInfo"></div>
- -->
+<div class="loader global-loader">
+	<div class="spin">
+		<i class="fa fa-spinner fa-spin fa-3x fa-fw"></i>
+	</div>
+</div>
 <div class="profile-content">
 	<div class="profile-row flex">
 		<div class="col-4 col info-content">
-			<div class="profile-pic-info col"><img src="/images/profile.png" /></div>
+			<div class="profile-pic-info col"><img src="/images/arjen.jpg" /></div>
 			<div class="user-info col">
 				<div class="user-info-content thin-text">
-					<a href="/plan">James Tang</a>
-					<div class="plan-info"><a href="/plan">BASIC PLAN</a></div>
+					<a href="/plan" id="nameDisplay"></a>
+					<div class="plan-info"><a href="/plan" id="planDisplay">FREE USER</a></div>
 				</div>
 			</div>
 		</div>
 		<div class="col-4 col usage-field info-content">
 			<div class="info-content-wrap thin-text">
-				<div class="col">Traffic</div><div class="col-right">7 / 10 GB</div>
+				<div class="col">Traffic</div><div class="col-right"><span id="trafficUsageDisplay">0</span> / <span id="trafficLimitDisplay">0 MB</span></div>
 				<div class="clear"></div>
-				<div class="bar"><div class="usage-bar traffic" style="width:33%"></div></div>
+				<div class="bar"><div class="usage-bar traffic" style="width:0" id="trafficUsageBar"></div></div>
 			</div>
 		</div>
 		<div class="col-4 col usage-field info-content">
 			<div class="info-content-wrap thin-text">
-				<div class="col">Storage</div><div class="col-right">7 / 1000 MB</div>
+				<div class="col">Storage</div><div class="col-right"><span id="storageUsageDisplay">0</span> / <span id="storageLimitDisplay">0 MB</span></div>
 				<div class="clear"></div>
-				<div class="bar"><div class="usage-bar storage" style="width:77%"></div></div>
+				<div class="bar"><div class="usage-bar storage" style="width:0" id="storageUsageBar"></div></div>
 			</div>
 		</div>
 		<div class="clear"></div>

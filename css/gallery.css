@@ -142,6 +142,27 @@ body {
 .profile-pic-info{
 	width: 60px;
 	height: 60px;
+
+	border-radius: 60px;
+	border: 3px solid #f6f6f6;
+}
+
+.profile-pic-info:before{
+	border-radius: 60px;
+    border: 1px solid #dadada;
+    background: none;
+    content: "";
+    display: block;
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    pointer-events: none;
+    width: 60px;
+    height: 60px;
+}
+
+.profile-pic-info img{
+	border-radius: 60px;
 }
 
 .user-info{
@@ -182,6 +203,7 @@ body {
 	box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.35);
 
 	position: relative;
+	cursor: pointer;
 
 	margin:8px;
 }
@@ -192,7 +214,12 @@ body {
 	box-shadow: 0px 0px 15px 0px rgba(0,0,0,0);
 }
 
-.gallery-preview .loader{
+.global-loader{
+	position: fixed!important;
+	z-index: 99999;
+}
+
+.loader{
 	position: absolute;
 	top: 0;
 	left: 0;

@@ -9,7 +9,7 @@ share:
 ---
 
 <link rel="stylesheet" type="text/css" href="/css/gallery.css" media="screen" />
-
+<script src="https://checkout.stripe.com/checkout.js"></script>
 <script>
 	var inapp = false;
 	$( document ).ready(function() {
@@ -39,14 +39,18 @@ share:
 				},
 				method: 'DELETE',
 				complete: function(json){
-				},
-				success: function(json){
 					console.log(json);
 					Cookies.remove('t');
 					Cookies.remove('rt');
 					Cookies.remove('userEmail');
 
-					window.location = '/';
+					if(inapp){
+						window.location = '/login?inapp';
+					}else{
+						window.location = '/';
+					}
+				},
+				success: function(json){
 				},
 				error: function(json){
 					console.log(json);
@@ -54,7 +58,17 @@ share:
 			});
 		}
 
+		function getUserPlan(){
+			// TODO: get all plan and display
+		}
+
+		function getUserPaymentLog(){
+			
+		}
+
 		function setupProfile(user){
+			$('.global-loader').remove();
+
 			var basicHandler = StripeCheckout.configure({
 			    key: '{{ site.stripe[jekyll.environment].key }}',
 			    image: '/images/profile.png',
@@ -82,7 +96,7 @@ share:
 
 			  });
 
-			var premiumHandler = StripeCheckout.configure({
+			var proHandler = StripeCheckout.configure({
 			    key: '{{ site.stripe[jekyll.environment].key }}',
 			    image: '/images/profile.png',
 			    locale: 'auto',
@@ -109,7 +123,7 @@ share:
 
 			  });
 
-			var proHandler = StripeCheckout.configure({
+			var ultraHandler = StripeCheckout.configure({
 			    key: '{{ site.stripe[jekyll.environment].key }}',
 			    image: '/images/profile.png',
 			    locale: 'auto',
@@ -136,40 +150,67 @@ share:
 
 			  });
 
-		  $('#customButton').removeAttr('disabled');
-		  $('#customButton').on('click', function(e) {
-		    // Open Checkout with further options:
-		    basicHandler.open({
-		      name: 'Basic plan',
-		      description: '5GB cloud storage',
-		      amount: 999,
-		    });
-		    e.preventDefault();
-		  });
+			if(user.customData.accessLevel == 0){
+				$('#noPlanButton').html('current plan');
+			}else{
+				$('#noPlanButton').html('back to Free plan');
+			}
 
-		  $('#customButton2').removeAttr('disabled');
-		  $('#customButton2').on('click', function(e) {
-		    // Open Checkout with further options:
-		    premiumHandler.open({
-		      name: 'Premium plan',
-		      description: '10GB cloud storage + access to premium content',
-		      amount: 2999,
-		    });
-		    e.preventDefault();
-		  });
+			if(user.customData.accessLevel == 1){
+				$('#basicButton').html('current plan');
+			}else{
+				$('#basicButton').removeAttr('disabled');
+				$('#basicButton').on('click', function(e) {
+					// Open Checkout with further options:
+					basicHandler.open({
+					  name: 'Subscribe to Basic plan',
+					  description: '',
+					  amount: 500,
+					});
+					e.preventDefault();
+				});
+			}
 
-		  $('#customButton3').removeAttr('disabled');
-		  $('#customButton3').on('click', function(e) {
-		    // Open Checkout with further options:
-		    proHandler.open({
-		      name: 'Pro Plan',
-		      description: '50GB cloud storage + access to premium content',
-		      amount: 5999,
-		    });
-		    e.preventDefault();
-		  });
+			if(user.customData.accessLevel == 2){
+				$('#proButton').html('current plan');
+			}else{
+				$('#proButton').removeAttr('disabled');
+				$('#proButton').on('click', function(e) {
+					// Open Checkout with further options:
+					proHandler.open({
+					  name: 'Subscribe to Pro plan',
+					  description: '',
+					  amount: 1000,
+					});
+					e.preventDefault();
+				});
+			}
 
-		  $('#accountInfo').html('Logged in as: '+ user.email);
+			if(user.customData.accessLevel == 3){
+				$('#ultraButton').html('current plan');
+			}else{
+				$('#ultraButton').removeAttr('disabled');
+				$('#ultraButton').on('click', function(e) {
+					// Open Checkout with further options:
+					ultraHandler.open({
+						name: 'Subscribe to Ultra Plan',
+						description: '',
+						amount: 2000,
+					});
+					e.preventDefault();
+				});
+			}
+
+			$('#nameDisplay').html(user.fullName);
+			$('#planDisplay').html(user.customData.userType);
+
+			if(inapp){
+				$('#nameDisplay').attr('href', $('#nameDisplay').attr('href')+'?inapp');
+				$('#planDisplay').attr('href', $('#planDisplay').attr('href')+'?inapp');
+			}
+
+			// getUserPlan();
+			getUserPaymentLog();
 		}
 
 		if(getParameterByName('inapp') != null){
@@ -202,21 +243,19 @@ share:
 				console.log(json);
 
 				if(json.email === undefined){
-					window.location = '/login';
+					window.location = '/login' + (inapp?'?inapp':'');
 				}else{
 					setupProfile(json);
 				}
 			},
 			error: function(json){
-				console.log(json);
+				window.location = '/login' + (inapp?'?inapp':'');
 			}
 		});
 
 	  });
 
 </script>
-
-<!-- <script src="https://checkout.stripe.com/checkout.js"></script> -->
 
 <!-- <button id="customButton" disabled="disabled">Subscribe magic sketch personal cloud (5GB)</button>
 <button id="customButton2" disabled="disabled">Subscribe magic sketch premium plan (10GB + download premium content)</button>
@@ -226,14 +265,21 @@ share:
 
 <div id="accountInfo"></div>
  -->
+
+<div class="loader global-loader">
+	<div class="spin">
+		<i class="fa fa-spinner fa-spin fa-3x fa-fw"></i>
+	</div>
+</div>
+
 <div class="profile-content">
 	<div class="profile-row flex">
 		<div class="col-8 col info-content">
-			<div class="profile-pic-info col"><img src="/images/profile.png" /></div>
+			<div class="profile-pic-info col"><img src="/images/arjen.jpg" /></div>
 			<div class="user-info col">
 				<div class="user-info-content thin-text">
-					<a href="/profile">James Tang</a>
-					<div class="plan-info"><a href="/profile">james@magicsketch.io</a></div>
+					<a href="/profile" id="nameDisplay"></a>
+					<div class="plan-info"><a href="/profile" id="planDisplay"></a></div>
 				</div>
 			</div>
 		</div>
@@ -266,7 +312,7 @@ share:
 				<div class="clear"></div>
 			</div>
 			<div class="plan-subscribe">
-				<button class="subscribe-button" disabled="disabled">current plan</button>
+				<button class="subscribe-button" id="noPlanButton" disabled="disabled">current plan</button>
 			</div>
 		</div>
 		<div class="col-3 col plan-desc">
@@ -284,7 +330,7 @@ share:
 				<div class="clear"></div>
 			</div>
 			<div class="plan-subscribe">
-				<button class="subscribe-button">select plan</button>
+				<button class="subscribe-button" id="basicButton" disabled="disabled">select plan</button>
 			</div>
 		</div>
 		<div class="col-3 col plan-desc">
@@ -302,7 +348,7 @@ share:
 				<div class="clear"></div>
 			</div>
 			<div class="plan-subscribe">
-				<button class="subscribe-button">select plan</button>
+				<button class="subscribe-button" id="proButton" disabled="disabled">select plan</button>
 			</div>
 		</div>
 		<div class="col-3 col plan-desc">
@@ -320,7 +366,7 @@ share:
 				<div class="clear"></div>
 			</div>
 			<div class="plan-subscribe">
-				<button class="subscribe-button">select plan</button>
+				<button class="subscribe-button" id="ultraButton" disabled="disabled">select plan</button>
 			</div>
 		</div>
 		<div class="clear"></div>

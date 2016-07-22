@@ -26,26 +26,6 @@ share:
 		    return decodeURIComponent(results[2].replace(/\+/g, " "));
 		}
 
-		// function createGalleryGrid(galleryItem){
-		// 	var result = $('<div>').addClass("flex sm-col-6 md-col-4 border-box p1 template free");
-		// 	var body = $('<div>').addClass('p1 border rounded sm-col-12 md-col-12').appendTo(result);
-
-		// 	var previewLink = $('<a>').attr({href: galleryItem.data}).append($('<img>').attr({'src': galleryItem.preview, 'height': 'auto'})).appendTo(body);
-
-		// 	var info = $('<div>').addClass('mx-auto').appendTo(body);
-		// 	var bigSpan = $('<span>').addClass('flex').appendTo(info);
-		// 	var infoSpan = $('<span>').addClass('flex-auto').appendTo(bigSpan);
-		// 	$('<h4>').addClass('title mt1 mb1 bold').html(galleryItem.name).appendTo(infoSpan);
-		// 	$('<i>').addClass('meta m0').html('description').appendTo(infoSpan);
-		// 	// $('author').append?
-		// 	$('<p>').addClass('author').append($('<a>').attr({href: 'http://twitter.com/jamztang', identifier: 'author'}).addClass('name').append($('<img>').attr({src: 'https://avatars2.githubusercontent.com/u/852375?v=3&s=460'}).addClass('avatar')).append(' James Tang')).appendTo(infoSpan);
-
-		// 	var priceDiv = $('<div>').addClass('flex-none p1 right-align').appendTo(bigSpan);
-		// 	$('<p>').addClass('status').append('FREE').appendTo(priceDiv);
-
-		// 	return result;
-		// }
-
 		if(getParameterByName('inapp') != null){
 			$('.flex-center.mb2').hide();
 			$('.site-header').hide();
@@ -74,7 +54,7 @@ share:
 				'lastName': lastName,
 			};
 
-			// create stripe 
+			// create account
 			$.ajax({
 				url: '{{ site.apigateway[jekyll.environment].url }}/signup',
 				data: param,
@@ -83,9 +63,22 @@ share:
 				},
 				success: function(json){
 					console.log(json);
+
+					if(json.userType !== undefined){
+						window.location = '/login' + (inapp?'inapp':'');
+					}else{
+						if(json.message !== undefined){
+							errorOutput.html(json.message);
+						}else{
+							errorOutput.html('There is some error on signing up.');
+						}
+						$('#signupButton').removeAttr('disabled');
+					}
 				},
 				error: function(json){
 					console.log(json);
+
+					$('#signupButton').removeAttr('disabled');
 				}
 			});
 		}
@@ -96,6 +89,8 @@ share:
 			var confirmPassword = $('#confirmPasswordInput').val();
 			var firstName = $('#firstNameInput').val();
 			var lastName = $('#lastNameInput').val();
+
+			$(this).attr('disabled', 'disabled');
 
 			signupUser(email, password, confirmPassword, firstName, lastName);
 		});
