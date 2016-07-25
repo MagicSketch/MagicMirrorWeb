@@ -40,20 +40,20 @@ share:
 			var trafficUsage = "";
 			var trafficTotal = "";
 
-			if(user.customData.trafficLimit > 1000){
-				trafficTotal = (user.customData.trafficLimit/1000)+" GB";
-				trafficUsage = (user.customData.trafficUsage/1000);
+			if(user.customData.trafficLimit > 1000000000){
+				trafficTotal = (user.customData.trafficLimit/1000000000)+" GB";
+				trafficUsage = (user.customData.trafficUsage/1000000000);
 			}else{
-				trafficTotal = (user.customData.trafficLimit)+" MB";
-				trafficUsage = (user.customData.trafficUsage);
+				trafficTotal = (user.customData.trafficLimit/1000000)+" MB";
+				trafficUsage = (user.customData.trafficUsage/1000000);
 			}
 
-			if(totalStorage > 1000){
-				storageTotal = (totalStorage/1000)+" GB";
-				storageUsage = (user.customData.cloudUsage/1000);
+			if(totalStorage > 1000000000){
+				storageTotal = (totalStorage/1000000000)+" GB";
+				storageUsage = (user.customData.cloudUsage/1000000000);
 			}else{
-				storageTotal = (totalStorage)+" MB";
-				storageUsage = (user.customData.cloudUsage);
+				storageTotal = (totalStorage/1000000)+" MB";
+				storageUsage = (user.customData.cloudUsage/1000000);
 			}
 
 			$('#nameDisplay').html(user.fullName);

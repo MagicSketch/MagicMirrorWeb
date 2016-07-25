@@ -315,6 +315,10 @@ body {
 	cursor: default;
 }
 
+.subscribe-button.no-plan{
+	background-color: #ddd;
+}
+
 .remarks{
 	font-size: 12px;
 	margin-top: 16px;

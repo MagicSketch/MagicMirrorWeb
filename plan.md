@@ -14,6 +14,11 @@ share:
 	var inapp = false;
 	$( document ).ready(function() {
 
+		function blockPageLoading(){
+			var loading = $('<div>').addClass('loader global-loader').prependTo($('body'));
+			$('<div>').addClass('spin').append($('<i>').addClass("fa fa-spinner fa-spin fa-3x fa-fw")).appendTo(loading);
+		}
+
 		function getParameterByName(name, url) {
 		    if (!url) url = window.location.href;
 		    name = name.replace(/[\[\]]/g, "\\$&");
@@ -63,7 +68,7 @@ share:
 		}
 
 		function getUserPaymentLog(){
-			
+
 		}
 
 		function setupProfile(user){
@@ -77,6 +82,8 @@ share:
 			      // You can access the token ID with `token.id`.
 			      // Get the token ID to your server-side code for use.
 
+			      	$('.subscribe-button').attr('disabled', 'disabled');
+			      	blockPageLoading();
 					// Perform subscribe
 					$.ajax({
 						url: '{{ site.apigateway[jekyll.environment].url }}/subscribe/MG01',
@@ -85,10 +92,11 @@ share:
 						complete: function(json){
 						},
 						success: function(json){
-							console.log(json);
+							window.location.reload();
 						},
 						error: function(json){
-							console.log(json);
+							$('.global-loader').remove();
+							$('.subscribe-button:not(.current-plan)').removeAttr('disabled');
 						}
 					});
 			    },
@@ -104,6 +112,8 @@ share:
 			      // You can access the token ID with `token.id`.
 			      // Get the token ID to your server-side code for use.
 
+			      	$('.subscribe-button').attr('disabled', 'disabled');
+			      	blockPageLoading();
 					// Perform subscribe
 					$.ajax({
 						url: '{{ site.apigateway[jekyll.environment].url }}/subscribe/MG02',
@@ -112,10 +122,11 @@ share:
 						complete: function(json){
 						},
 						success: function(json){
-							console.log(json);
+							window.location.reload();
 						},
 						error: function(json){
-							console.log(json);
+							$('.global-loader').remove();
+							$('.subscribe-button:not(.current-plan)').removeAttr('disabled');
 						}
 					});
 			    },
@@ -131,6 +142,8 @@ share:
 			      // You can access the token ID with `token.id`.
 			      // Get the token ID to your server-side code for use.
 
+			      	$('.subscribe-button').attr('disabled', 'disabled');
+			      	blockPageLoading();
 					// Perform subscribe
 					$.ajax({
 						url: '{{ site.apigateway[jekyll.environment].url }}/subscribe/MG03',
@@ -139,10 +152,11 @@ share:
 						complete: function(json){
 						},
 						success: function(json){
-							console.log(json);
+							window.location.reload();
 						},
 						error: function(json){
-							console.log(json);
+							$('.global-loader').remove();
+							$('.subscribe-button:not(.current-plan)').removeAttr('disabled');
 						}
 					});
 			    },
@@ -151,13 +165,37 @@ share:
 			  });
 
 			if(user.customData.accessLevel == 0){
-				$('#noPlanButton').html('current plan');
+				$('#noPlanButton').addClass('current-plan').html('current plan');
 			}else{
+				$('#noPlanButton').removeAttr('disabled');
 				$('#noPlanButton').html('back to Free plan');
+				$('#noPlanButton').on('click', function(e){
+					if(confirm('Are you sure to unsubscribe Magic Gallery service?')){
+						$('.subscribe-button').attr('disabled', 'disabled');
+						blockPageLoading();
+						$.ajax({
+							url: '{{ site.apigateway[jekyll.environment].url }}/unsubscribe',
+							headers: {
+								'X-Access-Token': Cookies.get('t'),
+								'X-Refresh-Token': Cookies.get('rt'),
+							},
+							method: 'DELETE',
+							complete: function(json){
+							},
+							success: function(json){
+								window.location.reload();
+							},
+							error: function(json){
+								$('.global-loader').remove();
+								$('.subscribe-button:not(.current-plan)').removeAttr('disabled');
+							}
+						});
+					}
+				});
 			}
 
 			if(user.customData.accessLevel == 1){
-				$('#basicButton').html('current plan');
+				$('#basicButton').addClass('current-plan').html('current plan');
 			}else{
 				$('#basicButton').removeAttr('disabled');
 				$('#basicButton').on('click', function(e) {
@@ -172,7 +210,7 @@ share:
 			}
 
 			if(user.customData.accessLevel == 2){
-				$('#proButton').html('current plan');
+				$('#proButton').addClass('current-plan').html('current plan');
 			}else{
 				$('#proButton').removeAttr('disabled');
 				$('#proButton').on('click', function(e) {
@@ -187,7 +225,7 @@ share:
 			}
 
 			if(user.customData.accessLevel == 3){
-				$('#ultraButton').html('current plan');
+				$('#ultraButton').addClass('current-plan').html('current plan');
 			}else{
 				$('#ultraButton').removeAttr('disabled');
 				$('#ultraButton').on('click', function(e) {
@@ -312,7 +350,7 @@ share:
 				<div class="clear"></div>
 			</div>
 			<div class="plan-subscribe">
-				<button class="subscribe-button" id="noPlanButton" disabled="disabled">current plan</button>
+				<button class="subscribe-button no-plan" id="noPlanButton" disabled="disabled">current plan</button>
 			</div>
 		</div>
 		<div class="col-3 col plan-desc">
