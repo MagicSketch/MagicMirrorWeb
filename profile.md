@@ -50,10 +50,10 @@ share:
 
 			if(totalStorage > 1000000000){
 				storageTotal = (totalStorage/1000000000)+" GB";
-				storageUsage = (user.customData.cloudUsage/1000000000);
+				storageUsage = Math.round(user.customData.cloudUsage/1000000000 * 100) / 100;
 			}else{
 				storageTotal = (totalStorage/1000000)+" MB";
-				storageUsage = (user.customData.cloudUsage/1000000);
+				storageUsage = Math.round(user.customData.cloudUsage/1000000 * 100) / 100;
 			}
 
 			$('#nameDisplay').html(user.fullName);
