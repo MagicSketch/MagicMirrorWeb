@@ -158,7 +158,7 @@ share:
 
 <div class="clearfix mxn2">
 	<div class="col-8 mx-auto" style="font-size:161px">
-		<img src="/images/4-in-1-bundle.png" style="width:100%"></img>
+		<img src="/images/4-in-1-bundle.png" style="width:100%" />
 	</div>
 
 	<div class="flex flex-center py3">
@@ -186,7 +186,7 @@ This bundle includes:
 </div>
 
 <div class="col col-6 px1">
-	<img src="/images/cybermonday-3-in-one.jpg"></img>
+	<img src="/images/cybermonday-3-in-one.jpg" />
 </div>
 </div>
 
