@@ -134,6 +134,9 @@ body {
 .usage-bar.storage{
 	background-color: #62d493;
 }
+.usage-bar.full{
+	background-color: #ff5b5b;
+}
 
 .profile-row{
 	margin: 10px;
@@ -212,6 +215,8 @@ body {
 	-webkit-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0);
 	-moz-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0);
 	box-shadow: 0px 0px 15px 0px rgba(0,0,0,0);
+
+	cursor: default;
 }
 
 .global-loader{

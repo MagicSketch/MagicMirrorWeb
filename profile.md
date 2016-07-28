@@ -24,13 +24,71 @@ share:
 		    return decodeURIComponent(results[2].replace(/\+/g, " "));
 		}
 
+		function createGalleryGrid(item){
+			var row = $('<div>').addClass('col-4 col gallery-preview');
+			var loader = $('<div>').addClass('loader').append($('<div>').addClass('spin').append($('<i>').addClass('fa fa-spinner fa-spin fa-3x fa-fw'))).hide().appendTo(row);
+			var image = $('<img>').appendTo(row);
+
+			console.log(item);
+
+			if(item === undefined){
+				row.addClass('nothing');
+			}else{
+				image.attr('src', item.preview);
+
+				row.click(function(e){
+					loader.show();
+
+					window.location.href = item.data;
+					// console.log('download ' + item.data);
+
+					setTimeout(function(){
+						loader.hide();
+					}, 5000);
+				});
+			}
+
+			return row;
+		}
+
+		function createTemplatesDisplay(list){
+			var container = $('#galleryContainer');
+			var index = 0;
+
+			while(index < list.length){
+				var row = $('<div>').addClass('gallery-row flex').appendTo(container);
+				for(;;index++){
+					row.append(createGalleryGrid(list[index]));
+					if((index+1)%3 == 0 && index != 0){
+						break;
+					}
+				}
+				$('<div>').addClass('clear').appendTo(row);
+
+				index++;
+			}
+
+			$('.global-loader').remove();
+		}
+
 		function getTemplates(){
-			// TODO: get this user uploaded template
+			$.ajax({
+				url: '{{ site.apigateway[jekyll.environment].url }}/mytemplate',
+				method: 'GET',
+				headers: {
+					'X-Access-Token': Cookies.get('t'),
+					'X-Refresh-Token': Cookies.get('rt'),
+				},
+				success: function (data) {
+					createTemplatesDisplay(data);
+				},
+				error: function (error) {
+					console.log('error', error);
+				}
+			});
 		}
 
 		function setupProfile(user){
-			$('.global-loader').remove();
-
 			var totalStorage = user.customData.freeStorage + user.customData.cloudStorage;
 			var storagePercent = user.customData.cloudUsage / totalStorage * 100;
 			var trafficPercent = user.customData.trafficUsage / user.customData.trafficLimit * 100;
@@ -55,6 +113,17 @@ share:
 				storageTotal = (totalStorage/1000000)+" MB";
 				storageUsage = Math.round(user.customData.cloudUsage/1000000 * 100) / 100;
 			}
+
+			if(trafficPercent > 100){
+				trafficPercent = 100;
+				trafficFull = true;
+				$("#trafficUsageBar").addClass('full');
+			}
+			if(storagePercent > 100){
+				storagePercent = 100;
+				$("#storageUsageBar").addClass('full');
+			}
+
 
 			$('#nameDisplay').html(user.fullName);
 			$('#planDisplay').html(user.customData.userType);
@@ -81,6 +150,9 @@ share:
 
 			inapp = true;
 		}
+
+		console.log(Cookies.get('t'));
+		console.log(Cookies.get('rt'));
 
 		$.ajax({
 			url: '{{ site.apigateway[jekyll.environment].url }}/user',
@@ -145,60 +217,7 @@ share:
 		<div class="clear"></div>
 	</div>
 
-	<div class="gallery-row flex">
-		<div class="col-4 col gallery-preview">
-			<div class="loader">
-				<div class="spin">
-					<i class="fa fa-spinner fa-spin fa-3x fa-fw"></i>
-				</div>
-			</div>
-			<img src="/images/templates/2015-11-03-ipad-mac.jpg" />
-		</div>
-		<div class="col-4 col gallery-preview"><img src="/images/templates/ipad-on-desk.jpg" /></div>
-		<div class="col-4 col gallery-preview"><img src="/images/templates/iphone-6-and-6s.jpg" /></div>
-		<div class="clear"></div>
-	</div>
-
-	<div class="gallery-row flex">
-		<div class="col-4 col gallery-preview">
-			<div class="loader">
-				<div class="spin">
-					<i class="fa fa-spinner fa-spin fa-3x fa-fw"></i>
-				</div>
-			</div>
-			<img src="/images/templates/iphone-6-fingertip.jpg" />
-		</div>
-		<div class="col-4 col gallery-preview">
-			<div class="loader">
-				<div class="spin">
-					<i class="fa fa-spinner fa-spin fa-3x fa-fw"></i>
-				</div>
-			</div>
-			<img src="/images/templates/iphone-office-cover.jpg" />
-		</div>
-		<div class="col-4 col gallery-preview">
-			<div class="loader">
-				<div class="spin">
-					<i class="fa fa-spinner fa-spin fa-3x fa-fw"></i>
-				</div>
-			</div>
-			<img src="/images/templates/iphone-watch-cover.jpg" />
-		</div>
-		<div class="clear"></div>
-	</div>
-
-	<div class="gallery-row flex">
-		<div class="col-4 col gallery-preview"><img src="/images/templates/iphone6-girls-hand.jpg" /></div>
-		<div class="col-4 col gallery-preview"><img src="/images/templates/iphone6s-flowkit.jpg" /></div>
-		<div class="col-4 col gallery-preview"><img src="/images/templates/iphone6s-hands.jpg" /></div>
-		<div class="clear"></div>
-	</div>
-
-	<div class="gallery-row flex">
-		<div class="col-4 col gallery-preview"><img src="/images/templates/iphone6s.jpg" /></div>
-		<div class="col-4 col gallery-preview"><img src="/images/templates/macbook-air-desk.jpg" /></div>
-		<div class="col-4 col gallery-preview nothing"></div>
-		<div class="clear"></div>
+	<div id="galleryContainer">
 	</div>
 
 </div>
