@@ -32,7 +32,7 @@ function testVideo()
 			<span class="main-body-content">
 				Now we can create perspective mockups, landing pages, and application flows all within Sketch.
 			</span><br><br>
-			<a href="http://api.magicmirror.design/download/latest" identifier="Free-Download" class="flex-auto border-box center btn btn-outline orange ">
+			<a href="http://dl.magicmirror.design/latest" identifier="Free-Download" class="flex-auto border-box center btn btn-outline orange ">
 				<img src="/images/icon-download.png">&nbsp;&nbsp;
 				Download the plugin (10kb)
 			</a><br>
@@ -79,7 +79,7 @@ function testVideo()
 	</div>
 </div>
 <div class="clear"></div>
-<!-- 
+<!--
 <div class="center custom-div-color">
 	<br>
 	<span class="span1">1</span>&nbsp;&nbsp;
